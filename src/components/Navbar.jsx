@@ -17,12 +17,12 @@ function Navbar() {
           </div>
         </div>
         <div className="fixed top-2.5 right-2.5 hidden h-fit items-center justify-center gap-2 transition-opacity duration-300 md:flex opacity-100">
-          <button className="purple-gradient-button rounded-[10px] flex items-center gap-[6px] w-fit text-white font-medium text-[16px] tracking-[-0.13px] p-[10px_20px] relative overflow-hidden">
+          <a href="#waitlist" className="purple-gradient-button rounded-[10px] flex items-center gap-[6px] w-fit text-white font-medium text-[16px] tracking-[-0.13px] p-[10px_20px] relative overflow-hidden">
             <span className="absolute top-0 left-0 z-20 h-full w-full blur-[1px]" aria-hidden="true">
               <span className="blurred-border absolute -top-px -left-px z-20 h-full w-full"></span>
             </span>
-            <span>Start Free Trial</span>
-          </button>
+            <span>Join Waitlist</span>
+          </a>
         </div>
         <button type="button" className="relative ml-4 flex size-6 text-white outline-hidden md:hidden">
           <span className="absolute -inset-3 lg:hidden"></span>

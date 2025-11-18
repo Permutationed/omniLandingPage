@@ -27,12 +27,12 @@ function Hero() {
               </div>
             </div>
             <div className="h-10" id="download-button" style={{opacity: 1, transform: 'none'}}>
-              <button className="purple-gradient-button rounded-[10px] flex items-center gap-[6px] w-fit text-white font-medium text-[16px] tracking-[-0.13px] p-[10px_20px] relative overflow-hidden">
+              <a href="#waitlist" className="purple-gradient-button rounded-[10px] flex items-center gap-[6px] w-fit text-white font-medium text-[16px] tracking-[-0.13px] p-[10px_20px] relative overflow-hidden">
                 <span className="absolute top-0 left-0 z-20 h-full w-full blur-[1px]" aria-hidden="true">
                   <span className="blurred-border absolute -top-px -left-px z-20 h-full w-full"></span>
                 </span>
-                <span>Start Your Free Trial</span>
-              </button>
+                <span>Join Waitlist</span>
+              </a>
             </div>
           </div>
         </section>

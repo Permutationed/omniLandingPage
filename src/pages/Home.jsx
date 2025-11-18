@@ -5,7 +5,6 @@ import Features from '../components/Features'
 import Benefits from '../components/Benefits'
 import Testimonials from '../components/Testimonials'
 import CTA from '../components/CTA'
-import Footer from '../components/Footer'
 
 function Home() {
   return (
@@ -18,7 +17,6 @@ function Home() {
           <Benefits />
           <Testimonials />
           <CTA />
-          <Footer />
         </main>
       </div>
     </div>
