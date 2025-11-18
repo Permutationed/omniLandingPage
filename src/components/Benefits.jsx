@@ -59,11 +59,12 @@ function Benefits() {
           </div>
           <div className="relative">
             <div className="bg-gray-700 rounded-3xl shadow-2xl p-8 border border-gray-600">
-              <div className="aspect-[9/16] bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <i className="fas fa-mobile-alt text-6xl text-gray-500 mb-4"></i>
-                  <p className="text-gray-400">iOS App Preview</p>
-                </div>
+              <div className="aspect-[9/16] rounded-2xl overflow-hidden">
+                <img 
+                  src="/assets/mobile-demo.png" 
+                  alt="Omni mobile app preview showing wallet interface"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="absolute -bottom-4 -left-4 w-48 h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full opacity-20 blur-3xl"></div>

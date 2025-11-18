@@ -21,17 +21,17 @@ function Hero() {
                   </span>
                 </h1>
                 <hr className="hidden h-px w-96 border-none lg:block" style={{background: 'linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%)', opacity: 1, transform: 'none'}} />
-                <h2 className="text-center leading-[140%] font-medium tracking-[-0.02em] text-white lg:text-[19px]" style={{fontFamily: "'EB Garamond', 'EB Garamond Fallback', serif", textShadow: 'rgba(0, 0, 0, 0) 0px 112px 31px, rgba(0, 0, 0, 0) 0px 72px 29px, rgba(0, 0, 0, 0.01) 0px 40px 24px, rgba(0, 0, 0, 0.01) 0px 18px 18px, rgba(0, 0, 0, 0.01) 0px 4px 10px', opacity: 1, transform: 'none'}}>
+                <h2 className="text-center leading-[140%] font-medium tracking-[-0.02em] text-white lg:text-[19px]" style={{textShadow: 'rgba(0, 0, 0, 0) 0px 112px 31px, rgba(0, 0, 0, 0) 0px 72px 29px, rgba(0, 0, 0, 0.01) 0px 40px 24px, rgba(0, 0, 0, 0.01) 0px 18px 18px, rgba(0, 0, 0, 0.01) 0px 4px 10px', opacity: 1, transform: 'none'}}>
                   Omni automatically analyzes your purchases<br className="md:hidden" /> and tells you which card earns the most<br className="hidden md:block" /> points, cash back, or perks—every time.<br className="md:hidden" /> Maximize rewards with zero effort.
                 </h2>
               </div>
             </div>
             <div className="h-10" id="download-button" style={{opacity: 1, transform: 'none'}}>
-              <a href="#waitlist" className="purple-gradient-button rounded-[10px] flex items-center gap-[6px] w-fit text-white font-medium text-[16px] tracking-[-0.13px] p-[10px_20px] relative overflow-hidden">
+              <a href="#waitlist" className="purple-gradient-button rounded-[10px] flex items-center gap-[6px] w-fit font-medium text-[16px] tracking-[-0.13px] p-[10px_20px] relative overflow-hidden">
                 <span className="absolute top-0 left-0 z-20 h-full w-full blur-[1px]" aria-hidden="true">
                   <span className="blurred-border absolute -top-px -left-px z-20 h-full w-full"></span>
                 </span>
-                <span>Join Waitlist</span>
+                <span className="relative z-30 text-white font-semibold">Join Waitlist</span>
               </a>
             </div>
           </div>
