@@ -6,7 +6,7 @@ function Navbar() {
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between rounded-b-lg pr-5 text-white md:pr-8">
         <div className="flex items-center justify-center gap-1 rounded-2xl px-3 py-1 lg:gap-7">
           <a className="inline-flex shrink-0 translate-y-0.5 items-center justify-center rounded lg:mr-7" href="/">
-            <h1 className="text-2xl font-bold text-white">Omni</h1>
+            <h1 className="text-2xl font-bold text-white" style={{fontFamily: "'EB Garamond', 'EB Garamond Fallback', serif"}}>Omni</h1>
             <span className="sr-only">Omni</span>
           </a>
           <div className="flex hidden items-center md:flex">

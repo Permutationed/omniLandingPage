@@ -18,7 +18,7 @@ function Benefits() {
             <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
               <i className="fas fa-mobile-alt text-white text-2xl"></i>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" style={{fontFamily: "'EB Garamond', 'EB Garamond Fallback', serif"}}>
               Simple, Clean, and
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 {' '}Built for Speed

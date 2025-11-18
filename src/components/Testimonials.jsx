@@ -29,7 +29,7 @@ function Testimonials() {
     <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{fontFamily: "'EB Garamond', 'EB Garamond Fallback', serif"}}>
             Loved by
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               {' '}Thousands
