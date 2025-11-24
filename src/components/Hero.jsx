@@ -19,8 +19,8 @@ function Hero({ isLoaded }) {
                     <span className="inline-block" style={{transform: 'none'}}>to</span>
                   </span>
                   <span className="block h-[70px] overflow-hidden lg:h-[94px]">
-                    <span className="inline-block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" style={{transform: 'none'}}>Earn</span>{' '}
-                    <span className="inline-block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" style={{transform: 'none'}}>More</span>
+                    <span className="inline-block" style={{transform: 'none', color: 'rgb(192, 132, 252)', backgroundImage: 'linear-gradient(to right, rgb(192, 132, 252), rgb(251, 146, 191))', WebkitBackgroundClip: 'text', backgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>Earn</span>{' '}
+                    <span className="inline-block" style={{transform: 'none', color: 'rgb(192, 132, 252)', backgroundImage: 'linear-gradient(to right, rgb(192, 132, 252), rgb(251, 146, 191))', WebkitBackgroundClip: 'text', backgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>More</span>
                   </span>
                 </h1>
                 <hr 
