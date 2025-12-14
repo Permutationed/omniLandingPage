@@ -13,14 +13,14 @@ function Hero({ isLoaded }) {
                   className={`text-center text-[56px] leading-[102%] font-medium tracking-[-1px] text-white lg:text-[80px] ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
                 >
                   <span className="block h-[57px] overflow-hidden lg:h-[76px]">
-                    <span className="inline-block" style={{transform: 'none'}}>The</span>{' '}
-                    <span className="inline-block" style={{transform: 'none'}}>Smartest</span>{' '}
-                    <span className="inline-block" style={{transform: 'none'}}>Way</span>{' '}
-                    <span className="inline-block" style={{transform: 'none'}}>to</span>
+                    <span className="inline-block" style={{transform: 'none', color: '#ffffff'}}>The</span>{' '}
+                    <span className="inline-block" style={{transform: 'none', color: '#ffffff'}}>Smartest</span>{' '}
+                    <span className="inline-block" style={{transform: 'none', color: '#ffffff'}}>Way</span>{' '}
+                    <span className="inline-block" style={{transform: 'none', color: '#ffffff'}}>to</span>
                   </span>
                   <span className="block h-[70px] overflow-hidden lg:h-[94px]">
-                    <span className="inline-block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" style={{transform: 'none'}}>Earn</span>{' '}
-                    <span className="inline-block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" style={{transform: 'none'}}>More</span>
+                    <span className="inline-block" style={{transform: 'none', color: '#ffffff', textShadow: '0 0 10px rgba(255, 255, 255, 0.5)'}}>Earn</span>{' '}
+                    <span className="inline-block" style={{transform: 'none', color: '#ffffff', textShadow: '0 0 10px rgba(255, 255, 255, 0.5)'}}>More</span>
                   </span>
                 </h1>
                 <hr 
@@ -31,7 +31,7 @@ function Hero({ isLoaded }) {
                   style={{animationDelay: isLoaded ? '0.4s' : '0s', textShadow: 'rgba(0, 0, 0, 0) 0px 112px 31px, rgba(0, 0, 0, 0) 0px 72px 29px, rgba(0, 0, 0, 0.01) 0px 40px 24px, rgba(0, 0, 0, 0.01) 0px 18px 18px, rgba(0, 0, 0, 0.01) 0px 4px 10px'}} 
                   className={`text-center leading-[140%] font-medium tracking-[-0.02em] text-white lg:text-[19px] ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
                 >
-                  The intelligent credit card assistant that works in the background.<br className="md:hidden" /> Real-time location-based recommendations, bonus optimization,<br className="hidden md:block" /> and a complete financial dashboard—all automated.<br className="md:hidden" /> Effortless rewards maximization.
+                  Omni is the only seamless smart wallet that maximizes your card rewards before you pay, automatically.
                 </h2>
               </div>
             </div>

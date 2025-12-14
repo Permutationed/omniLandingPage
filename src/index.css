@@ -91,18 +91,52 @@ html {
   }
 }
 
-/* Cohesive Landing Page Gradient */
+/* Cohesive Landing Page Gradient with Background Image */
 .cohesive-gradient {
+  position: relative;
+  min-height: 100vh;
+}
+
+.cohesive-gradient::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/15225.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: blur(8px);
+  z-index: -2;
+  opacity: 0.7;
+}
+
+.cohesive-gradient::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(
     to bottom,
-    #111827 0%,
-    #15192d 20%,
-    #1a1f3a 40%,
-    #1e1b4b 60%,
-    #1a1f3a 80%,
-    #15192d 100%
+    rgba(17, 24, 39, 0.6) 0%,
+    rgba(17, 24, 39, 0.75) 50%,
+    rgba(17, 24, 39, 0.9) 100%
   );
-  min-height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Enhanced text contrast */
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+p, span, label, div {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Fade In Animation Styles - Industry Standard */
@@ -203,5 +237,46 @@ h1 {
 .animate-fade-in {
   opacity: 0;
   animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scrolling Card Band */
+.card-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+}
+
+.card-scroll-track {
+  display: flex;
+  gap: 1rem;
+  animation: scrollCards 30s linear infinite;
+  will-change: transform;
+}
+
+.card-scroll-item {
+  flex-shrink: 0;
+}
+
+@keyframes scrollCards {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 

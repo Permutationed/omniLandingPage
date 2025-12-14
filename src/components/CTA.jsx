@@ -145,20 +145,6 @@ function CTA({ isLoaded }) {
             </p>
           )}
         </form>
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-white/80">
-          <div className="flex items-center gap-2">
-            <i className="fas fa-shield-alt"></i>
-            <span>Secure & Private</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <i className="fas fa-envelope-open-text"></i>
-            <span>Personalized launch invite</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <i className="fas fa-gift"></i>
-            <span>Early access perks</span>
-          </div>
-        </div>
       </div>
     </section>
   )
