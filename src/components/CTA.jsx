@@ -85,7 +85,7 @@ function CTA({ isLoaded }) {
       <div className="max-w-4xl mx-auto text-center">
         <h2 
           style={{fontFamily: "'EB Garamond', 'EB Garamond Fallback', serif", animationDelay: isLoaded ? '2.3s' : '0s'}} 
-          className={`text-4xl md:text-5xl font-bold text-white mb-6 ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
+          className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
         >
           Join the Waitlist
         </h2>

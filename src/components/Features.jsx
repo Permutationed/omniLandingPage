@@ -147,7 +147,7 @@ function Features({ isLoaded }) {
           <div className="text-center mb-8">
             <h2 
               style={{fontFamily: "'EB Garamond', 'EB Garamond Fallback', serif", animationDelay: isLoaded ? '0.8s' : '0s'}} 
-              className={`text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
+              className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
             >
               The Best Card. Always.
             </h2>
@@ -155,7 +155,7 @@ function Features({ isLoaded }) {
               style={{animationDelay: isLoaded ? '1.0s' : '0s'}} 
               className={`text-2xl md:text-3xl lg:text-4xl text-gray-300 max-w-3xl mx-auto ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
             >
-              <p className="mb-3">Have the best card when you walk into {['Starbucks', 'Target', 'Home Depot'].includes(currentEstablishment) ? '' : 'a'}</p>
+              <p className="mb-4">Have the best card when you walk into {['Starbucks', 'Target', 'Home Depot'].includes(currentEstablishment) ? '' : 'a'}</p>
               <p className="text-white font-semibold min-h-[3rem] transition-all duration-500">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent block">
                   {currentEstablishment}
@@ -255,7 +255,7 @@ function Features({ isLoaded }) {
         <div className="max-w-4xl mx-auto">
           <h2 
             style={{fontFamily: "'EB Garamond', 'EB Garamond Fallback', serif", animationDelay: isLoaded ? '1.5s' : '0s'}} 
-            className={`text-4xl md:text-6xl font-bold text-white mb-4 text-center ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
+            className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 text-center ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
           >
             See How Much You're Missing Out
           </h2>
@@ -280,7 +280,7 @@ function Features({ isLoaded }) {
                   
                   {/* Selected Cards Tags */}
                   {formData.currentCards.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mb-3">
+                    <div className="flex flex-wrap gap-2 mb-4">
                       {formData.currentCards.map((card, index) => (
                         <span
                           key={index}

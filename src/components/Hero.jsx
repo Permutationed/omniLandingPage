@@ -7,7 +7,7 @@ function Hero({ isLoaded }) {
         <section className="flex h-full items-start justify-center pt-20 lg:pt-20 bg-transparent">
           <div className="flex flex-col items-center gap-8 py-20">
             <div className="flex flex-col items-center gap-4">
-              <div className="flex flex-col items-center gap-4 lg:gap-3">
+              <div className="flex flex-col items-center gap-4 lg:gap-4">
                 <h1 
                   style={{fontFamily: "'EB Garamond', 'EB Garamond Fallback'", animationDelay: isLoaded ? '0.1s' : '0s'}} 
                   className={`text-center text-[56px] leading-[102%] font-medium tracking-[-1px] text-white lg:text-[80px] ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
