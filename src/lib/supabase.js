@@ -7,13 +7,18 @@ const supabaseAnonKey = import.meta.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || import.
 
 if (!supabaseUrl || !supabaseAnonKey) {
   console.error('Missing Supabase environment variables.')
-  console.error('Make sure you have set in Vercel:')
-  console.error('  NEXT_PUBLIC_SUPABASE_URL')
-  console.error('  NEXT_PUBLIC_SUPABASE_ANON_KEY')
+  console.error('Make sure you have set in your .env file:')
+  console.error('  NEXT_PUBLIC_SUPABASE_URL or VITE_SUPABASE_URL')
+  console.error('  NEXT_PUBLIC_SUPABASE_ANON_KEY or VITE_SUPABASE_ANON_KEY')
   console.error('Current values:', {
     url: supabaseUrl ? '✓ Set' : '✗ Missing',
     key: supabaseAnonKey ? '✓ Set' : '✗ Missing'
   })
+} else {
+  // Log which database is being used (only in development)
+  if (import.meta.env.DEV) {
+    console.log('🔗 Supabase connected to:', supabaseUrl.replace(/https?:\/\/([^.]+).*/, '$1'))
+  }
 }
 
 // Create client with fallback empty strings to prevent errors

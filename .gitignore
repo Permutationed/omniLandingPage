@@ -4,3 +4,6 @@ dist
 *.log
 .env
 
+# Migration backups (contain sensitive user data)
+waitlist-backup*.json
+

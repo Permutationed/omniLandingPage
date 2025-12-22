@@ -220,7 +220,7 @@ function Features({ isLoaded }) {
               </h2>
               <p 
                 style={{animationDelay: isLoaded ? '1.3s' : '0s'}} 
-                className={`text-sm md:text-base text-white leading-relaxed ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
+                className={`text-base md:text-lg lg:text-xl text-white leading-relaxed ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
               >
                 On Android and iOS, we use OS-approved NFC and network tokenization to present the optimal card. All credentials are protected by hardware-backed security (Secure Element / StrongBox), so your data never leaves your device and transactions settle directly with your bank.
               </p>
@@ -455,18 +455,18 @@ function Features({ isLoaded }) {
               </div>
             )}
 
-            {/* Phase 3: Max Rewards Earned Possible */}
+            {/* Phase 3: Max Possible Rewards */}
             {currentPhase === 3 && (
               <div className="space-y-6 text-center">
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                    Max Rewards Earned Possible
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
+                    Max Possible Rewards
                   </h3>
                   <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-2xl p-8 backdrop-blur-sm">
                     <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                       ${maxRewards.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                     </div>
-                    <p className="text-white/70 text-sm">
+                    <p className="text-white/70 text-sm md:text-base">
                       Based on your selected cards and spending patterns
                     </p>
                   </div>

@@ -29,7 +29,7 @@ function Hero({ isLoaded }) {
                 />
                 <h2 
                   style={{animationDelay: isLoaded ? '0.4s' : '0s', textShadow: 'rgba(0, 0, 0, 0) 0px 112px 31px, rgba(0, 0, 0, 0) 0px 72px 29px, rgba(0, 0, 0, 0.01) 0px 40px 24px, rgba(0, 0, 0, 0.01) 0px 18px 18px, rgba(0, 0, 0, 0.01) 0px 4px 10px'}} 
-                  className={`text-center leading-[140%] font-medium tracking-[-0.02em] text-white lg:text-[19px] ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
+                  className={`text-center leading-[140%] font-medium tracking-[-0.02em] text-white text-base md:text-lg lg:text-xl ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
                 >
                   Omni is the only seamless smart wallet that maximizes your card rewards before you pay, automatically.
                 </h2>

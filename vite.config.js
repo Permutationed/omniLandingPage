@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   
   return {
     plugins: [react()],
-    // Expose NEXT_PUBLIC_ prefixed variables to the client (similar to Next.js behavior)
+    // Expose NEXT_PUBLIC_ and VITE_ prefixed variables to the client
     // This makes them available at build time and runtime
     define: {
       'import.meta.env.NEXT_PUBLIC_SUPABASE_URL': JSON.stringify(
@@ -16,6 +16,12 @@ export default defineConfig(({ mode }) => {
       ),
       'import.meta.env.NEXT_PUBLIC_SUPABASE_ANON_KEY': JSON.stringify(
         env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
+      ),
+      'import.meta.env.VITE_SUPABASE_URL': JSON.stringify(
+        env.VITE_SUPABASE_URL || process.env.VITE_SUPABASE_URL || ''
+      ),
+      'import.meta.env.VITE_SUPABASE_ANON_KEY': JSON.stringify(
+        env.VITE_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY || ''
       ),
     }
   }

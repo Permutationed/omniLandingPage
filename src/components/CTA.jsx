@@ -91,7 +91,7 @@ function CTA({ isLoaded }) {
         </h2>
         <p 
           style={{animationDelay: isLoaded ? '2.4s' : '0s'}} 
-          className={`text-xl text-white/90 mb-10 max-w-2xl mx-auto ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
+          className={`text-base md:text-lg lg:text-xl text-white/90 mb-10 max-w-2xl mx-auto ${isLoaded ? 'animate-fly-in-bottom' : ''}`}
         >
           Be among the first to experience effortless credit card optimization. Early access, exclusive perks, and priority support.
         </p>
@@ -127,7 +127,7 @@ function CTA({ isLoaded }) {
           <button
             type="submit"
             disabled={loading}
-            className="purple-gradient-button relative overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.01] disabled:opacity-50 disabled:cursor-not-allowed"
+            className="purple-gradient-button relative overflow-hidden rounded-2xl px-8 py-4 text-base md:text-lg font-semibold text-white shadow-lg transition hover:scale-[1.01] disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <span className="absolute top-0 left-0 z-20 h-full w-full blur-[1px]" aria-hidden="true">
               <span className="blurred-border absolute -top-px -left-px z-20 h-full w-full"></span>
