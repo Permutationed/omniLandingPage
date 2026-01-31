@@ -25,8 +25,8 @@ This roadmap derives 10 phases from the 35 v1 requirements, respecting the archi
 **Plans:** 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Next.js project with Tailwind v4 and design tokens
-- [ ] 01-02-PLAN.md — shadcn/ui integration and Button verification
+- [x] 01-01-PLAN.md — Next.js project with Tailwind v4 and design tokens
+- [x] 01-02-PLAN.md — shadcn/ui integration and Button verification
 
 ---
 
@@ -185,7 +185,7 @@ Plans:
 
 | Phase | Status | Completed |
 |-------|--------|-----------|
-| 1 - Foundation | Planned | - |
+| 1 - Foundation | Complete ✓ | 2026-01-31 |
 | 2 - Layout Components | Not started | - |
 | 3 - Hero Section | Not started | - |
 | 4 - Animation Infrastructure | Not started | - |

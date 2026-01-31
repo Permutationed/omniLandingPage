@@ -151,8 +151,8 @@
 | CTA-03 | Phase 10 | Pending |
 | FOOT-01 | Phase 2 | Pending |
 | FOOT-02 | Phase 2 | Pending |
-| CORE-01 | Phase 1 | Pending |
-| CORE-02 | Phase 1 | Pending |
+| CORE-01 | Phase 1 | Complete |
+| CORE-02 | Phase 1 | Complete |
 | CORE-03 | Phase 4 | Pending |
 | CORE-04 | Phase 4 | Pending |
 | CORE-05 | Phase 10 | Pending |
