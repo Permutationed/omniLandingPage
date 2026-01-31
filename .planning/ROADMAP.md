@@ -22,7 +22,11 @@ This roadmap derives 10 phases from the 35 v1 requirements, respecting the archi
 3. Tailwind config extends tokens correctly (classes like `bg-primary` work)
 4. shadcn/ui is initialized and a test component (Button) renders with correct styling
 
-**Plans:** (created by /gsd:plan-phase)
+**Plans:** 2 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Next.js project with Tailwind v4 and design tokens
+- [ ] 01-02-PLAN.md — shadcn/ui integration and Button verification
 
 ---
 
@@ -181,7 +185,7 @@ This roadmap derives 10 phases from the 35 v1 requirements, respecting the archi
 
 | Phase | Status | Completed |
 |-------|--------|-----------|
-| 1 - Foundation | Not started | - |
+| 1 - Foundation | Planned | - |
 | 2 - Layout Components | Not started | - |
 | 3 - Hero Section | Not started | - |
 | 4 - Animation Infrastructure | Not started | - |
