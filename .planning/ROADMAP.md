@@ -43,7 +43,13 @@ Plans:
 4. User clicks nav link and page smoothly scrolls to target section
 5. User sees footer with logo, nav links, legal placeholders, and social icons
 
-**Plans:** (created by /gsd:plan-phase)
+**Plans:** 4 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Dependencies and animation infrastructure (motion, shadcn Sheet, hooks)
+- [ ] 02-02-PLAN.md — Navigation components (Magnetic, MobileNav, HeaderNav, Header)
+- [ ] 02-03-PLAN.md — Footer components (FooterSocials, Footer)
+- [ ] 02-04-PLAN.md — Layout integration and visual verification
 
 ---
 
@@ -185,8 +191,8 @@ Plans:
 
 | Phase | Status | Completed |
 |-------|--------|-----------|
-| 1 - Foundation | Complete ✓ | 2026-01-31 |
-| 2 - Layout Components | Not started | - |
+| 1 - Foundation | Complete | 2026-01-31 |
+| 2 - Layout Components | Planned | - |
 | 3 - Hero Section | Not started | - |
 | 4 - Animation Infrastructure | Not started | - |
 | 5 - 3D Infrastructure | Not started | - |
