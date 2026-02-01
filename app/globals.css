@@ -117,6 +117,35 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* Hero gradient mesh - slow drift animation */
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    -45deg,
+    oklch(0.95 0.03 280),
+    oklch(0.97 0.02 240),
+    oklch(0.98 0.015 260),
+    oklch(0.96 0.025 220)
+  );
+  background-size: 400% 400%;
+  animation: gradient-drift 30s ease infinite;
+}
+
+@keyframes gradient-drift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Respect reduced motion for CSS animations */
+@media (prefers-reduced-motion: reduce) {
+  .hero-gradient {
+    animation: none;
+    background-size: 100% 100%;
+  }
+}
+
 /* Base styles */
 @layer base {
   * {
