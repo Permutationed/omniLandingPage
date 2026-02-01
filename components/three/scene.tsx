@@ -9,7 +9,7 @@ interface Scene3DProps {
 }
 
 export function Scene3D({ children }: Scene3DProps) {
-  const containerRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null!)
 
   return (
     <div ref={containerRef} className="relative">
