@@ -10,11 +10,11 @@ See: .planning/PROJECT.md
 ## Current Position
 
 Phase: 3 of 10 (Hero Section)
-Plan: 1 of 3 complete
+Plan: 2 of 3 complete
 Status: In progress
-Last activity: 2026-02-01 - Completed 03-01-PLAN.md
+Last activity: 2026-02-01 - Completed 03-02-PLAN.md
 
-Progress: [#######---] 35%
+Progress: [########--] 40%
 
 ## Performance Metrics
 
@@ -28,7 +28,7 @@ Progress: [#######---] 35%
 |-------|-------|-------|----------|
 | 01-foundation | 2/2 | 7min | 3.5min |
 | 02-layout-components | 4/4 | 10min | 2.5min |
-| 03-hero-section | 1/3 | 1min | 1min |
+| 03-hero-section | 2/3 | 4min | 2min |
 
 ## Accumulated Context
 
@@ -50,6 +50,8 @@ Progress: [#######---] 35%
 | 02-04 | Container px-4 + mx-auto | Consistent padding and centering |
 | 03-01 | Native validation over react-hook-form | Single field, simpler implementation |
 | 03-01 | CSS animation for gradient mesh | GPU-accelerated, no React overhead |
+| 03-02 | HeroSection as server component | Composes client components for animation |
+| 03-02 | 4 trust metrics chosen | $50B+, Zero, 3x-10x, Day 1 |
 
 ### Pending Todos
 
@@ -62,5 +64,5 @@ Progress: [#######---] 35%
 ## Session Continuity
 
 Last session: 2026-02-01
-Stopped at: Completed 03-01-PLAN.md
-Resume file: .planning/phases/03-hero-section/03-02-PLAN.md
+Stopped at: Completed 03-02-PLAN.md
+Resume file: .planning/phases/03-hero-section/03-03-PLAN.md
