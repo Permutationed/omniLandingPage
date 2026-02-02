@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { useScroll, useReducedMotion } from 'motion/react'
 import { HowItWorksStatic } from './how-it-works-static'
+import { ProgressDots } from './progress-dots'
 
 export function HowItWorksSection() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -24,6 +25,9 @@ export function HowItWorksSection() {
       id="how-it-works"
       className="relative h-[175vh]"
     >
+      {/* Progress navigation - only shows when section visible (desktop only) */}
+      <ProgressDots progress={scrollYProgress} containerRef={containerRef} />
+
       {/* Sticky viewport that pins during scroll */}
       <div className="sticky top-0 h-screen overflow-hidden flex items-center justify-center bg-muted/30">
         {/* PaymentFlowAnimation will go here in Plan 02 */}
