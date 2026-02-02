@@ -81,6 +81,9 @@ Progress: [#################-] 88%
 | 07-01 | 175vh container height | Provides ~75vh scroll distance for smooth animation pacing |
 | 07-01 | Static fallback as separate component | Not dimmed animations but truly static step cards |
 | 07-01 | useReducedMotion at section level | Single check returns entire alternate component |
+| 07-02 | Overlapping phase ranges | Smooth blending between animation states |
+| 07-02 | SVG bezier path | Organic flow visualization with splits |
+| 07-02 | Amber color for rewards | Differentiate rewards from neutral school ACH |
 | 07-03 | Progress dots desktop-only | Hidden on mobile with hidden md:flex |
 | 07-03 | Fade range 0.02-0.98 | Dots fully visible during active scroll |
 | 07-03 | 44x44px touch targets | p-4 -m-4 pattern for accessible tap areas |
