@@ -5,21 +5,21 @@
 See: .planning/PROJECT.md
 
 **Core value:** Visitors immediately understand that Omni unlocks rewards on tuition without costing schools anything - and trust the page enough to join the waitlist.
-**Current focus:** Phase 6 - 3D Card Implementation
+**Current focus:** Phase 7 - How It Works Scroll Section
 
 ## Current Position
 
-Phase: 6 of 10 (3D Card) - VERIFIED ✓
-Plan: 3 of 3 complete
-Status: Phase verified, ready for Phase 7
-Last activity: 2026-02-02 - Phase 6 verified (4/4 must-haves passed)
+Phase: 7 of 10 (How It Works)
+Plan: 1 of 3 complete
+Status: In progress
+Last activity: 2026-02-02 - Completed 07-01-PLAN.md (Section Infrastructure)
 
-Progress: [################] 80%
+Progress: [################--] 82%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 13
+- Total plans completed: 14
 - Average duration: 2.5min
 
 **By Phase:**
@@ -32,6 +32,7 @@ Progress: [################] 80%
 | 04-animation-infrastructure | 1/1 | 3min | 3min |
 | 05-3d-infrastructure | 3/3 | 6min | 2min |
 | 06-3d-card | 3/3 | 8min | 2.7min |
+| 07-how-it-works | 1/3 | 3min | 3min |
 
 ## Accumulated Context
 
@@ -77,6 +78,9 @@ Progress: [################] 80%
 | 06-03 | Environment preset='city' | Urban HDR for premium metallic reflections |
 | 06-03 | Reduced light intensities | ambient 0.3, directional 0.8 with Environment |
 | 06-03 | Permission button pattern | Show only when isSupported AND permission === 'prompt' |
+| 07-01 | 175vh container height | Provides ~75vh scroll distance for smooth animation pacing |
+| 07-01 | Static fallback as separate component | Not dimmed animations but truly static step cards |
+| 07-01 | useReducedMotion at section level | Single check returns entire alternate component |
 
 ### Pending Todos
 
@@ -89,5 +93,5 @@ Progress: [################] 80%
 ## Session Continuity
 
 Last session: 2026-02-02
-Stopped at: Phase 6 verified, ready for Phase 7
-Resume file: .planning/phases/07-how-it-works/07-01-PLAN.md
+Stopped at: Completed 07-01-PLAN.md (Section Infrastructure)
+Resume file: .planning/phases/07-how-it-works/07-02-PLAN.md
