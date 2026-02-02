@@ -147,12 +147,13 @@ Plans:
 3. User can click progress dots to jump between steps
 4. User with prefers-reduced-motion sees static step cards instead of animation
 
-**Plans:** 3 plans
+**Plans:** 4 plans
 
 Plans:
-- [ ] 07-01-PLAN.md — Section infrastructure with scroll tracking and reduced motion fallback
-- [ ] 07-02-PLAN.md — Payment flow animation with multi-phase scroll-linked visualization
-- [ ] 07-03-PLAN.md — Progress dots navigation with click-to-scroll functionality
+- [x] 07-01-PLAN.md — Section infrastructure with scroll tracking and reduced motion fallback
+- [x] 07-02-PLAN.md — Payment flow animation with multi-phase scroll-linked visualization
+- [x] 07-03-PLAN.md — Progress dots navigation with click-to-scroll functionality
+- [x] 07-04-PLAN.md — Path particles gap closure
 
 ---
 
@@ -219,7 +220,7 @@ Plans:
 | 4 - Animation Infrastructure | Complete | 2026-01-31 |
 | 5 - 3D Infrastructure | Complete | 2026-01-31 |
 | 6 - 3D Card | Complete | 2026-02-02 |
-| 7 - How It Works | Planned | - |
+| 7 - How It Works | Complete | 2026-02-02 |
 | 8 - Content Sections | Not started | - |
 | 9 - Interactive Features | Not started | - |
 | 10 - Final CTA & Polish | Not started | - |

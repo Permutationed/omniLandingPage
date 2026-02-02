@@ -29,10 +29,10 @@
 
 ### How It Works
 
-- [ ] **HIW-01**: Scroll-linked animation section (150-200vh, not a marathon)
-- [ ] **HIW-02**: Animated payment flow: card swipe → particles along SVG path → split to ACH (school) + rewards (user)
-- [ ] **HIW-03**: Clickable progress dots to jump between steps
-- [ ] **HIW-04**: Static step cards fallback for prefers-reduced-motion
+- [x] **HIW-01**: Scroll-linked animation section (150-200vh, not a marathon)
+- [x] **HIW-02**: Animated payment flow: card swipe → particles along SVG path → split to ACH (school) + rewards (user)
+- [x] **HIW-03**: Clickable progress dots to jump between steps
+- [x] **HIW-04**: Static step cards fallback for prefers-reduced-motion
 
 ### Audience Tabs
 
@@ -126,10 +126,10 @@
 | HERO-07 | Phase 3 | Complete |
 | TRUST-01 | Phase 3 | Complete |
 | TRUST-02 | Phase 9 | Pending |
-| HIW-01 | Phase 7 | Pending |
-| HIW-02 | Phase 7 | Pending |
-| HIW-03 | Phase 7 | Pending |
-| HIW-04 | Phase 7 | Pending |
+| HIW-01 | Phase 7 | Complete |
+| HIW-02 | Phase 7 | Complete |
+| HIW-03 | Phase 7 | Complete |
+| HIW-04 | Phase 7 | Complete |
 | AUD-01 | Phase 8 | Pending |
 | AUD-02 | Phase 8 | Pending |
 | AUD-03 | Phase 8 | Pending |
