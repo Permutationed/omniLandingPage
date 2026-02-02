@@ -10,16 +10,16 @@ See: .planning/PROJECT.md
 ## Current Position
 
 Phase: 6 of 10 (3D Card Implementation)
-Plan: 1 of 3 complete (06-02)
+Plan: 2 of 3 complete (06-01, 06-02)
 Status: In progress
-Last activity: 2026-02-02 - Completed 06-02-PLAN.md (Interaction Hooks)
+Last activity: 2026-02-02 - Completed 06-01-PLAN.md (Card Model & Materials)
 
-Progress: [#############] 65%
+Progress: [##############] 70%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 11
+- Total plans completed: 12
 - Average duration: 2.4min
 
 **By Phase:**
@@ -31,7 +31,7 @@ Progress: [#############] 65%
 | 03-hero-section | 2/2 | 4min | 2min |
 | 04-animation-infrastructure | 1/1 | 3min | 3min |
 | 05-3d-infrastructure | 3/3 | 6min | 2min |
-| 06-3d-card | 1/3 | 2min | 2min |
+| 06-3d-card | 2/3 | 5min | 2.5min |
 
 ## Accumulated Context
 
@@ -71,6 +71,9 @@ Progress: [#############] 65%
 | 06-02 | beta-45 offset | Offset for natural phone holding angle |
 | 06-02 | 0.2 smoothing time | Responsive yet smooth feel for dampE |
 | 06-02 | No useState in useFrame | Direct ref mutation for 60fps performance |
+| 06-01 | RoundedBox 3.375x2.125x0.05 | Credit card ISO proportions |
+| 06-01 | Iridescence 0.7 | Subtle holographic effect, not gaudy |
+| 06-01 | Base color #0f0f23 | Dark premium appearance |
 
 ### Pending Todos
 
@@ -83,5 +86,5 @@ Progress: [#############] 65%
 ## Session Continuity
 
 Last session: 2026-02-02
-Stopped at: Completed 06-02-PLAN.md (Interaction Hooks)
+Stopped at: Completed 06-01-PLAN.md (Card Model & Materials)
 Resume file: .planning/phases/06-3d-card/06-03-PLAN.md
