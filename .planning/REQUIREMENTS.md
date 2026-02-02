@@ -14,9 +14,9 @@
 
 ### Hero
 
-- [ ] **HERO-01**: 3D interactive card (React Three Fiber) with cursor-reactive tilt and rotation
-- [ ] **HERO-02**: Metallic card materials with holographic shimmer effect
-- [ ] **HERO-03**: Mobile: gyroscope-reactive card tilt
+- [x] **HERO-01**: 3D interactive card (React Three Fiber) with cursor-reactive tilt and rotation
+- [x] **HERO-02**: Metallic card materials with holographic shimmer effect
+- [x] **HERO-03**: Mobile: gyroscope-reactive card tilt
 - [x] **HERO-04**: Headline + subhead with staggered fade-in animation
 - [x] **HERO-05**: Inline email capture (single field, no modal) with micro-validation
 - [x] **HERO-06**: Trust microcopy line ("Bank-level security | No fees for schools | Rewards from day one")
@@ -117,9 +117,9 @@
 | NAV-02 | Phase 2 | Complete |
 | NAV-03 | Phase 2 | Complete |
 | NAV-04 | Phase 2 | Complete |
-| HERO-01 | Phase 6 | Pending |
-| HERO-02 | Phase 6 | Pending |
-| HERO-03 | Phase 6 | Pending |
+| HERO-01 | Phase 6 | Complete |
+| HERO-02 | Phase 6 | Complete |
+| HERO-03 | Phase 6 | Complete |
 | HERO-04 | Phase 3 | Complete |
 | HERO-05 | Phase 3 | Complete |
 | HERO-06 | Phase 3 | Complete |
