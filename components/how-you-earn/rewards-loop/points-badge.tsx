@@ -38,7 +38,7 @@ export function PointsBadge({
     >
       {/* Badge container */}
       <div
-        className="inline-block rounded-2xl p-6 md:p-8 shadow-xl"
+        className="inline-block rounded-2xl p-8 md:p-10 shadow-xl"
         style={{
           background: `linear-gradient(to bottom right, color-mix(in oklch, ${ISO_COLORS.primary} 15%, white), color-mix(in oklch, ${ISO_COLORS.amber} 15%, white))`,
           borderWidth: 1,
