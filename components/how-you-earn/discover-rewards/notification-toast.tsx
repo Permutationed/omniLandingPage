@@ -1,14 +1,16 @@
 'use client'
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
+import { MapPin, LucideIcon } from 'lucide-react'
+import { ISO_COLORS } from '../shared/constants'
 
 interface NotificationToastProps {
   /** Merchant name */
   merchantName: string
   /** Reward multiplier */
   multiplier: number
-  /** Merchant icon */
-  icon: string
+  /** Merchant icon component */
+  Icon: LucideIcon
   /** Scroll progress */
   progress?: MotionValue<number>
   /** Progress range when toast appears */
@@ -22,7 +24,7 @@ interface NotificationToastProps {
 export function NotificationToast({
   merchantName,
   multiplier,
-  icon,
+  Icon,
   progress,
   appearRange = [0.75, 0.85],
   className = '',
@@ -50,8 +52,8 @@ export function NotificationToast({
 
         <div className="p-4 flex items-center gap-4">
           {/* Location icon */}
-          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-lg flex-shrink-0">
-            📍
+          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <MapPin className="w-5 h-5 text-primary" strokeWidth={2} />
           </div>
 
           {/* Content */}
@@ -65,8 +67,8 @@ export function NotificationToast({
           </div>
 
           {/* Merchant icon */}
-          <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-xl flex-shrink-0">
-            {icon}
+          <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+            <Icon className="w-5 h-5 text-foreground" strokeWidth={2} />
           </div>
         </div>
       </div>

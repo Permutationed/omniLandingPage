@@ -2,6 +2,7 @@
 
 import { useRef } from 'react'
 import { useScroll, motion, useTransform } from 'framer-motion'
+import { MapPin, Coffee } from 'lucide-react'
 import { IsometricMap } from './isometric-map'
 import { CampusBuilding } from './campus-building'
 import { MerchantPin, MERCHANTS } from './merchant-pin'
@@ -88,7 +89,7 @@ export function DiscoverRewards() {
             <NotificationToast
               merchantName="Campus Coffee"
               multiplier={5}
-              icon="☕"
+              Icon={Coffee}
               progress={animationProgress}
               appearRange={[0.75, 0.85]}
             />
@@ -108,11 +109,13 @@ export function DiscoverRewards() {
             <div className="text-xs text-muted-foreground">Merchants</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-green-600">3x-10x</div>
+            <div className="text-2xl font-bold text-accent">3x-10x</div>
             <div className="text-xs text-muted-foreground">Points</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-amber-600">📍</div>
+            <div className="flex justify-center">
+              <MapPin className="w-6 h-6 text-primary" strokeWidth={2.5} />
+            </div>
             <div className="text-xs text-muted-foreground">Near You</div>
           </div>
         </motion.div>

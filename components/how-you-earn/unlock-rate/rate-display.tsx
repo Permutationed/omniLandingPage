@@ -1,6 +1,7 @@
 'use client'
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
+import { EXAMPLE_DATA, ISO_COLORS } from '../shared/constants'
 
 interface RateDisplayProps {
   progress?: MotionValue<number>
@@ -83,7 +84,7 @@ export function RateDisplay({
             color: useTransform(
               rateIndex,
               [0, 1],
-              ['oklch(0.65 0.25 260)', 'oklch(0.70 0.20 145)']
+              [ISO_COLORS.primary, ISO_COLORS.success]
             ),
           }}
         >
@@ -122,7 +123,7 @@ export function RateDisplay({
             display: 'inline-block',
           }}
         >
-          Earn <strong>$125</strong> on $25,000 tuition
+          Earn <strong>${(EXAMPLE_DATA.tuition * 0.005).toLocaleString()}</strong> on ${EXAMPLE_DATA.tuition.toLocaleString()} tuition
         </motion.span>
         <motion.span
           style={{
@@ -131,7 +132,7 @@ export function RateDisplay({
             marginLeft: '-100%',
           }}
         >
-          Earn <strong className="text-green-600">$250</strong> on $25,000 tuition
+          Earn <strong style={{ color: ISO_COLORS.success }}>${(EXAMPLE_DATA.tuition * EXAMPLE_DATA.rewardRate).toLocaleString()}</strong> on ${EXAMPLE_DATA.tuition.toLocaleString()} tuition
         </motion.span>
       </motion.div>
     </motion.div>

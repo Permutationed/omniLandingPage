@@ -1,7 +1,9 @@
 'use client'
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
+import { GraduationCap, CreditCard, Store } from 'lucide-react'
 import { Odometer } from '../shared/odometer'
+import { ISO_COLORS } from '../shared/constants'
 
 interface SourceBreakdownProps {
   progress?: MotionValue<number>
@@ -14,23 +16,23 @@ const SOURCES = [
   {
     id: 'tuition',
     label: 'Tuition',
-    icon: '🎓',
+    Icon: GraduationCap,
     points: 250,
-    color: 'oklch(0.65 0.25 260)',
+    color: ISO_COLORS.primary,
   },
   {
     id: 'everyday',
     label: 'Everyday',
-    icon: '💳',
+    Icon: CreditCard,
     points: 8200,
-    color: 'oklch(0.65 0.20 240)',
+    color: ISO_COLORS.blue,
   },
   {
     id: 'merchants',
     label: 'Merchants',
-    icon: '🏪',
+    Icon: Store,
     points: 4000,
-    color: 'oklch(0.75 0.15 85)',
+    color: ISO_COLORS.amber,
   },
 ] as const
 
@@ -67,10 +69,10 @@ export function SourceBreakdown({
           >
             {/* Icon */}
             <div
-              className="w-12 h-12 rounded-full flex items-center justify-center text-2xl mb-2 shadow-md"
-              style={{ backgroundColor: `${source.color}20` }}
+              className="w-12 h-12 rounded-full flex items-center justify-center mb-2 shadow-md"
+              style={{ backgroundColor: `color-mix(in oklch, ${source.color} 15%, transparent)` }}
             >
-              {source.icon}
+              <source.Icon className="w-6 h-6" style={{ color: source.color }} strokeWidth={2} />
             </div>
 
             {/* Points */}

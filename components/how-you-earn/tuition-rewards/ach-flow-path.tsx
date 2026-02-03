@@ -1,6 +1,7 @@
 'use client'
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
+import { ISO_COLORS } from '../shared/constants'
 
 interface AchFlowPathProps {
   progress?: MotionValue<number>
@@ -48,16 +49,16 @@ export function AchFlowPath({
 
         {/* Gradient for the line */}
         <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="oklch(0.65 0.25 260)" />
-          <stop offset="50%" stopColor="oklch(0.70 0.20 240)" />
-          <stop offset="100%" stopColor="oklch(0.70 0.20 145)" />
+          <stop offset="0%" stopColor={ISO_COLORS.primary} />
+          <stop offset="50%" stopColor={ISO_COLORS.blue} />
+          <stop offset="100%" stopColor={ISO_COLORS.success} />
         </linearGradient>
       </defs>
 
       {/* Background track (subtle) */}
       <path
         d="M 20 30 C 80 30, 100 30, 150 30 C 200 30, 220 30, 280 30"
-        stroke="oklch(0.90 0.02 260)"
+        stroke={ISO_COLORS.surfaceRight}
         strokeWidth="3"
         strokeDasharray="8 4"
         fill="none"
@@ -97,7 +98,7 @@ export function AchFlowPath({
           width="40"
           height="18"
           rx="4"
-          fill="oklch(0.65 0.25 260)"
+          fill={ISO_COLORS.primary}
         />
         <text
           x="150"
@@ -114,7 +115,7 @@ export function AchFlowPath({
       {/* Arrow head at end */}
       <motion.path
         d="M 275 25 L 285 30 L 275 35"
-        stroke="oklch(0.70 0.20 145)"
+        stroke={ISO_COLORS.success}
         strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -133,7 +134,7 @@ export function AchFlowPath({
         <motion.text
           key={i}
           fontSize="12"
-          fill="oklch(0.65 0.25 260)"
+          fill={ISO_COLORS.primary}
           fontWeight="bold"
           style={{
             opacity: useTransform(

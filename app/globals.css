@@ -3,55 +3,55 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Light mode only - fintech trust aesthetic */
+/* Light mode only - Premium fintech aesthetic */
 :root {
   /* Backgrounds & Surfaces */
-  --background: oklch(0.995 0 0);
-  --foreground: oklch(0.145 0.01 260);
-  --card: oklch(0.995 0 0);
-  --card-foreground: oklch(0.145 0.01 260);
-  --popover: oklch(0.995 0 0);
-  --popover-foreground: oklch(0.145 0.01 260);
+  --background: oklch(0.995 0.005 270);
+  --foreground: oklch(0.18 0.02 270);
+  --card: oklch(0.995 0.005 270);
+  --card-foreground: oklch(0.18 0.02 270);
+  --popover: oklch(0.995 0.005 270);
+  --popover-foreground: oklch(0.18 0.02 270);
 
-  /* Primary - Brand color (premium purple/blue) */
-  --primary: oklch(0.55 0.18 260);
+  /* Primary - Deep indigo with confidence */
+  --primary: oklch(0.50 0.22 270);
   --primary-foreground: oklch(0.99 0 0);
 
-  /* Secondary - Subtle backgrounds */
-  --secondary: oklch(0.97 0.005 260);
-  --secondary-foreground: oklch(0.25 0.01 260);
+  /* Secondary - Subtle warmth */
+  --secondary: oklch(0.96 0.01 270);
+  --secondary-foreground: oklch(0.30 0.02 270);
 
-  /* Muted - Disabled/subtle text */
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.55 0 0);
+  /* Muted - Refined grays */
+  --muted: oklch(0.96 0.008 270);
+  --muted-foreground: oklch(0.50 0.02 270);
 
-  /* Accent - Hover states */
-  --accent: oklch(0.97 0.01 260);
-  --accent-foreground: oklch(0.25 0.01 260);
+  /* Accent - Emerald success */
+  --accent: oklch(0.65 0.22 160);
+  --accent-foreground: oklch(0.99 0 0);
 
-  /* Destructive - Errors */
-  --destructive: oklch(0.55 0.22 25);
+  /* Destructive - Vivid red */
+  --destructive: oklch(0.55 0.25 25);
   --destructive-foreground: oklch(0.99 0 0);
 
   /* Borders & Inputs */
-  --border: oklch(0.92 0.005 260);
-  --input: oklch(0.92 0.005 260);
-  --ring: oklch(0.55 0.18 260);
+  --border: oklch(0.90 0.01 270);
+  --input: oklch(0.92 0.01 270);
+  --ring: oklch(0.50 0.22 270);
 
   /* Radii */
   --radius: 0.625rem;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 oklch(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px oklch(0 0 0 / 0.1), 0 2px 4px -2px oklch(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px oklch(0 0 0 / 0.1), 0 4px 6px -4px oklch(0 0 0 / 0.1);
+  /* Shadows - Warmer, more depth */
+  --shadow-sm: 0 1px 2px 0 oklch(0.20 0.02 270 / 0.08);
+  --shadow-md: 0 4px 6px -1px oklch(0.20 0.02 270 / 0.12), 0 2px 4px -2px oklch(0.20 0.02 270 / 0.08);
+  --shadow-lg: 0 10px 15px -3px oklch(0.20 0.02 270 / 0.15), 0 4px 6px -4px oklch(0.20 0.02 270 / 0.10);
 
-  /* Chart colors (for later phases) */
-  --chart-1: oklch(0.55 0.18 260);
-  --chart-2: oklch(0.65 0.15 180);
-  --chart-3: oklch(0.60 0.12 320);
-  --chart-4: oklch(0.70 0.15 80);
-  --chart-5: oklch(0.55 0.20 20);
+  /* Chart colors - Vibrant and distinct */
+  --chart-1: oklch(0.50 0.22 270);  /* Primary indigo */
+  --chart-2: oklch(0.65 0.22 160);  /* Emerald */
+  --chart-3: oklch(0.60 0.20 320);  /* Magenta */
+  --chart-4: oklch(0.78 0.18 75);   /* Amber */
+  --chart-5: oklch(0.55 0.25 25);   /* Coral */
 
   /* Sidebar colors (for shadcn components) */
   --sidebar: oklch(0.985 0 0);
@@ -117,20 +117,21 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* Hero gradient mesh - slow drift animation */
+/* Hero gradient mesh - sophisticated drift animation */
 .hero-gradient {
   position: absolute;
   inset: 0;
   z-index: -1;
   background: linear-gradient(
     -45deg,
-    oklch(0.95 0.03 280),
-    oklch(0.97 0.02 240),
-    oklch(0.98 0.015 260),
-    oklch(0.96 0.025 220)
+    oklch(0.94 0.04 280),
+    oklch(0.96 0.03 250),
+    oklch(0.98 0.02 270),
+    oklch(0.95 0.035 200),
+    oklch(0.97 0.025 290)
   );
-  background-size: 400% 400%;
-  animation: gradient-drift 30s ease infinite;
+  background-size: 500% 500%;
+  animation: gradient-drift 25s ease infinite;
 }
 
 @keyframes gradient-drift {

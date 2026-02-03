@@ -1,6 +1,7 @@
 'use client'
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
+import { ISO_COLORS } from '../shared/constants'
 
 interface FlowLinesProps {
   progress?: MotionValue<number>
@@ -33,8 +34,8 @@ export function FlowLines({
       <defs>
         {/* Gradient for flow lines */}
         <linearGradient id="flowGradientLoop" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="oklch(0.65 0.25 260)" />
-          <stop offset="100%" stopColor="oklch(0.70 0.20 145)" />
+          <stop offset="0%" stopColor={ISO_COLORS.primary} />
+          <stop offset="100%" stopColor={ISO_COLORS.success} />
         </linearGradient>
       </defs>
 
@@ -93,7 +94,7 @@ export function FlowLines({
       <motion.path
         d="M 145 90 L 150 100 L 155 90"
         fill="none"
-        stroke="oklch(0.70 0.20 145)"
+        stroke={ISO_COLORS.success}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

@@ -1,6 +1,8 @@
 'use client'
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
+import { Lock, Check } from 'lucide-react'
+import { EXAMPLE_DATA } from '../shared/constants'
 
 interface ThresholdBadgeProps {
   /** The rate this threshold unlocks (e.g., 0.5, 1.0) */
@@ -70,26 +72,26 @@ export function ThresholdBadge({
           style={{ opacity }}
         >
           {/* Lock icon (shown when locked) */}
-          <motion.span
-            className="absolute -top-2 -right-2 text-sm"
+          <motion.div
+            className="absolute -top-2 -right-2 w-5 h-5 bg-muted rounded-full flex items-center justify-center shadow-sm"
             style={{
               opacity: useTransform(unlocked, [0, 0.5], [1, 0]),
               scale: useTransform(unlocked, [0, 0.5], [1, 0]),
             }}
           >
-            🔒
-          </motion.span>
+            <Lock className="w-3 h-3 text-muted-foreground" strokeWidth={2.5} />
+          </motion.div>
 
           {/* Unlock icon (shown when unlocked) */}
-          <motion.span
-            className="absolute -top-2 -right-2 text-sm"
+          <motion.div
+            className="absolute -top-2 -right-2 w-5 h-5 bg-accent rounded-full flex items-center justify-center shadow-sm"
             style={{
               opacity: useTransform(unlocked, [0.5, 1], [0, 1]),
               scale: useTransform(unlocked, [0.5, 1], [0, 1]),
             }}
           >
-            ✓
-          </motion.span>
+            <Check className="w-3 h-3 text-white" strokeWidth={3} />
+          </motion.div>
 
           {/* Rate value */}
           <span>{rate}%</span>
@@ -103,7 +105,7 @@ export function ThresholdBadge({
           opacity: useTransform(unlocked, [0.5, 1], [0.3, 1]),
         }}
       >
-        ${(25000 * (rate / 100)).toLocaleString()} back
+        ${(EXAMPLE_DATA.tuition * (rate / 100)).toLocaleString()} back
       </motion.span>
     </div>
   )

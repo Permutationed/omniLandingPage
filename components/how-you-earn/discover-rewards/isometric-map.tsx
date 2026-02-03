@@ -2,6 +2,7 @@
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
 import { ReactNode } from 'react'
+import { ISO_COLORS } from '../shared/constants'
 
 interface IsometricMapProps {
   progress?: MotionValue<number>
@@ -38,7 +39,12 @@ export function IsometricMap({
       style={{ opacity, scale }}
     >
       {/* Map background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-100/50 to-green-200/30 rounded-2xl overflow-hidden border border-border shadow-lg">
+      <div
+        className="absolute inset-0 rounded-2xl overflow-hidden border border-border shadow-lg"
+        style={{
+          background: `linear-gradient(to bottom right, color-mix(in oklch, ${ISO_COLORS.success} 8%, white), color-mix(in oklch, ${ISO_COLORS.success} 15%, white))`
+        }}
+      >
         {/* Grid pattern (isometric) */}
         <svg
           className="absolute inset-0 w-full h-full"
@@ -59,7 +65,7 @@ export function IsometricMap({
                 y1="20"
                 x2="40"
                 y2="40"
-                stroke="oklch(0.70 0.05 145 / 0.3)"
+                stroke={`color-mix(in oklch, ${ISO_COLORS.success} 30%, transparent)`}
                 strokeWidth="1"
               />
               {/* Vertical-ish lines (going left-down) */}
@@ -68,7 +74,7 @@ export function IsometricMap({
                 y1="40"
                 x2="40"
                 y2="20"
-                stroke="oklch(0.70 0.05 145 / 0.3)"
+                stroke={`color-mix(in oklch, ${ISO_COLORS.success} 30%, transparent)`}
                 strokeWidth="1"
               />
             </pattern>
@@ -84,7 +90,7 @@ export function IsometricMap({
             y1="200"
             x2="350"
             y2="200"
-            stroke="oklch(0.85 0.02 260)"
+            stroke={ISO_COLORS.surfaceRight}
             strokeWidth="20"
             strokeLinecap="round"
           />
@@ -95,7 +101,7 @@ export function IsometricMap({
             y1="50"
             x2="200"
             y2="350"
-            stroke="oklch(0.85 0.02 260)"
+            stroke={ISO_COLORS.surfaceRight}
             strokeWidth="20"
             strokeLinecap="round"
           />
@@ -106,7 +112,7 @@ export function IsometricMap({
             y1="200"
             x2="340"
             y2="200"
-            stroke="oklch(0.95 0.01 60)"
+            stroke={ISO_COLORS.amber}
             strokeWidth="2"
             strokeDasharray="10 10"
           />
@@ -115,7 +121,7 @@ export function IsometricMap({
             y1="60"
             x2="200"
             y2="340"
-            stroke="oklch(0.95 0.01 60)"
+            stroke={ISO_COLORS.amber}
             strokeWidth="2"
             strokeDasharray="10 10"
           />
@@ -126,7 +132,8 @@ export function IsometricMap({
           <div className="relative">
             {/* Pulse rings */}
             <motion.div
-              className="absolute w-8 h-8 rounded-full bg-blue-500/20 -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+              className="absolute w-8 h-8 rounded-full -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+              style={{ backgroundColor: `color-mix(in oklch, ${ISO_COLORS.primary} 25%, transparent)` }}
               animate={{
                 scale: [1, 2, 1],
                 opacity: [0.5, 0, 0.5],
@@ -138,7 +145,8 @@ export function IsometricMap({
               }}
             />
             <motion.div
-              className="absolute w-8 h-8 rounded-full bg-blue-500/20 -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+              className="absolute w-8 h-8 rounded-full -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+              style={{ backgroundColor: `color-mix(in oklch, ${ISO_COLORS.primary} 25%, transparent)` }}
               animate={{
                 scale: [1, 2, 1],
                 opacity: [0.5, 0, 0.5],
@@ -151,7 +159,10 @@ export function IsometricMap({
               }}
             />
             {/* User dot */}
-            <div className="w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-lg" />
+            <div
+              className="w-4 h-4 rounded-full border-2 border-white shadow-lg"
+              style={{ backgroundColor: ISO_COLORS.primary }}
+            />
           </div>
         </div>
 

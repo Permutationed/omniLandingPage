@@ -1,6 +1,7 @@
 'use client'
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
+import { Check } from 'lucide-react'
 import { DollarOdometer } from '../shared/odometer'
 import { EXAMPLE_DATA } from '../shared/constants'
 
@@ -108,7 +109,7 @@ export function TuitionCard({
 
           {/* Savings badge */}
           <motion.div
-            className="inline-flex items-center gap-2 mt-3 px-3 py-1.5 bg-green-100 text-green-700 rounded-full"
+            className="inline-flex items-center gap-2 mt-3 px-3 py-1.5 bg-accent/15 text-accent rounded-full"
             style={{
               opacity: useTransform(
                 progress ?? { get: () => 1 } as MotionValue<number>,
@@ -122,7 +123,7 @@ export function TuitionCard({
               ),
             }}
           >
-            <span className="text-lg">✓</span>
+            <Check className="w-5 h-5" strokeWidth={3} />
             <span className="font-bold">${reduction.toFixed(2)} OFF</span>
           </motion.div>
         </motion.div>

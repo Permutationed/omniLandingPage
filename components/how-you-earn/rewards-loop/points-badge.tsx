@@ -2,7 +2,7 @@
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
 import { PointsOdometer } from '../shared/odometer'
-import { EXAMPLE_DATA } from '../shared/constants'
+import { EXAMPLE_DATA, ISO_COLORS } from '../shared/constants'
 
 interface PointsBadgeProps {
   progress?: MotionValue<number>
@@ -37,7 +37,14 @@ export function PointsBadge({
       style={{ opacity, scale }}
     >
       {/* Badge container */}
-      <div className="inline-block bg-gradient-to-br from-primary/20 to-amber-500/20 rounded-2xl p-6 md:p-8 border border-primary/30 shadow-xl">
+      <div
+        className="inline-block rounded-2xl p-6 md:p-8 shadow-xl"
+        style={{
+          background: `linear-gradient(to bottom right, color-mix(in oklch, ${ISO_COLORS.primary} 15%, white), color-mix(in oklch, ${ISO_COLORS.amber} 15%, white))`,
+          borderWidth: 1,
+          borderColor: `color-mix(in oklch, ${ISO_COLORS.primary} 30%, transparent)`,
+        }}
+      >
         <div className="text-sm text-muted-foreground mb-2 uppercase tracking-wide">
           Your Points
         </div>

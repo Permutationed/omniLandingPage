@@ -1,22 +1,32 @@
-// Isometric color palette (extending brand tokens)
+// Isometric color palette - Premium fintech aesthetic
 export const ISO_COLORS = {
-  // Primary (from brand)
-  primary: 'oklch(0.65 0.25 260)',
-  primaryLight: 'oklch(0.80 0.15 260)',
-  primaryDark: 'oklch(0.45 0.20 260)',
+  // Primary - Deep indigo with presence
+  primary: 'oklch(0.50 0.22 270)',
+  primaryLight: 'oklch(0.70 0.18 270)',
+  primaryDark: 'oklch(0.35 0.20 270)',
 
-  // Surfaces for isometric faces
-  surfaceTop: 'oklch(0.98 0.01 260)',
-  surfaceLeft: 'oklch(0.90 0.02 260)',
-  surfaceRight: 'oklch(0.85 0.02 260)',
+  // Surfaces for isometric faces - Warm neutrals with depth
+  surfaceTop: 'oklch(0.97 0.01 250)',
+  surfaceLeft: 'oklch(0.88 0.02 250)',
+  surfaceRight: 'oklch(0.82 0.03 250)',
+  surfaceFront: 'oklch(0.92 0.015 250)',
 
-  // Accents
-  success: 'oklch(0.70 0.20 145)',
-  amber: 'oklch(0.75 0.15 85)',
-  blue: 'oklch(0.65 0.20 240)',
+  // Accents - Vibrant and distinct
+  success: 'oklch(0.65 0.22 160)',      // Emerald green
+  successLight: 'oklch(0.85 0.15 160)',
+  amber: 'oklch(0.78 0.18 75)',          // Warm amber
+  amberDark: 'oklch(0.65 0.20 65)',
+  blue: 'oklch(0.55 0.20 250)',          // Deep blue
 
-  // Shadow
-  shadow: 'oklch(0.20 0.05 260 / 0.15)',
+  // Merchant colors - Distinct and recognizable
+  coffee: 'oklch(0.45 0.12 50)',         // Rich brown
+  books: 'oklch(0.50 0.22 270)',         // Primary indigo
+  food: 'oklch(0.60 0.22 30)',           // Warm coral
+  retail: 'oklch(0.55 0.18 230)',        // Steel blue
+
+  // Shadow - Deeper for better depth
+  shadow: 'oklch(0.15 0.03 270 / 0.20)',
+  shadowLight: 'oklch(0.20 0.02 270 / 0.10)',
 } as const
 
 // Animation timing

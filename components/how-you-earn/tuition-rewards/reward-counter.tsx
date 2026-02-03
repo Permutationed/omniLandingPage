@@ -2,7 +2,7 @@
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
 import { DollarOdometer } from '../shared/odometer'
-import { EXAMPLE_DATA } from '../shared/constants'
+import { EXAMPLE_DATA, ISO_COLORS } from '../shared/constants'
 
 interface RewardCounterProps {
   progress?: MotionValue<number>
@@ -43,12 +43,20 @@ export function RewardCounter({
       style={{ opacity, scale, y }}
     >
       {/* Main counter */}
-      <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-6 md:p-8 border border-primary/20 shadow-lg shadow-primary/10">
+      <div
+        className="rounded-2xl p-6 md:p-8 shadow-lg"
+        style={{
+          background: `linear-gradient(to bottom right, color-mix(in oklch, ${ISO_COLORS.success} 10%, white), color-mix(in oklch, ${ISO_COLORS.success} 5%, white))`,
+          borderWidth: 1,
+          borderColor: `color-mix(in oklch, ${ISO_COLORS.success} 25%, transparent)`,
+          boxShadow: `0 4px 15px -3px color-mix(in oklch, ${ISO_COLORS.success} 15%, transparent)`,
+        }}
+      >
         <div className="text-sm text-muted-foreground mb-2 uppercase tracking-wide">
           Rewards Earned
         </div>
 
-        <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary">
+        <div className="text-4xl md:text-5xl lg:text-6xl font-bold" style={{ color: ISO_COLORS.success }}>
           +<DollarOdometer
             value={EXAMPLE_DATA.rewardAmount}
             progress={progress}

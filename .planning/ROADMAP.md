@@ -166,6 +166,47 @@ Plans (v2 redesign):
 
 ---
 
+### Phase 7.1: Professional Illustrations (SUPERSEDED by 7.2)
+
+**Status:** SUPERSEDED - Storyset illustrations were too childish/cartoon-like for fintech aesthetic. Phase 7.2 addresses this with comprehensive design overhaul.
+
+---
+
+### Phase 7.2: Design System Overhaul (INSERTED)
+
+**Goal:** Achieve professional fintech aesthetic comparable to Bilt, Ramp, Mercury by fixing illustrations, typography, colors, and component styling
+**Depends on:** Phase 7
+**Requirements:** Visual polish for entire site
+
+**Success Criteria:**
+1. Buildings use clean geometric isometric shapes (not cartoon Storyset illustrations)
+2. Headlines use distinctive display font (Geist) while body remains Inter
+3. Primary color palette is more sophisticated (reduced saturation)
+4. Hero gradient is subtle, not playful
+5. Component styling has proper depth (layered shadows, refined borders)
+6. Spacing is generous, content breathes
+7. Overall aesthetic matches premium fintech sites
+
+**Context:**
+- Storyset illustrations contained cartoon characters, colorful plants - completely wrong for fintech
+- Inter-only typography is generic ("template" feel)
+- Primary purple too saturated compared to competitors
+- Components lack sophistication of Mercury, Bilt, Stripe
+
+**Research:**
+- Bilt: Dark mode, GT America font, soft pastels
+- Ramp: Dark navy, bold hierarchy, enterprise feel
+- Mercury: Arcadia Display font, blue primary, frosted glass
+- Stripe: Whitespace, clean hierarchy, sophisticated
+
+**Plans:** 4 plans in 2 waves
+- [ ] 07.2-01-PLAN.md — Remove Storyset illustrations, restore refined isometric shapes (Wave 1)
+- [ ] 07.2-02-PLAN.md — Add Geist display font for headlines (Wave 1)
+- [ ] 07.2-03-PLAN.md — Reduce color saturation, simplify gradient (Wave 1)
+- [ ] 07.2-04-PLAN.md — Component styling & spacing refinement (Wave 2)
+
+---
+
 ### Phase 8: Content Sections
 
 **Goal:** User can explore features, audience tabs, and discovery preview
@@ -230,6 +271,8 @@ Plans (v2 redesign):
 | 5 - 3D Infrastructure | Complete | 2026-01-31 |
 | 6 - 3D Card | Complete | 2026-02-02 |
 | 7 - How You Earn | Complete | 2026-02-03 |
+| 7.1 - Professional Illustrations | SUPERSEDED | - |
+| 7.2 - Design System Overhaul | Planned | - |
 | 8 - Content Sections | Not started | - |
 | 9 - Interactive Features | Not started | - |
 | 10 - Final CTA & Polish | Not started | - |

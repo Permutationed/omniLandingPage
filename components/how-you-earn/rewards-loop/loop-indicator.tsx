@@ -1,6 +1,7 @@
 'use client'
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
+import { ISO_COLORS } from '../shared/constants'
 
 interface LoopIndicatorProps {
   progress?: MotionValue<number>
@@ -56,7 +57,7 @@ export function LoopIndicator({
             cy="30"
             r="24"
             fill="none"
-            stroke="oklch(0.65 0.25 260 / 0.3)"
+            stroke={`color-mix(in oklch, ${ISO_COLORS.primary} 30%, transparent)`}
             strokeWidth="4"
           />
 
@@ -66,7 +67,7 @@ export function LoopIndicator({
             cy="30"
             r="24"
             fill="none"
-            stroke="oklch(0.65 0.25 260)"
+            stroke={ISO_COLORS.primary}
             strokeWidth="4"
             strokeLinecap="round"
             strokeDasharray="120"
@@ -84,7 +85,7 @@ export function LoopIndicator({
           <motion.path
             d="M 50 15 L 56 30 L 50 30"
             fill="none"
-            stroke="oklch(0.65 0.25 260)"
+            stroke={ISO_COLORS.primary}
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"

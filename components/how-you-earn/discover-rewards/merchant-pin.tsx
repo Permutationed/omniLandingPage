@@ -1,14 +1,16 @@
 'use client'
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
+import { Coffee, BookOpen, Pizza, UtensilsCrossed, ShoppingBag, LucideIcon } from 'lucide-react'
+import { ISO_COLORS } from '../shared/constants'
 
 interface MerchantPinProps {
   /** Merchant name */
   name: string
   /** Reward multiplier (e.g., 3, 5, 10) */
   multiplier: number
-  /** Icon/emoji for the merchant */
-  icon: string
+  /** Icon component for the merchant */
+  Icon: LucideIcon
   /** Pin color */
   color: string
   /** Position on the map (percentage) */
@@ -26,7 +28,7 @@ interface MerchantPinProps {
 export function MerchantPin({
   name,
   multiplier,
-  icon,
+  Icon,
   color,
   position,
   progress,
@@ -80,10 +82,10 @@ export function MerchantPin({
 
         {/* Icon circle */}
         <div
-          className="w-10 h-10 rounded-full flex items-center justify-center text-lg shadow-lg border-2 border-white"
+          className="w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-2 border-white"
           style={{ backgroundColor: color }}
         >
-          {icon}
+          <Icon className="w-5 h-5 text-white" strokeWidth={2.5} />
         </div>
 
         {/* Pin point */}
@@ -121,41 +123,41 @@ export const MERCHANTS = [
   {
     id: 'coffee',
     name: 'Campus Coffee',
-    icon: '☕',
+    Icon: Coffee,
     multiplier: 5,
-    color: '#8B4513',
+    color: ISO_COLORS.coffee,
     position: { x: 25, y: 35 },
   },
   {
     id: 'books',
     name: 'University Books',
-    icon: '📚',
+    Icon: BookOpen,
     multiplier: 10,
-    color: 'oklch(0.65 0.25 260)',
+    color: ISO_COLORS.books,
     position: { x: 70, y: 30 },
   },
   {
     id: 'pizza',
     name: 'Campus Pizza',
-    icon: '🍕',
+    Icon: Pizza,
     multiplier: 3,
-    color: '#E55B3C',
+    color: ISO_COLORS.food,
     position: { x: 30, y: 65 },
   },
   {
     id: 'burger',
     name: 'Student Grill',
-    icon: '🍔',
+    Icon: UtensilsCrossed,
     multiplier: 5,
-    color: '#D4A574',
+    color: ISO_COLORS.amberDark,
     position: { x: 75, y: 60 },
   },
   {
     id: 'store',
     name: 'Quick Mart',
-    icon: '🏪',
+    Icon: ShoppingBag,
     multiplier: 7,
-    color: '#4A90D9',
+    color: ISO_COLORS.retail,
     position: { x: 55, y: 75 },
   },
-] as const
+]
