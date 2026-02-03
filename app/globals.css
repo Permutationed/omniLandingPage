@@ -39,7 +39,7 @@
   --ring: oklch(0.45 0.16 270);
 
   /* Radii */
-  --radius: 0.625rem;
+  --radius: 0.5rem;
 
   /* Shadows - Warmer, more depth */
   --shadow-sm: 0 1px 2px 0 oklch(0.20 0.02 270 / 0.08);
