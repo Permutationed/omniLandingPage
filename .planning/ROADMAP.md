@@ -158,11 +158,11 @@ Plans (deprecated - to be deleted):
 - [x] ~~07-04-PLAN.md~~ — (deprecated) Path particles
 
 Plans (v2 redesign):
-- [ ] 07-05-PLAN.md — Cleanup old implementation and create new section infrastructure
-- [ ] 07-06-PLAN.md — "Earn on Tuition" section with isometric buildings and ACH flow
-- [ ] 07-07-PLAN.md — "Unlock Better Rates" section with progress gauge and threshold animations
-- [ ] 07-08-PLAN.md — "Discover Local Rewards" section with isometric map and merchant pins
-- [ ] 07-09-PLAN.md — "Rewards Loop" section with points flow and tuition reduction
+- [x] 07-05-PLAN.md — Cleanup old implementation and create new section infrastructure
+- [x] 07-06-PLAN.md — "Earn on Tuition" section with isometric buildings and ACH flow
+- [x] 07-07-PLAN.md — "Unlock Better Rates" section with progress gauge and threshold animations
+- [x] 07-08-PLAN.md — "Discover Local Rewards" section with isometric map and merchant pins
+- [x] 07-09-PLAN.md — "Rewards Loop" section with points flow and tuition reduction
 
 ---
 
@@ -229,7 +229,7 @@ Plans (v2 redesign):
 | 4 - Animation Infrastructure | Complete | 2026-01-31 |
 | 5 - 3D Infrastructure | Complete | 2026-01-31 |
 | 6 - 3D Card | Complete | 2026-02-02 |
-| 7 - How You Earn | In Progress (v2 redesign) | - |
+| 7 - How You Earn | Complete | 2026-02-03 |
 | 8 - Content Sections | Not started | - |
 | 9 - Interactive Features | Not started | - |
 | 10 - Final CTA & Polish | Not started | - |
