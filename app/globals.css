@@ -41,10 +41,11 @@
   /* Radii */
   --radius: 0.5rem;
 
-  /* Shadows - Warmer, more depth */
-  --shadow-sm: 0 1px 2px 0 oklch(0.20 0.02 270 / 0.08);
-  --shadow-md: 0 4px 6px -1px oklch(0.20 0.02 270 / 0.12), 0 2px 4px -2px oklch(0.20 0.02 270 / 0.08);
-  --shadow-lg: 0 10px 15px -3px oklch(0.20 0.02 270 / 0.15), 0 4px 6px -4px oklch(0.20 0.02 270 / 0.10);
+  /* Shadows - Multi-layer depth system */
+  --shadow-sm: 0 1px 2px 0 oklch(0.20 0.01 270 / 0.06), 0 1px 3px 0 oklch(0.20 0.01 270 / 0.04);
+  --shadow-md: 0 4px 6px -1px oklch(0.20 0.01 270 / 0.08), 0 2px 4px -2px oklch(0.20 0.01 270 / 0.04);
+  --shadow-lg: 0 10px 25px -5px oklch(0.20 0.01 270 / 0.12), 0 8px 10px -6px oklch(0.20 0.01 270 / 0.06);
+  --shadow-xl: 0 20px 40px -10px oklch(0.20 0.01 270 / 0.15), 0 10px 20px -8px oklch(0.20 0.01 270 / 0.08);
 
   /* Chart colors - Vibrant and distinct */
   --chart-1: oklch(0.45 0.16 270);  /* Primary indigo - refined */
@@ -98,6 +99,7 @@
   --shadow-sm: var(--shadow-sm);
   --shadow-md: var(--shadow-md);
   --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
