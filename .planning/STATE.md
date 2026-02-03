@@ -5,39 +5,39 @@
 See: .planning/PROJECT.md
 
 **Core value:** Visitors immediately understand that Omni unlocks rewards on tuition without costing schools anything - and trust the page enough to join the waitlist.
-**Current focus:** Phase 7 v2 - How You Earn (complete redesign)
+**Current focus:** Phase 7 v2 - How You Earn COMPLETE
 
 ## Current Position
 
 Phase: 7 of 10 (How You Earn v2 Redesign)
-Plan: 4 of 5 new plans complete
-Status: In progress - Discover Rewards section complete
-Last activity: 2026-02-02 - Completed 07-08-PLAN.md (Discover Rewards section)
+Plan: 5 of 5 new plans complete
+Status: Phase 7 v2 COMPLETE
+Last activity: 2026-02-03 - Completed 07-09-PLAN.md (Rewards Loop section)
 
-Progress: [###################] 96% (07-05, 07-06, 07-07, 07-08 complete, 1 section plan remaining)
+Progress: [####################] 100% (07-05, 07-06, 07-07, 07-08, 07-09 complete)
 
 ## Phase 7 Redesign
 
 **Why:** Original implementation didn't reflect actual product model. Omni has THREE earning streams, not one payment flow.
 
 **New Structure (4 full-width sections):**
-1. **Tuition Rewards** — Bank → ACH → School → $250 rewards (isometric)
-2. **Unlock Rate** — Progress gauge, 20%→0.5%, 40%→1.0% thresholds
-3. **Discover Rewards** — Isometric campus map, merchant pins 3x-10x
-4. **Rewards Loop** — Points combine, reduce next tuition, cycle repeats
+1. **Tuition Rewards** — Bank -> ACH -> School -> $250 rewards (isometric) COMPLETE
+2. **Unlock Rate** — Progress gauge, 20%->0.5%, 40%->1.0% thresholds COMPLETE
+3. **Discover Rewards** — Isometric campus map, merchant pins 3x-10x COMPLETE
+4. **Rewards Loop** — Points combine, reduce next tuition, cycle repeats COMPLETE
 
 **Plans:**
-- 07-05: Cleanup old implementation + new infrastructure
-- 07-06: Tuition Rewards section
-- 07-07: Unlock Rate section
-- 07-08: Discover Rewards section
-- 07-09: Rewards Loop section
+- 07-05: Cleanup old implementation + new infrastructure COMPLETE
+- 07-06: Tuition Rewards section COMPLETE
+- 07-07: Unlock Rate section COMPLETE
+- 07-08: Discover Rewards section COMPLETE
+- 07-09: Rewards Loop section COMPLETE
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 17 (v1)
-- Phase 7 v2 plans: 5 planned
+- Total plans completed: 17 (v1) + 5 (v2) = 22
+- Phase 7 v2 plans: 5/5 complete
 
 **By Phase:**
 
@@ -50,7 +50,7 @@ Progress: [###################] 96% (07-05, 07-06, 07-07, 07-08 complete, 1 sect
 | 05-3d-infrastructure | 3/3 | 6min | 2min |
 | 06-3d-card | 3/3 | 8min | 2.7min |
 | 07-how-it-works v1 | 4/4 | 7min | 1.75min |
-| 07-how-you-earn v2 | 4/5 | 20min | 5min |
+| 07-how-you-earn v2 | 5/5 | 27min | 5.4min |
 
 ## Accumulated Context
 
@@ -113,6 +113,10 @@ Progress: [###################] 96% (07-05, 07-06, 07-07, 07-08 complete, 1 sect
 | 07-08 | Percentage-based pin positioning | Responsive to map container size |
 | 07-08 | Staggered pin intervals (0.08) | Sequential appearance, not simultaneous |
 | 07-08 | Toast late appearance (0.75-0.85) | Finishing touch after pins settle |
+| 07-09 | Points badge gradient | from-primary/20 to-amber-500/20 for value accumulation |
+| 07-09 | Source stagger 0.05 | Creates cascade reveal effect |
+| 07-09 | Tuition card perspective | perspective(1000px) rotateY(-5deg) rotateX(5deg) |
+| 07-09 | Loop arc dasharray | 120 offset -> 30 draws 3/4 arc for cycle |
 
 ### Pending Todos
 
@@ -124,6 +128,6 @@ Progress: [###################] 96% (07-05, 07-06, 07-07, 07-08 complete, 1 sect
 
 ## Session Continuity
 
-Last session: 2026-02-02
-Stopped at: Completed 07-08-PLAN.md
-Resume file: None - ready for 07-09 (Rewards Loop - final section)
+Last session: 2026-02-03
+Stopped at: Completed 07-09-PLAN.md (Phase 7 v2 complete)
+Resume file: None - ready for Phase 8 or future work
