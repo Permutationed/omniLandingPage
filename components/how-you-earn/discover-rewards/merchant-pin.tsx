@@ -118,7 +118,7 @@ export function MerchantPin({
   )
 }
 
-// Pre-defined merchant data
+// Pre-defined merchant data - spread out on wider rectangular map
 export const MERCHANTS = [
   {
     id: 'coffee',
@@ -126,7 +126,7 @@ export const MERCHANTS = [
     Icon: Coffee,
     multiplier: 5,
     color: ISO_COLORS.coffee,
-    position: { x: 25, y: 35 },
+    position: { x: 12, y: 30 },
   },
   {
     id: 'books',
@@ -134,7 +134,7 @@ export const MERCHANTS = [
     Icon: BookOpen,
     multiplier: 10,
     color: ISO_COLORS.books,
-    position: { x: 70, y: 30 },
+    position: { x: 85, y: 25 },
   },
   {
     id: 'pizza',
@@ -142,7 +142,7 @@ export const MERCHANTS = [
     Icon: Pizza,
     multiplier: 3,
     color: ISO_COLORS.food,
-    position: { x: 30, y: 65 },
+    position: { x: 18, y: 70 },
   },
   {
     id: 'burger',
@@ -150,7 +150,7 @@ export const MERCHANTS = [
     Icon: UtensilsCrossed,
     multiplier: 5,
     color: ISO_COLORS.amberDark,
-    position: { x: 75, y: 60 },
+    position: { x: 80, y: 65 },
   },
   {
     id: 'store',
@@ -158,6 +158,6 @@ export const MERCHANTS = [
     Icon: ShoppingBag,
     multiplier: 7,
     color: ISO_COLORS.retail,
-    position: { x: 55, y: 75 },
+    position: { x: 50, y: 80 },
   },
 ]

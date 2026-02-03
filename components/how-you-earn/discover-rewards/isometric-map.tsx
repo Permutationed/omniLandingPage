@@ -35,7 +35,7 @@ export function IsometricMap({
 
   return (
     <motion.div
-      className={`relative w-full max-w-lg mx-auto aspect-square ${className}`}
+      className={`relative w-full max-w-2xl mx-auto aspect-[16/10] ${className}`}
       style={{ opacity, scale }}
     >
       {/* Map background */}
@@ -48,7 +48,7 @@ export function IsometricMap({
         {/* Grid pattern (isometric) */}
         <svg
           className="absolute inset-0 w-full h-full"
-          viewBox="0 0 400 400"
+          viewBox="0 0 640 400"
           preserveAspectRatio="xMidYMid slice"
         >
           <defs>
@@ -81,14 +81,14 @@ export function IsometricMap({
           </defs>
 
           {/* Apply grid pattern */}
-          <rect width="400" height="400" fill="url(#isoGrid)" />
+          <rect width="640" height="400" fill="url(#isoGrid)" />
 
           {/* Main "streets" */}
           {/* Horizontal street */}
           <line
             x1="50"
             y1="200"
-            x2="350"
+            x2="590"
             y2="200"
             stroke={ISO_COLORS.surfaceRight}
             strokeWidth="20"
@@ -97,9 +97,9 @@ export function IsometricMap({
 
           {/* Vertical street */}
           <line
-            x1="200"
+            x1="320"
             y1="50"
-            x2="200"
+            x2="320"
             y2="350"
             stroke={ISO_COLORS.surfaceRight}
             strokeWidth="20"
@@ -110,16 +110,16 @@ export function IsometricMap({
           <line
             x1="60"
             y1="200"
-            x2="340"
+            x2="580"
             y2="200"
             stroke={ISO_COLORS.amber}
             strokeWidth="2"
             strokeDasharray="10 10"
           />
           <line
-            x1="200"
+            x1="320"
             y1="60"
-            x2="200"
+            x2="320"
             y2="340"
             stroke={ISO_COLORS.amber}
             strokeWidth="2"

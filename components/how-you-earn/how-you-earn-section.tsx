@@ -15,7 +15,7 @@ function HowYouEarnStatic() {
       <section className="container mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold mb-4">Earn on Every Tuition Payment</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Pay your $25,000 (for example) tuition through Omni. We handle the ACH transfer
+          Pay your (e.g.) $25,000 tuition through Omni. We handle the ACH transfer
           to your school — you earn up to 1% back. That's $250 in rewards.
         </p>
       </section>

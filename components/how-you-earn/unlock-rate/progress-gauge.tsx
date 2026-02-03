@@ -40,7 +40,7 @@ export function ProgressGauge({
           <span className="text-white text-xs font-bold">OMNI</span>
         </div>
         <span className="text-sm font-medium text-muted-foreground">
-          YOUR EVERYDAY SPENDING
+          YOUR EVERYDAY ANNUAL SPENDING
         </span>
       </div>
 
@@ -81,7 +81,7 @@ export function ProgressGauge({
         <div className="absolute" style={{ left: '25%', transform: 'translateX(-50%)' }}>
           <ThresholdBadge
             rate={0.5}
-            thresholdLabel="20% spent"
+            thresholdLabel="20% of tuition spent"
             progress={gaugeProgress}
             unlockAt={0.4} // Unlock at 40% of animation progress
           />
@@ -91,7 +91,7 @@ export function ProgressGauge({
         <div className="absolute" style={{ left: '50%', transform: 'translateX(-50%)' }}>
           <ThresholdBadge
             rate={1.0}
-            thresholdLabel="40% spent"
+            thresholdLabel="40% of tuition spent"
             progress={gaugeProgress}
             unlockAt={0.8} // Unlock at 80% of animation progress
             isActive

@@ -74,27 +74,6 @@ export function UnlockRate() {
           />
         </div>
 
-        {/* Explanation cards */}
-        <motion.div
-          className="mt-12 grid md:grid-cols-2 gap-6 max-w-2xl mx-auto"
-          style={{
-            opacity: useTransform(animationProgress, [0.85, 0.95], [0, 1]),
-            y: useTransform(animationProgress, [0.85, 0.95], [20, 0]),
-          }}
-        >
-          <div className="bg-muted/50 rounded-xl p-5 text-center">
-            <div className="text-2xl font-bold text-primary mb-1">$5,000</div>
-            <div className="text-sm text-muted-foreground">
-              everyday spending unlocks <strong>0.5%</strong> tuition rate
-            </div>
-          </div>
-          <div className="bg-muted/50 rounded-xl p-5 text-center">
-            <div className="text-2xl font-bold text-green-600 mb-1">$10,000</div>
-            <div className="text-sm text-muted-foreground">
-              everyday spending unlocks <strong>1.0%</strong> tuition rate
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

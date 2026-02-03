@@ -6,7 +6,6 @@ import { PointsBadge } from './points-badge'
 import { SourceBreakdown } from './source-breakdown'
 import { FlowLines } from './flow-lines'
 import { TuitionCard } from './tuition-card'
-import { LoopIndicator } from './loop-indicator'
 
 /**
  * Section 4: Redeem & Repeat
@@ -83,14 +82,6 @@ export function RewardsLoop() {
           appearRange={[0.55, 0.65]}
           reductionRange={[0.65, 0.8]}
         />
-
-        {/* Loop indicator */}
-        <div className="mt-8">
-          <LoopIndicator
-            progress={animationProgress}
-            appearRange={[0.8, 0.95]}
-          />
-        </div>
       </div>
     </section>
   )

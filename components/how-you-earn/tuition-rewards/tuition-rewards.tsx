@@ -50,7 +50,7 @@ export function TuitionRewards() {
             Earn on Every Tuition Payment
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto">
-            Pay your ${EXAMPLE_DATA.tuition.toLocaleString()} tuition through Omni.
+            Pay your (e.g.) ${EXAMPLE_DATA.tuition.toLocaleString()} tuition through Omni.
             We handle the ACH transfer to your school — you earn up to{' '}
             {(EXAMPLE_DATA.rewardRate * 100).toFixed(0)}% back.
           </p>
