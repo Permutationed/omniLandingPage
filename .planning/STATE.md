@@ -5,22 +5,39 @@
 See: .planning/PROJECT.md
 
 **Core value:** Visitors immediately understand that Omni unlocks rewards on tuition without costing schools anything - and trust the page enough to join the waitlist.
-**Current focus:** Phase 8 - Content Sections
+**Current focus:** Phase 7 v2 - How You Earn (complete redesign)
 
 ## Current Position
 
-Phase: 7 of 10 (How It Works) — COMPLETE
-Plan: 4 of 4 complete
-Status: Ready for Phase 8
-Last activity: 2026-02-02 - Completed Phase 7 (How It Works)
+Phase: 7 of 10 (How You Earn v2 Redesign)
+Plan: 0 of 5 new plans complete
+Status: Redesign planned, ready for execution
+Last activity: 2026-02-02 - Created v2 plans for complete How You Earn redesign
 
-Progress: [###################] 95%
+Progress: [################---] 80% (Phase 7 v1 deprecated)
+
+## Phase 7 Redesign
+
+**Why:** Original implementation didn't reflect actual product model. Omni has THREE earning streams, not one payment flow.
+
+**New Structure (4 full-width sections):**
+1. **Tuition Rewards** — Bank → ACH → School → $250 rewards (isometric)
+2. **Unlock Rate** — Progress gauge, 20%→0.5%, 40%→1.0% thresholds
+3. **Discover Rewards** — Isometric campus map, merchant pins 3x-10x
+4. **Rewards Loop** — Points combine, reduce next tuition, cycle repeats
+
+**Plans:**
+- 07-05: Cleanup old implementation + new infrastructure
+- 07-06: Tuition Rewards section
+- 07-07: Unlock Rate section
+- 07-08: Discover Rewards section
+- 07-09: Rewards Loop section
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 17
-- Average duration: 2.3min
+- Total plans completed: 17 (v1)
+- Phase 7 v2 plans: 5 planned
 
 **By Phase:**
 
@@ -32,7 +49,8 @@ Progress: [###################] 95%
 | 04-animation-infrastructure | 1/1 | 3min | 3min |
 | 05-3d-infrastructure | 3/3 | 6min | 2min |
 | 06-3d-card | 3/3 | 8min | 2.7min |
-| 07-how-it-works | 4/4 | 7min | 1.75min |
+| 07-how-it-works v1 | 4/4 | 7min | 1.75min |
+| 07-how-you-earn v2 | 0/5 | - | - |
 
 ## Accumulated Context
 
@@ -78,18 +96,11 @@ Progress: [###################] 95%
 | 06-03 | Environment preset='city' | Urban HDR for premium metallic reflections |
 | 06-03 | Reduced light intensities | ambient 0.3, directional 0.8 with Environment |
 | 06-03 | Permission button pattern | Show only when isSupported AND permission === 'prompt' |
-| 07-01 | 175vh container height | Provides ~75vh scroll distance for smooth animation pacing |
-| 07-01 | Static fallback as separate component | Not dimmed animations but truly static step cards |
-| 07-01 | useReducedMotion at section level | Single check returns entire alternate component |
-| 07-02 | Overlapping phase ranges | Smooth blending between animation states |
-| 07-02 | SVG bezier path | Organic flow visualization with splits |
-| 07-02 | Amber color for rewards | Differentiate rewards from neutral school ACH |
-| 07-03 | Progress dots desktop-only | Hidden on mobile with hidden md:flex |
-| 07-03 | Fade range 0.02-0.98 | Dots fully visible during active scroll |
-| 07-03 | 44x44px touch targets | p-4 -m-4 pattern for accessible tap areas |
-| 07-04 | SVG circle with CSS offset-path | Cleaner integration with existing SVG |
-| 07-04 | First path segment for particles | Avoids complexity at branch point |
-| 07-04 | 3 primary + 2 amber particles | Foreshadow ACH/rewards split |
+| 07-v2 | 4 full-width sections | Separate animations for each earning stream |
+| 07-v2 | Isometric illustration style | Premium fintech aesthetic like Ramp |
+| 07-v2 | Scroll-triggered (not interactive) | Consistent experience, easier to implement |
+| 07-v2 | Delete old implementation | Complete redesign, not incremental |
+| 07-v2 | Framer Motion + Rive/Lottie | Code-first with optional enhancements |
 
 ### Pending Todos
 
@@ -102,5 +113,5 @@ Progress: [###################] 95%
 ## Session Continuity
 
 Last session: 2026-02-02
-Stopped at: Completed Phase 7 (How It Works) - all 4 plans executed, verification passed
-Resume file: None - ready for Phase 8
+Stopped at: Created Phase 7 v2 redesign plans (07-05 through 07-09)
+Resume file: None - ready to execute `/gsd:execute-phase 7`

@@ -135,25 +135,34 @@ Plans:
 
 ---
 
-### Phase 7: How It Works (Scroll Section)
+### Phase 7: How You Earn (4-Section Animated Explainer)
 
-**Goal:** User understands payment flow through scroll-driven animation
-**Depends on:** Phase 4, Phase 5
+**Goal:** User understands the complete Omni earning ecosystem through 4 premium scroll-animated sections
+**Depends on:** Phase 4
 **Requirements:** HIW-01, HIW-02, HIW-03, HIW-04
 
 **Success Criteria:**
-1. User scrolls through 150-200vh section with progress-linked animation
-2. User sees animated payment flow: card swipe, particles along path, split to ACH + rewards
-3. User can click progress dots to jump between steps
-4. User with prefers-reduced-motion sees static step cards instead of animation
+1. User sees "Earn on Tuition" section with isometric bank→school ACH flow and animated $250 reward counter
+2. User sees "Unlock Better Rates" section with progress gauge showing 20%→0.5% and 40%→1.0% thresholds
+3. User sees "Discover Local Rewards" section with isometric campus map and 3x-10x merchant pins appearing
+4. User sees "Rewards Loop" section showing points combining and reducing next tuition bill
+5. All animations are scroll-triggered and maintain 60fps
+6. User with prefers-reduced-motion sees static isometric illustrations with all content
 
-**Plans:** 4 plans
+**Plans:** 9 plans (4 original deprecated, 5 new)
 
-Plans:
-- [x] 07-01-PLAN.md — Section infrastructure with scroll tracking and reduced motion fallback
-- [x] 07-02-PLAN.md — Payment flow animation with multi-phase scroll-linked visualization
-- [x] 07-03-PLAN.md — Progress dots navigation with click-to-scroll functionality
-- [x] 07-04-PLAN.md — Path particles gap closure
+Plans (deprecated - to be deleted):
+- [x] ~~07-01-PLAN.md~~ — (deprecated) Section infrastructure
+- [x] ~~07-02-PLAN.md~~ — (deprecated) Payment flow animation
+- [x] ~~07-03-PLAN.md~~ — (deprecated) Progress dots navigation
+- [x] ~~07-04-PLAN.md~~ — (deprecated) Path particles
+
+Plans (v2 redesign):
+- [ ] 07-05-PLAN.md — Cleanup old implementation and create new section infrastructure
+- [ ] 07-06-PLAN.md — "Earn on Tuition" section with isometric buildings and ACH flow
+- [ ] 07-07-PLAN.md — "Unlock Better Rates" section with progress gauge and threshold animations
+- [ ] 07-08-PLAN.md — "Discover Local Rewards" section with isometric map and merchant pins
+- [ ] 07-09-PLAN.md — "Rewards Loop" section with points flow and tuition reduction
 
 ---
 
@@ -220,7 +229,7 @@ Plans:
 | 4 - Animation Infrastructure | Complete | 2026-01-31 |
 | 5 - 3D Infrastructure | Complete | 2026-01-31 |
 | 6 - 3D Card | Complete | 2026-02-02 |
-| 7 - How It Works | Complete | 2026-02-02 |
+| 7 - How You Earn | In Progress (v2 redesign) | - |
 | 8 - Content Sections | Not started | - |
 | 9 - Interactive Features | Not started | - |
 | 10 - Final CTA & Polish | Not started | - |
