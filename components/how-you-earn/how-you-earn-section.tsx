@@ -1,21 +1,10 @@
 'use client'
 
 import { useReducedMotion } from 'framer-motion'
+import { TuitionRewards } from './tuition-rewards'
 import { UnlockRate } from './unlock-rate'
 import { DiscoverRewards } from './discover-rewards'
 import { RewardsLoop } from './rewards-loop'
-
-// Placeholder components - will be replaced in subsequent plans
-function TuitionRewardsPlaceholder() {
-  return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-background to-muted/30">
-      <div className="text-center p-8">
-        <h2 className="text-3xl font-bold mb-4">Earn on Every Tuition Payment</h2>
-        <p className="text-muted-foreground">Animation coming in 07-06</p>
-      </div>
-    </section>
-  )
-}
 
 /**
  * Static fallback for reduced motion users
@@ -70,7 +59,7 @@ export function HowYouEarnSection() {
 
   return (
     <div id="how-it-works">
-      <TuitionRewardsPlaceholder />
+      <TuitionRewards />
       <UnlockRate />
       <DiscoverRewards />
       <RewardsLoop />
