@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
-import { EXAMPLE_DATA, ISO_COLORS } from '../shared/constants'
+import { ISO_COLORS } from '../shared/constants'
 
 interface RateDisplayProps {
   progress?: MotionValue<number>
@@ -106,35 +106,6 @@ export function RateDisplay({
         </motion.span>
       </motion.div>
 
-      {/* Earnings example */}
-      <motion.div
-        className="mt-4 text-muted-foreground"
-        style={{
-          opacity: useTransform(
-            progress ?? { get: () => 0 } as MotionValue<number>,
-            [0.8, 0.9],
-            [0, 1]
-          ),
-        }}
-      >
-        <motion.span
-          style={{
-            opacity: useTransform(rateIndex, [0.5, 1], [1, 0]),
-            display: 'inline-block',
-          }}
-        >
-          Earn <strong>${(EXAMPLE_DATA.tuition * 0.005).toLocaleString()}</strong> on ${EXAMPLE_DATA.tuition.toLocaleString()} tuition
-        </motion.span>
-        <motion.span
-          style={{
-            opacity: useTransform(rateIndex, [0.5, 1], [0, 1]),
-            display: 'inline-block',
-            marginLeft: '-100%',
-          }}
-        >
-          Earn <strong style={{ color: ISO_COLORS.success }}>${(EXAMPLE_DATA.tuition * EXAMPLE_DATA.rewardRate).toLocaleString()}</strong> on ${EXAMPLE_DATA.tuition.toLocaleString()} tuition
-        </motion.span>
-      </motion.div>
     </motion.div>
   )
 }
