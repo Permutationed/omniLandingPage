@@ -13,8 +13,8 @@
   --popover: oklch(0.995 0.005 270);
   --popover-foreground: oklch(0.18 0.02 270);
 
-  /* Primary - Deep indigo with confidence */
-  --primary: oklch(0.50 0.22 270);
+  /* Primary - Deep indigo with refined saturation */
+  --primary: oklch(0.45 0.16 270);
   --primary-foreground: oklch(0.99 0 0);
 
   /* Secondary - Subtle warmth */
@@ -36,7 +36,7 @@
   /* Borders & Inputs */
   --border: oklch(0.90 0.01 270);
   --input: oklch(0.92 0.01 270);
-  --ring: oklch(0.50 0.22 270);
+  --ring: oklch(0.45 0.16 270);
 
   /* Radii */
   --radius: 0.625rem;
@@ -47,7 +47,7 @@
   --shadow-lg: 0 10px 15px -3px oklch(0.20 0.02 270 / 0.15), 0 4px 6px -4px oklch(0.20 0.02 270 / 0.10);
 
   /* Chart colors - Vibrant and distinct */
-  --chart-1: oklch(0.50 0.22 270);  /* Primary indigo */
+  --chart-1: oklch(0.45 0.16 270);  /* Primary indigo - refined */
   --chart-2: oklch(0.65 0.22 160);  /* Emerald */
   --chart-3: oklch(0.60 0.20 320);  /* Magenta */
   --chart-4: oklch(0.78 0.18 75);   /* Amber */
