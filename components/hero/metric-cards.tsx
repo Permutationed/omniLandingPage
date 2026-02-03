@@ -15,7 +15,7 @@ function MetricCard({ value, label }: MetricCardProps) {
       initial="rest"
       whileHover="hover"
       transition={cardTransition}
-      className="bg-card rounded-xl p-6 shadow-sm border cursor-default"
+      className="bg-card rounded-xl p-8 shadow-md border border-border/50 cursor-default"
       style={{ willChange: 'transform' }}
     >
       <div className="font-display text-2xl sm:text-3xl font-bold text-primary">{value}</div>
