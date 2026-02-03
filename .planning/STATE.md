@@ -10,11 +10,11 @@ See: .planning/PROJECT.md
 ## Current Position
 
 Phase: 7 of 10 (How You Earn v2 Redesign)
-Plan: 2 of 5 new plans complete
-Status: In progress - Unlock Rate section complete
-Last activity: 2026-02-02 - Completed 07-07-PLAN.md (Unlock Rate section)
+Plan: 3 of 5 new plans complete
+Status: In progress - Tuition Rewards section complete
+Last activity: 2026-02-02 - Completed 07-06-PLAN.md (Tuition Rewards section)
 
-Progress: [##################-] 90% (07-07 complete, 3 section plans remaining)
+Progress: [##################-] 92% (07-05, 07-06, 07-07 complete, 2 section plans remaining)
 
 ## Phase 7 Redesign
 
@@ -50,7 +50,7 @@ Progress: [##################-] 90% (07-07 complete, 3 section plans remaining)
 | 05-3d-infrastructure | 3/3 | 6min | 2min |
 | 06-3d-card | 3/3 | 8min | 2.7min |
 | 07-how-it-works v1 | 4/4 | 7min | 1.75min |
-| 07-how-you-earn v2 | 2/5 | 6min | 3min |
+| 07-how-you-earn v2 | 3/5 | 14min | 4.7min |
 
 ## Accumulated Context
 
@@ -107,6 +107,9 @@ Progress: [##################-] 90% (07-07 complete, 3 section plans remaining)
 | 07-07 | Threshold visual positions | 20% threshold at 25% visual width, 40% at 50% |
 | 07-07 | Progress mapping fillRange | [0.15, 0.75] for smooth animation window |
 | 07-07 | Unlock stagger timing | 20% unlocks at 40% progress, 40% at 80% progress |
+| 07-06 | pathLength={1} pattern | Clean SVG path drawing animation |
+| 07-06 | Vertical mobile flow | Simplified ACH indicator on mobile |
+| 07-06 | Isometric building pattern | Shadow ellipse, multi-face 3D, oklch colors |
 
 ### Pending Todos
 
@@ -119,5 +122,5 @@ Progress: [##################-] 90% (07-07 complete, 3 section plans remaining)
 ## Session Continuity
 
 Last session: 2026-02-02
-Stopped at: Completed 07-07-PLAN.md
-Resume file: None - ready for 07-08 (Discover Rewards section)
+Stopped at: Completed 07-06-PLAN.md
+Resume file: None - ready for 07-08, 07-09 (remaining sections)
