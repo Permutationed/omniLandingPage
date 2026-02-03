@@ -11,10 +11,10 @@ import { RewardsLoop } from './rewards-loop'
  */
 function HowYouEarnStatic() {
   return (
-    <div className="py-24 container mx-auto px-4">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div className="py-24 md:py-32 lg:py-40 container mx-auto px-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
         {/* Left column */}
-        <div className="space-y-8">
+        <div className="space-y-12 lg:space-y-16">
           <section className="bg-card rounded-xl p-8 shadow-md border border-border/50">
             <h2 className="text-2xl font-bold mb-4">Earn on Every Tuition Payment</h2>
             <p className="text-muted-foreground">
@@ -31,7 +31,7 @@ function HowYouEarnStatic() {
           </section>
         </div>
         {/* Right column - staggered */}
-        <div className="space-y-8 lg:pt-32">
+        <div className="space-y-12 lg:space-y-16 lg:mt-[50vh]">
           <section className="bg-card rounded-xl p-8 shadow-md border border-border/50">
             <h2 className="text-2xl font-bold mb-4">Unlock Better Tuition Rates</h2>
             <p className="text-muted-foreground">
@@ -65,16 +65,16 @@ export function HowYouEarnSection() {
   }
 
   return (
-    <div id="how-it-works" className="py-16 md:py-24">
+    <div id="how-it-works" className="py-24 md:py-32 lg:py-40">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left column */}
-          <div className="space-y-6 lg:space-y-8">
+          <div className="space-y-12 lg:space-y-16">
             <TuitionRewards />
             <DiscoverRewards />
           </div>
-          {/* Right column - staggered down */}
-          <div className="space-y-6 lg:space-y-8 lg:pt-48">
+          {/* Right column - staggered down significantly for cascading effect */}
+          <div className="space-y-12 lg:space-y-16 lg:mt-[50vh]">
             <UnlockRate />
             <RewardsLoop />
           </div>
