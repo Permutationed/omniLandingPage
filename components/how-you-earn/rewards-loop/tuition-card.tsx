@@ -59,7 +59,7 @@ export function TuitionCard({
     >
       {/* Card container with slight 3D tilt */}
       <div
-        className="bg-background border border-border rounded-xl shadow-xl p-6 md:p-8 max-w-sm mx-auto"
+        className="bg-background border border-border/70 rounded-xl shadow-lg p-8 md:p-10 max-w-sm mx-auto"
         style={{
           transform: 'perspective(1000px) rotateY(-5deg) rotateX(5deg)',
         }}
