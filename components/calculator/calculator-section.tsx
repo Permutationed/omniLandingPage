@@ -2,54 +2,42 @@
 
 import { useState } from 'react'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
-import { EmailCapture } from '@/components/hero/email-capture'
 import { TuitionSlider } from './tuition-slider'
 import { SpendSlider } from './spend-slider'
 import { CalculatorResults } from './calculator-results'
 
 export function CalculatorSection() {
-  const [tuition, setTuition] = useState(25000)
+  const [tuition, setTuition] = useState(30000)
   const [monthlySpend, setMonthlySpend] = useState(500)
 
   return (
-    <section
-      id="calculator"
-      className="bg-gradient-to-b from-background to-muted/30 py-20 sm:py-24"
-    >
-      <div className="max-w-4xl mx-auto px-4">
-        {/* Header */}
-        <ScrollReveal className="text-center mb-12">
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
+    <section id="calculator" className="py-16 sm:py-20">
+      <div className="max-w-3xl mx-auto px-4">
+        {/* Compact header */}
+        <ScrollReveal className="text-center mb-8">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground mb-2">
             Calculate Your Rewards
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground">
             See how much you could earn with Omni
           </p>
         </ScrollReveal>
 
-        {/* Sliders Card */}
+        {/* Single compact card */}
         <ScrollReveal delay={0.1}>
-          <div className="bg-card rounded-lg p-6 sm:p-8 shadow-sm border mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-card rounded-xl border shadow-sm p-6">
+            {/* Sliders - horizontal on desktop */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
               <TuitionSlider value={tuition} onChange={setTuition} />
               <SpendSlider value={monthlySpend} onChange={setMonthlySpend} />
             </div>
-          </div>
-        </ScrollReveal>
 
-        {/* Results Card */}
-        <ScrollReveal delay={0.2}>
-          <div className="bg-primary/5 rounded-lg p-6 sm:p-8 mb-12">
+            {/* Divider */}
+            <div className="border-t border-border my-6" />
+
+            {/* Results */}
             <CalculatorResults tuition={tuition} monthlySpend={monthlySpend} />
           </div>
-        </ScrollReveal>
-
-        {/* CTA */}
-        <ScrollReveal delay={0.3} className="text-center">
-          <p className="text-lg text-muted-foreground mb-6">
-            Ready to start earning?
-          </p>
-          <EmailCapture />
         </ScrollReveal>
       </div>
     </section>
