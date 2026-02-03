@@ -200,10 +200,10 @@ Plans (v2 redesign):
 - Stripe: Whitespace, clean hierarchy, sophisticated
 
 **Plans:** 4 plans in 2 waves
-- [ ] 07.2-01-PLAN.md — Remove Storyset illustrations, restore refined isometric shapes (Wave 1)
-- [ ] 07.2-02-PLAN.md — Add Geist display font for headlines (Wave 1)
-- [ ] 07.2-03-PLAN.md — Reduce color saturation, simplify gradient (Wave 1)
-- [ ] 07.2-04-PLAN.md — Component styling & spacing refinement (Wave 2)
+- [x] 07.2-01-PLAN.md — Remove Storyset illustrations, restore refined isometric shapes (Wave 1)
+- [x] 07.2-02-PLAN.md — Add Geist display font for headlines (Wave 1)
+- [x] 07.2-03-PLAN.md — Reduce color saturation, simplify gradient (Wave 1)
+- [x] 07.2-04-PLAN.md — Component styling & spacing refinement (Wave 2)
 
 ---
 
@@ -272,7 +272,7 @@ Plans (v2 redesign):
 | 6 - 3D Card | Complete | 2026-02-02 |
 | 7 - How You Earn | Complete | 2026-02-03 |
 | 7.1 - Professional Illustrations | SUPERSEDED | - |
-| 7.2 - Design System Overhaul | Planned | - |
+| 7.2 - Design System Overhaul | Complete | 2026-02-03 |
 | 8 - Content Sections | Not started | - |
 | 9 - Interactive Features | Not started | - |
 | 10 - Final CTA & Polish | Not started | - |
