@@ -1,7 +1,11 @@
 export interface FAQItem {
   id: string
   question: string
-  answer: string
+  answer?: string
+  /** When set, accordion renders custom content (e.g. security grid) instead of answer. */
+  contentKey?: 'security-grid'
+  /** Optional icon name for the row label (e.g. 'shield'). */
+  icon?: 'shield'
 }
 
 export const faqItems: FAQItem[] = [
@@ -15,13 +19,7 @@ export const faqItems: FAQItem[] = [
     id: 'school-integration',
     question: 'How does school integration work?',
     answer:
-      "Schools connect their payment systems to Omni, allowing tuition payments to automatically earn rewards. The process is seamless for students and parents—you'll see rewards accumulate in real-time.",
-  },
-  {
-    id: 'supported-cards',
-    question: 'What payment methods are supported?',
-    answer:
-      'Omni works with major credit and debit cards, ACH transfers, and direct bank payments. Check with your school for specific payment options available.',
+      "We're working to integrate Omni directly into student payment rails. For now, students and parents pay through our platform, and we handle the ACH transfer to your school on your behalf.",
   },
   {
     id: 'data-safety',
@@ -33,6 +31,12 @@ export const faqItems: FAQItem[] = [
     id: 'how-rewards-work',
     question: 'How do rewards work?',
     answer:
-      'Earn points on tuition payments (up to 1% back) and everyday purchases at partner merchants (3x-10x points). Points convert to statement credits or direct tuition payments at a rate of 100 points = $1.',
+      'Earn up to 1% back on tuition based on your everyday spending, plus 1% cash back on all everyday purchases. Partner merchants offer bonus rewards (3x-10x points) on top of your base rewards. Points convert to statement credits or direct tuition payments at a rate of 100 points = $1.',
+  },
+  {
+    id: 'bank-level-security',
+    question: 'Bank-Level Security',
+    contentKey: 'security-grid',
+    icon: 'shield',
   },
 ]
