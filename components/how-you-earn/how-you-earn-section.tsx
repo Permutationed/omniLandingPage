@@ -1,6 +1,7 @@
 'use client'
 
 import { useReducedMotion } from 'framer-motion'
+import { UnlockRate } from './unlock-rate'
 
 // Placeholder components - will be replaced in subsequent plans
 function TuitionRewardsPlaceholder() {
@@ -9,17 +10,6 @@ function TuitionRewardsPlaceholder() {
       <div className="text-center p-8">
         <h2 className="text-3xl font-bold mb-4">Earn on Every Tuition Payment</h2>
         <p className="text-muted-foreground">Animation coming in 07-06</p>
-      </div>
-    </section>
-  )
-}
-
-function UnlockRatePlaceholder() {
-  return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-muted/30 to-background">
-      <div className="text-center p-8">
-        <h2 className="text-3xl font-bold mb-4">Unlock Better Tuition Rates</h2>
-        <p className="text-muted-foreground">Animation coming in 07-07</p>
       </div>
     </section>
   )
@@ -101,7 +91,7 @@ export function HowYouEarnSection() {
   return (
     <div id="how-it-works">
       <TuitionRewardsPlaceholder />
-      <UnlockRatePlaceholder />
+      <UnlockRate />
       <DiscoverRewardsPlaceholder />
       <RewardsLoopPlaceholder />
     </div>
