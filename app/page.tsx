@@ -15,10 +15,6 @@ export default function Page() {
       <AudienceTabs />
 
       <FAQSection />
-
-      <section className="max-w-3xl mx-auto px-4 pb-24">
-        <SecurityAccordion />
-      </section>
     </>
   )
 }

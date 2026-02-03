@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { FooterSocials } from './footer-socials'
 
 const footerLinks = {
   nav: [
@@ -7,19 +6,15 @@ const footerLinks = {
     { href: '#features', label: 'Features' },
     { href: '#faq', label: 'FAQ' },
   ],
-  legal: [
-    { href: '/privacy', label: 'Privacy Policy' },
-    { href: '/terms', label: 'Terms of Service' },
-  ],
 }
 
 export function Footer() {
   return (
     <footer className="border-t bg-muted/30">
       <div className="container py-12 md:py-16">
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2">
           {/* Logo & Tagline */}
-          <div className="md:col-span-2">
+          <div>
             <Link href="/" className="font-bold text-xl">
               Omni Card
             </Link>
@@ -44,31 +39,13 @@ export function Footer() {
               ))}
             </ul>
           </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="font-medium mb-4">Legal</h3>
-            <ul className="space-y-2">
-              {footerLinks.legal.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-12 pt-8 border-t">
           <p className="text-sm text-muted-foreground">
             {new Date().getFullYear()} Omni Card. All rights reserved.
           </p>
-          <FooterSocials />
         </div>
       </div>
     </footer>
