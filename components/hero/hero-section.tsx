@@ -4,7 +4,7 @@ import { HeroCard3D } from './hero-card-3d'
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center py-20">
+    <section className="relative min-h-screen flex flex-col justify-center py-24 lg:py-32">
       {/* Gradient mesh background */}
       <div className="hero-gradient" aria-hidden="true" />
 
