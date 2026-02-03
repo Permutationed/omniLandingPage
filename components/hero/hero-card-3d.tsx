@@ -1,6 +1,6 @@
 'use client'
 
-import { View, Environment, PerspectiveCamera } from '@react-three/drei'
+import { View, Environment } from '@react-three/drei'
 import { Suspense } from 'react'
 import { LoadingFallback } from '@/components/three/loading-fallback'
 import { CardInteractive } from '@/components/three/card/card-interactive'
@@ -15,7 +15,7 @@ export function HeroCard3D() {
       <LoadingFallback />
       <View className="absolute inset-0 pointer-events-auto">
         {/* Camera pulled back so the full card fits in view when tilted */}
-        <PerspectiveCamera makeDefault position={[0, 0, 500]} fov={50} />
+        <perspectiveCamera makeDefault position={[0, 0, 500]} fov={50} />
         <Suspense fallback={null}>
           <ambientLight intensity={0.3} />
           <directionalLight position={[5, 5, 5]} intensity={0.8} />
