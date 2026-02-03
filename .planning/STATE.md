@@ -10,11 +10,11 @@ See: .planning/PROJECT.md
 ## Current Position
 
 Phase: 7 of 10 (How You Earn v2 Redesign)
-Plan: 3 of 5 new plans complete
-Status: In progress - Tuition Rewards section complete
-Last activity: 2026-02-02 - Completed 07-06-PLAN.md (Tuition Rewards section)
+Plan: 4 of 5 new plans complete
+Status: In progress - Discover Rewards section complete
+Last activity: 2026-02-02 - Completed 07-08-PLAN.md (Discover Rewards section)
 
-Progress: [##################-] 92% (07-05, 07-06, 07-07 complete, 2 section plans remaining)
+Progress: [###################] 96% (07-05, 07-06, 07-07, 07-08 complete, 1 section plan remaining)
 
 ## Phase 7 Redesign
 
@@ -50,7 +50,7 @@ Progress: [##################-] 92% (07-05, 07-06, 07-07 complete, 2 section pla
 | 05-3d-infrastructure | 3/3 | 6min | 2min |
 | 06-3d-card | 3/3 | 8min | 2.7min |
 | 07-how-it-works v1 | 4/4 | 7min | 1.75min |
-| 07-how-you-earn v2 | 3/5 | 14min | 4.7min |
+| 07-how-you-earn v2 | 4/5 | 20min | 5min |
 
 ## Accumulated Context
 
@@ -110,6 +110,9 @@ Progress: [##################-] 92% (07-05, 07-06, 07-07 complete, 2 section pla
 | 07-06 | pathLength={1} pattern | Clean SVG path drawing animation |
 | 07-06 | Vertical mobile flow | Simplified ACH indicator on mobile |
 | 07-06 | Isometric building pattern | Shadow ellipse, multi-face 3D, oklch colors |
+| 07-08 | Percentage-based pin positioning | Responsive to map container size |
+| 07-08 | Staggered pin intervals (0.08) | Sequential appearance, not simultaneous |
+| 07-08 | Toast late appearance (0.75-0.85) | Finishing touch after pins settle |
 
 ### Pending Todos
 
@@ -122,5 +125,5 @@ Progress: [##################-] 92% (07-05, 07-06, 07-07 complete, 2 section pla
 ## Session Continuity
 
 Last session: 2026-02-02
-Stopped at: Completed 07-06-PLAN.md
-Resume file: None - ready for 07-08, 07-09 (remaining sections)
+Stopped at: Completed 07-08-PLAN.md
+Resume file: None - ready for 07-09 (Rewards Loop - final section)
