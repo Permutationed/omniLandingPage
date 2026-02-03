@@ -134,7 +134,7 @@ export const MERCHANTS = [
     Icon: BookOpen,
     multiplier: 10,
     color: ISO_COLORS.books,
-    position: { x: 85, y: 25 },
+    position: { x: 75, y: 25 },
   },
   {
     id: 'pizza',
@@ -158,6 +158,6 @@ export const MERCHANTS = [
     Icon: ShoppingBag,
     multiplier: 7,
     color: ISO_COLORS.retail,
-    position: { x: 50, y: 80 },
+    position: { x: 55, y: 12 },
   },
 ]

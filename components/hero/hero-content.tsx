@@ -24,8 +24,8 @@ export function HeroContent() {
         variants={heroItemVariants}
         className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto"
       >
-        Pay tuition with any credit card. Keep your rewards.
-        Schools get paid instantly via ACH — zero fees.
+        Pay tuition through the Omni platform. Earn points on tuition.
+        Maximize rewards as a student.
       </motion.p>
 
       <motion.div variants={heroItemVariants} className="mt-8">
