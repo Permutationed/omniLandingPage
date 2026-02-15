@@ -10,32 +10,32 @@ export interface FAQItem {
 
 export const faqItems: FAQItem[] = [
   {
-    id: 'how-omni-makes-money',
-    question: 'How does Omni make money?',
+    id: 'compliance',
+    question: 'How does Omni ensure compliance?',
     answer:
-      'Omni earns a small commission from partner merchants when you shop at their locations. This allows us to offer rewards at no cost to students or schools.',
+      'Omni is built for regulated environments with audit-ready outputs and human oversight. Every deliverable can be traced back to source.',
   },
   {
-    id: 'school-integration',
-    question: 'How does school integration work?',
+    id: 'data-protection',
+    question: 'How is sensitive data protected?',
     answer:
-      "We're working to integrate Omni directly into student payment rails. For now, students and parents pay through our platform, and we handle the ACH transfer to your school on your behalf.",
+      'Our architecture is designed for privacy and compliance. Data handling follows industry standards.',
   },
   {
-    id: 'data-safety',
-    question: 'Is my data safe?',
+    id: 'traceability',
+    question: 'Is output traceable?',
     answer:
-      "Absolutely. We use bank-level 256-bit encryption and never store sensitive payment information on our servers. We're SOC 2 compliant and follow strict data protection standards.",
+      'Yes. Omni produces reproducible, auditable outputs with full lineage to source inputs.',
   },
   {
-    id: 'how-rewards-work',
-    question: 'How do rewards work?',
+    id: 'quality',
+    question: 'How is quality assured?',
     answer:
-      'Earn up to 1% back on tuition based on your everyday spending, plus 1% cash back on all everyday purchases. Partner merchants offer bonus rewards (3x-10x points) on top of your base rewards. Points convert to statement credits or direct tuition payments at a rate of 100 points = $1.',
+      'Automated verification and validation are built into the pipeline for higher accuracy.',
   },
   {
-    id: 'bank-level-security',
-    question: 'Bank-Level Security',
+    id: 'security-governance',
+    question: 'Security & Governance',
     contentKey: 'security-grid',
     icon: 'shield',
   },

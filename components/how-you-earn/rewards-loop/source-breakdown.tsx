@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
-import { GraduationCap, CreditCard, Store } from 'lucide-react'
+import { FileText, BarChart3, Activity } from 'lucide-react'
 import { Odometer } from '../shared/odometer'
 import { ISO_COLORS } from '../shared/constants'
 
@@ -14,30 +14,30 @@ interface SourceBreakdownProps {
 
 const SOURCES = [
   {
-    id: 'tuition',
-    label: 'Tuition',
-    Icon: GraduationCap,
-    points: 250,
+    id: 'documents',
+    label: 'Documents',
+    Icon: FileText,
+    points: 1,
     color: ISO_COLORS.primary,
   },
   {
-    id: 'everyday',
-    label: 'Everyday',
-    Icon: CreditCard,
-    points: 8200,
+    id: 'analysis',
+    label: 'Analysis',
+    Icon: BarChart3,
+    points: 1,
     color: ISO_COLORS.blue,
   },
   {
-    id: 'merchants',
-    label: 'Merchants',
-    Icon: Store,
-    points: 4000,
+    id: 'monitoring',
+    label: 'Monitoring',
+    Icon: Activity,
+    points: 1,
     color: ISO_COLORS.amber,
   },
 ] as const
 
 /**
- * Three source categories showing where points came from
+ * Three upstream input categories feeding CSR draft
  */
 export function SourceBreakdown({
   progress,
@@ -75,13 +75,13 @@ export function SourceBreakdown({
               <source.Icon className="w-6 h-6" style={{ color: source.color }} strokeWidth={2} />
             </div>
 
-            {/* Points */}
+            {/* Check */}
             <div className="text-lg font-bold" style={{ color: source.color }}>
-              +<Odometer
+              <Odometer
                 value={source.points}
                 progress={progress}
                 progressRange={[itemStart, itemEnd]}
-                format={(v) => v.toLocaleString()}
+                format={(v) => (v ? '✓' : '')}
               />
             </div>
 

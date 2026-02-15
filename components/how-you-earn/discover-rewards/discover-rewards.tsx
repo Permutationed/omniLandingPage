@@ -2,17 +2,16 @@
 
 import { useRef } from 'react'
 import { useScroll, motion, useTransform } from 'framer-motion'
-import { MapPin, Coffee } from 'lucide-react'
+import { MapPin, BarChart3 } from 'lucide-react'
 import { IsometricMap } from './isometric-map'
 import { CampusBuilding } from './campus-building'
 import { MerchantPin, MERCHANTS } from './merchant-pin'
 import { NotificationToast } from './notification-toast'
 
 /**
- * Section 3: Discover Local Rewards
+ * Steps 3–4: SAP parsing & gap detection, SDTM/ADaM code generation
  *
- * Shows isometric campus map with merchant pins appearing
- * Demonstrates 3x-10x rewards at participating merchants
+ * Isometric map as visualization of data pipeline nodes
  */
 export function DiscoverRewards() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -53,11 +52,10 @@ export function DiscoverRewards() {
           }}
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            Discover Local Rewards
+            Analysis Planning & Dataset Generation
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto">
-            Find participating merchants near campus.
-            Earn 3x to 10x points at select locations.
+            Automated analysis planning and dataset generation.
           </p>
         </motion.div>
 
@@ -67,7 +65,7 @@ export function DiscoverRewards() {
             progress={animationProgress}
             appearRange={[0.1, 0.25]}
           >
-            {/* Campus building */}
+            {/* Central building (data hub) */}
             <CampusBuilding
               progress={animationProgress}
               appearRange={[0.2, 0.3]}
@@ -84,12 +82,12 @@ export function DiscoverRewards() {
             ))}
           </IsometricMap>
 
-          {/* Notification toast */}
+          {/* Status toast */}
           <div className="mt-6">
             <NotificationToast
-              merchantName="Campus Coffee"
-              multiplier={5}
-              Icon={Coffee}
+              label="Analysis plan processed"
+              subtext="Dataset generation in progress"
+              Icon={BarChart3}
               progress={animationProgress}
               appearRange={[0.5, 0.6]}
             />
@@ -105,18 +103,18 @@ export function DiscoverRewards() {
           }}
         >
           <div>
-            <div className="font-display text-2xl font-bold text-primary">50+</div>
-            <div className="text-xs text-muted-foreground">Merchants</div>
+            <div className="font-display text-2xl font-bold text-primary">Standards</div>
+            <div className="text-xs text-muted-foreground">Compliant</div>
           </div>
           <div>
-            <div className="font-display text-2xl font-bold text-accent">3x-10x</div>
-            <div className="text-xs text-muted-foreground">Points</div>
+            <div className="font-display text-2xl font-bold text-accent">Automated</div>
+            <div className="text-xs text-muted-foreground">Validation</div>
           </div>
           <div>
             <div className="flex justify-center">
               <MapPin className="w-6 h-6 text-primary" strokeWidth={2.5} />
             </div>
-            <div className="text-xs text-muted-foreground">Near You</div>
+            <div className="text-xs text-muted-foreground">Traceable</div>
           </div>
         </motion.div>
       </div>

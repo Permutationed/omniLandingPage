@@ -49,7 +49,7 @@ export function EmailCapture() {
       <div className="flex-1 relative">
         <Input
           type="email"
-          placeholder="Enter your email"
+          placeholder="Enter your email for demo"
           value={email}
           onChange={handleChange}
           onBlur={handleBlur}
@@ -73,7 +73,7 @@ export function EmailCapture() {
         )}
       </div>
       <Button type="submit" size="lg" className="h-12 px-8">
-        Join Waitlist
+        Request Demo
       </Button>
     </form>
   )

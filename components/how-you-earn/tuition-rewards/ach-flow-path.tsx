@@ -11,8 +11,7 @@ interface AchFlowPathProps {
 }
 
 /**
- * Clean horizontal gradient line showing ACH transfer flow
- * Simple, professional design matching mobile aesthetic
+ * Horizontal gradient line showing data flow between pipeline stages
  */
 export function AchFlowPath({
   progress,
@@ -53,7 +52,7 @@ export function AchFlowPath({
         }}
       />
 
-      {/* ACH label badge */}
+      {/* Data flow label badge */}
       <motion.div
         className="px-3 py-1.5 rounded-md text-xs font-medium text-white shrink-0"
         style={{
@@ -61,7 +60,7 @@ export function AchFlowPath({
           opacity: labelOpacity,
         }}
       >
-        ACH Transfer
+        Data Flow
       </motion.div>
 
       {/* Right segment - gradient line */}

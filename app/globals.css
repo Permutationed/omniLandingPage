@@ -3,7 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Light mode only - Premium fintech aesthetic */
+/* Light mode only - Enterprise pharma aesthetic */
 :root {
   /* Backgrounds & Surfaces */
   --background: oklch(0.995 0.005 270);

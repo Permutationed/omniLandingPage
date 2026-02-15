@@ -1,50 +1,39 @@
 'use client'
 
-import { motion } from 'motion/react'
-import { Gift, Building2, Clock, Shield, Activity, Brain } from 'lucide-react'
+import { FileText, Users, Code2, Activity, FileCheck } from 'lucide-react'
 import { FeatureCard } from './feature-card'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
-import {
-  staggerContainerVariants,
-  slideUpVariants,
-} from '@/lib/animation-variants'
 
 const features = [
   {
-    icon: Gift,
-    title: 'Rewards on Tuition',
+    icon: FileText,
+    title: 'Study Design to Forms',
     description:
-      'Earn cash back every time you pay tuition. Up to 1% back on qualifying payments.',
+      'Automated translation of study design into data collection forms. Weeks instead of months.',
   },
   {
-    icon: Building2,
-    title: 'Zero School Fees',
+    icon: Users,
+    title: 'Patient Matching',
     description:
-      'Schools pay nothing. Omni covers all processing costs so institutions can focus on education.',
+      'Automated eligibility screening and patient matching with privacy and compliance built in.',
   },
   {
-    icon: Clock,
-    title: 'Pay Over Time',
+    icon: Code2,
+    title: 'Statistical Outputs',
     description:
-      'Flexible payment plans that fit your budget. No hidden fees, no surprises.',
-  },
-  {
-    icon: Shield,
-    title: 'Bank-Level Security',
-    description:
-      'Your data is protected with enterprise-grade encryption and fraud monitoring.',
+      'Automated dataset generation and reconciliation for faster database lock.',
   },
   {
     icon: Activity,
-    title: 'Real-Time Tracking',
+    title: 'Continuous Monitoring',
     description:
-      'Monitor your payments, rewards, and spending from a single dashboard.',
+      'Automated oversight across sites. Flag issues before they become findings.',
   },
   {
-    icon: Brain,
-    title: 'Smart Underwriting',
+    icon: FileCheck,
+    title: 'Report Drafting',
     description:
-      'Our AI-powered system offers personalized rates based on your complete financial picture.',
+      'Automated report generation with audit-ready outputs.',
   },
 ]
 
@@ -53,30 +42,23 @@ export function FeatureGrid() {
     <section id="features" className="max-w-6xl mx-auto px-4 py-20 sm:py-24">
       <ScrollReveal className="text-center mb-12">
         <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">
-          Why Omni?
+          High-Impact Integration Points
         </h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          The smart way to pay for education with rewards that actually matter.
+          Where Omni connects to your stack — and where it delivers the biggest gains.
         </p>
       </ScrollReveal>
 
-      <motion.div
-        variants={staggerContainerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature) => (
-          <motion.div key={feature.title} variants={slideUpVariants}>
-            <FeatureCard
-              icon={<feature.icon className="size-8" />}
-              title={feature.title}
-              description={feature.description}
-            />
-          </motion.div>
+          <FeatureCard
+            key={feature.title}
+            icon={<feature.icon className="size-8" />}
+            title={feature.title}
+            description={feature.description}
+          />
         ))}
-      </motion.div>
+      </div>
     </section>
   )
 }

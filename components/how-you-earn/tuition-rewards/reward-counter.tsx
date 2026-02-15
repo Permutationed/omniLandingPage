@@ -1,8 +1,7 @@
 'use client'
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
-import { DollarOdometer } from '../shared/odometer'
-import { EXAMPLE_DATA, ISO_COLORS } from '../shared/constants'
+import { Check } from 'lucide-react'
 
 interface RewardCounterProps {
   progress?: MotionValue<number>
@@ -12,7 +11,7 @@ interface RewardCounterProps {
 }
 
 /**
- * Animated reward counter showing earnings from tuition payment
+ * Status badge showing eCRF generation complete
  */
 export function RewardCounter({
   progress,
@@ -42,17 +41,9 @@ export function RewardCounter({
       className={`flex items-center gap-3 ${className}`}
       style={{ opacity, scale, y }}
     >
-      {/* Compact inline reward display */}
       <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-muted/50 border border-border">
-        <span className="text-sm text-muted-foreground">Rewards:</span>
-        <span className="text-lg md:text-xl font-semibold text-foreground">
-          +$<DollarOdometer
-            value={EXAMPLE_DATA.rewardAmount}
-            progress={progress}
-            progressRange={counterRange}
-          />
-        </span>
-        <span className="text-xs text-muted-foreground">pts</span>
+        <Check className="w-5 h-5 text-green-600" strokeWidth={2.5} />
+        <span className="text-sm text-muted-foreground">Forms ready — ready for downstream</span>
       </div>
     </motion.div>
   )

@@ -10,9 +10,9 @@ import { cn } from '@/lib/utils'
 import { navVariants, navTransition } from '@/lib/animation-variants'
 
 const navItems = [
-  { href: '#how-it-works', label: 'How It Works' },
-  { href: '#calculator', label: 'Calculator' },
-  { href: '#benefits', label: 'Benefits' },
+  { href: '#architecture', label: 'Architecture' },
+  { href: '#benefits', label: "Who It's For" },
+  { href: '#security', label: 'Security' },
   { href: '#faq', label: 'FAQ' },
 ]
 
@@ -60,7 +60,9 @@ export function HeaderNav() {
         {/* CTA Button with Magnetic Effect */}
         <div className="hidden md:block">
           <Magnetic>
-            <Button>Join Waitlist</Button>
+            <Button asChild>
+              <a href="#request-demo">Request Demo</a>
+            </Button>
           </Magnetic>
         </div>
 

@@ -7,23 +7,23 @@ import { ChevronDown, Shield, Lock, Server, CheckCircle } from 'lucide-react'
 const securityItems = [
   {
     icon: CheckCircle,
-    title: 'SOC 2 Type II Compliant',
-    description: 'Independently audited security controls',
+    title: 'Privacy & Compliance',
+    description: 'Designed for regulated environments',
   },
   {
     icon: Lock,
-    title: '256-bit AES Encryption',
-    description: 'Bank-level data protection',
+    title: 'Audit-Ready',
+    description: 'Full traceability and lineage',
   },
   {
     icon: Server,
-    title: 'PCI DSS Level 1',
-    description: 'Highest payment security standard',
+    title: 'Secure Architecture',
+    description: 'Enterprise-grade data handling',
   },
   {
     icon: Shield,
-    title: 'GDPR Compliant',
-    description: 'Full data privacy protection',
+    title: 'Human Oversight',
+    description: 'Built-in review checkpoints',
   },
 ]
 
@@ -40,7 +40,7 @@ export function SecurityAccordion() {
       >
         <div className="flex items-center gap-3">
           <Shield className="size-5 text-primary" aria-hidden />
-          <span className="font-medium">Bank-Level Security</span>
+          <span className="font-medium">Security & Governance</span>
         </div>
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}

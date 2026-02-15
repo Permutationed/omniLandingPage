@@ -8,10 +8,9 @@ import { FlowLines } from './flow-lines'
 import { TuitionCard } from './tuition-card'
 
 /**
- * Section 4: Redeem & Repeat
+ * Step 7: CSR drafting & submission artifacts
  *
- * Shows how points from all sources combine and reduce the next tuition bill
- * Demonstrates the virtuous cycle of earning and redeeming
+ * Downstream outputs combine into CSR draft and regulatory submission
  */
 export function RewardsLoop() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -46,11 +45,10 @@ export function RewardsLoop() {
           }}
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            Redeem & Repeat
+            Report Drafting & Submission
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto">
-            Your points work toward what matters most —
-            reducing your next tuition bill.
+            All outputs flow into reports and submissions. Changes propagate automatically.
           </p>
         </motion.div>
 

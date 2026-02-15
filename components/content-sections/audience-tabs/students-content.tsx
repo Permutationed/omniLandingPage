@@ -1,6 +1,6 @@
 'use client'
 
-import { GraduationCap, Wallet, MapPin, Bell, TrendingUp } from 'lucide-react'
+import { Building2, FileCheck, Zap, Clock, Shield } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
 interface Benefit {
@@ -11,29 +11,29 @@ interface Benefit {
 
 const benefits: Benefit[] = [
   {
-    icon: Wallet,
-    title: 'Rewards on Tuition',
-    description: 'Earn up to 1% cash back on every tuition payment. No caps, no gimmicks.',
+    icon: Building2,
+    title: 'End-to-End Acceleration',
+    description: 'From study design through submission with a single auditable workflow.',
   },
   {
-    icon: TrendingUp,
-    title: 'Better Loan Rates',
-    description: 'Unlock lower interest rates as you build payment history with Omni.',
+    icon: FileCheck,
+    title: 'Regulatory Readiness',
+    description: 'Compliant outputs with traceability to submission.',
   },
   {
-    icon: MapPin,
-    title: '3x-10x Merchant Points',
-    description: 'Discover local businesses near campus offering boosted reward multipliers.',
+    icon: Zap,
+    title: 'Faster Time to Lock',
+    description: 'Automated mapping and generation shrink timelines.',
   },
   {
-    icon: GraduationCap,
-    title: 'Campus Discovery',
-    description: 'Find the best student deals and rewards at businesses around your school.',
+    icon: Clock,
+    title: 'Capacity Reclamation',
+    description: 'Reclaim 25–40% of capacity from manual tasks.',
   },
   {
-    icon: Bell,
-    title: 'Proximity Notifications',
-    description: "Get alerts when you're near a partner merchant with elevated rewards.",
+    icon: Shield,
+    title: 'Audit-Ready',
+    description: 'Traceability and human oversight for compliance.',
   },
 ]
 
@@ -50,7 +50,7 @@ function BenefitCard({ benefit }: { benefit: Benefit }) {
   )
 }
 
-export function StudentsContent() {
+export function SponsorsContent() {
   const topRow = benefits.slice(0, 3)
   const bottomRow = benefits.slice(3, 5)
 

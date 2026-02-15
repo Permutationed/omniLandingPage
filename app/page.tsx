@@ -1,6 +1,14 @@
 import { HeroSection } from '@/components/hero/hero-section'
-import { HowYouEarnSection } from '@/components/how-you-earn'
-import { AudienceTabs, FAQSection, SecurityAccordion } from '@/components/content-sections'
+import {
+  AudienceTabs,
+  FAQSection,
+  SecuritySection,
+  FeatureGrid,
+  ArchitectureSection,
+  FutureVisionSection,
+  CTASection,
+  ProductivitySection,
+} from '@/components/content-sections'
 import { CalculatorSection } from '@/components/calculator'
 
 export default function Page() {
@@ -8,13 +16,23 @@ export default function Page() {
     <>
       <HeroSection />
 
-      <HowYouEarnSection />
+      <FeatureGrid />
+
+      <ArchitectureSection />
+
+      <ProductivitySection />
 
       <CalculatorSection />
 
       <AudienceTabs />
 
+      <SecuritySection />
+
       <FAQSection />
+
+      <FutureVisionSection />
+
+      <CTASection />
     </>
   )
 }

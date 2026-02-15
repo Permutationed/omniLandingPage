@@ -19,12 +19,12 @@ const plusJakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Omni Card - Earn Rewards on Tuition',
-  description: 'Pay tuition with your credit card. Earn rewards on your biggest expense. Zero fees for schools.',
-  keywords: ['tuition payments', 'student rewards', 'credit card rewards', 'college payments', 'university tuition', 'payment processing'],
+  title: 'Omni - AI Automation for Phase II & III Clinical Trials',
+  description: 'AI automation for Phase II & III clinical research. From study design to submission.',
+  keywords: ['clinical trials', 'Phase II', 'Phase III', 'AI automation', 'pharma', 'CRO', 'clinical research', 'regulatory submission'],
   openGraph: {
-    title: 'Omni Card - Earn Rewards on Tuition',
-    description: 'Pay tuition with your credit card. Earn rewards on your biggest expense.',
+    title: 'Omni - AI Automation for Phase II & III Clinical Trials',
+    description: 'AI automation for clinical trials. Built for regulated environments.',
     type: 'website',
   },
 }

@@ -10,42 +10,33 @@ import { RewardsLoop } from './rewards-loop'
  * Static fallback for reduced motion users
  */
 function HowYouEarnStatic() {
+  const steps = [
+    { title: 'Document ingestion', desc: 'Automated document processing and structuring.' },
+    { title: 'Form generation', desc: 'Automated creation of data collection forms.' },
+    { title: 'Analysis planning', desc: 'Automated planning and gap detection.' },
+    { title: 'Dataset generation', desc: 'Automated dataset creation and validation.' },
+    { title: 'Monitoring', desc: 'Automated oversight and anomaly detection.' },
+    { title: 'Analysis outputs', desc: 'Automated tables and figures.' },
+    { title: 'Report drafting', desc: 'Automated regulatory reports. Changes propagate downstream.' },
+  ]
   return (
     <div className="pt-16 pb-8 md:pt-24 md:pb-12 container mx-auto px-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-        {/* Left column */}
         <div className="space-y-6 lg:space-y-8">
-          <section className="bg-card rounded-xl p-8 shadow-md border border-border/50">
-            <h2 className="font-display text-2xl font-bold tracking-tight mb-4">Earn on Every Tuition Payment</h2>
-            <p className="text-muted-foreground">
-              Pay your (e.g.) $25,000 tuition through Omni. We handle the ACH transfer
-              to your school — you earn up to 1% back. That's $250 in rewards.
-            </p>
-          </section>
-          <section className="bg-card rounded-xl p-8 shadow-md border border-border/50">
-            <h2 className="font-display text-2xl font-bold tracking-tight mb-4">Discover Local Rewards</h2>
-            <p className="text-muted-foreground">
-              Find participating merchants near campus through the Omni app.
-              Earn 3x to 10x points at select locations.
-            </p>
-          </section>
+          {steps.slice(0, 4).map((s) => (
+            <section key={s.title} className="bg-card rounded-xl p-8 shadow-md border border-border/50">
+              <h2 className="font-display text-2xl font-bold tracking-tight mb-4">{s.title}</h2>
+              <p className="text-muted-foreground">{s.desc}</p>
+            </section>
+          ))}
         </div>
-        {/* Right column - staggered */}
         <div className="space-y-6 lg:space-y-8 lg:pt-48">
-          <section className="bg-card rounded-xl p-8 shadow-md border border-border/50">
-            <h2 className="font-display text-2xl font-bold tracking-tight mb-4">Unlock Better Tuition Rates</h2>
-            <p className="text-muted-foreground">
-              Use your Omni card for everyday purchases. Spend 20% of tuition to
-              unlock 0.5% back. Spend 40% to unlock 1.0% back.
-            </p>
-          </section>
-          <section className="bg-card rounded-xl p-8 shadow-md border border-border/50">
-            <h2 className="font-display text-2xl font-bold tracking-tight mb-4">Redeem & Repeat</h2>
-            <p className="text-muted-foreground">
-              Your points work toward what matters most — reducing your next
-              tuition bill. Then earn more the following semester.
-            </p>
-          </section>
+          {steps.slice(4, 7).map((s) => (
+            <section key={s.title} className="bg-card rounded-xl p-8 shadow-md border border-border/50">
+              <h2 className="font-display text-2xl font-bold tracking-tight mb-4">{s.title}</h2>
+              <p className="text-muted-foreground">{s.desc}</p>
+            </section>
+          ))}
         </div>
       </div>
     </div>
@@ -53,9 +44,9 @@ function HowYouEarnStatic() {
 }
 
 /**
- * Main "How You Earn" section with two-column staggered layout
- * Left column: TuitionRewards, DiscoverRewards
- * Right column: UnlockRate, RewardsLoop (offset down for stagger effect)
+ * The 7-Step Agentic Workflow
+ * Left column: Steps 1-4 (Protocol → eCRF → SAP → SDTM/ADaM)
+ * Right column: Steps 5-7 (Monitoring → TLF → CSR)
  */
 export function HowYouEarnSection() {
   const prefersReducedMotion = useReducedMotion()
@@ -67,6 +58,14 @@ export function HowYouEarnSection() {
   return (
     <div id="how-it-works" className="pt-16 pb-8 md:pt-24 md:pb-12">
       <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+            How It Works
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            From study design to submission — automated end to end.
+          </p>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Left column */}
           <div className="space-y-6 lg:space-y-8">

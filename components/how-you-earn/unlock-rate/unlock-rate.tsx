@@ -6,10 +6,9 @@ import { ProgressGauge } from './progress-gauge'
 import { RateDisplay } from './rate-display'
 
 /**
- * Section 2: Unlock Better Tuition Rates
+ * Steps 5–6: Real-time monitoring intelligence, Analysis & TLF generation
  *
- * Shows how everyday spending unlocks higher tuition reward rates
- * Progress bar fills as user scrolls, unlocking threshold badges
+ * Progress bar represents monitoring coverage / analysis stages
  */
 export function UnlockRate() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -44,11 +43,10 @@ export function UnlockRate() {
           }}
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            Unlock Better Tuition Rates
+            Monitoring & Analysis Outputs
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto">
-            Use your Omni card for everyday purchases.
-            The more you spend, the more you earn on tuition.
+            Automated oversight across sites and automated analysis outputs.
           </p>
         </motion.div>
 

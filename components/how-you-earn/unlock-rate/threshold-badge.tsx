@@ -5,8 +5,10 @@ import { Lock, Check } from 'lucide-react'
 import { ReactNode } from 'react'
 
 interface ThresholdBadgeProps {
-  /** The rate this threshold unlocks (e.g., 0.5, 1.0) */
+  /** The rate this threshold unlocks (e.g., 0.5, 1.0) — or use display to override */
   rate: number
+  /** Optional display text to show instead of rate% */
+  display?: ReactNode
   /** Label for the threshold (e.g., "20% of tuition<br/>spent") */
   thresholdLabel: ReactNode
   /** Scroll progress value */
@@ -23,6 +25,7 @@ interface ThresholdBadgeProps {
  */
 export function ThresholdBadge({
   rate,
+  display,
   thresholdLabel,
   progress,
   unlockAt,
@@ -93,8 +96,8 @@ export function ThresholdBadge({
             <Check className="w-3 h-3 text-white" strokeWidth={3} />
           </motion.div>
 
-          {/* Rate value */}
-          <span>{rate}%</span>
+          {/* Rate or custom display value */}
+          <span>{display ?? `${rate}%`}</span>
         </motion.div>
       </motion.div>
     </div>

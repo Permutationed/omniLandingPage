@@ -11,7 +11,7 @@ export function HeroCard3D() {
   const gyroscopeEnabled = permission === 'granted'
 
   return (
-    <div className="relative w-full max-w-3xl mx-auto aspect-[4/3]">
+    <div className="relative w-full min-h-[320px] sm:min-h-[400px] lg:min-h-[480px] max-w-4xl lg:max-w-5xl mx-auto aspect-[4/3] lg:aspect-[3/2]">
       <LoadingFallback />
       <View className="absolute inset-0 pointer-events-auto">
         {/* Camera pulled back so the full card fits in view when tilted */}

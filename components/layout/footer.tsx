@@ -2,10 +2,11 @@ import Link from 'next/link'
 
 const footerLinks = {
   nav: [
-    { href: '#how-it-works', label: 'How It Works' },
-    { href: '#calculator', label: 'Calculator' },
-    { href: '#benefits', label: 'Benefits' },
-    { href: '#faq', label: 'FAQ' },
+    { href: '#architecture', label: 'Architecture Overview' },
+    { href: '#security', label: 'Compliance & Security' },
+    { href: '#request-demo', label: 'Documentation' },
+    { href: '#request-demo', label: 'Research Whitepaper' },
+    { href: '#request-demo', label: 'Contact / Partnerships' },
   ],
 }
 
@@ -17,10 +18,10 @@ export function Footer() {
           {/* Logo & Tagline */}
           <div>
             <Link href="/" className="font-display font-bold text-xl tracking-tight">
-              Omni Card
+              Omni
             </Link>
             <p className="mt-2 text-sm text-muted-foreground max-w-xs">
-              Earn rewards on your biggest expense. Pay tuition with your credit card.
+              AI automation for Phase II & III clinical trials.
             </p>
           </div>
 
@@ -29,7 +30,7 @@ export function Footer() {
             <h3 className="font-display font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2">
               {footerLinks.nav.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <a
                     href={link.href}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -45,7 +46,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t">
           <p className="text-sm text-muted-foreground">
-            {new Date().getFullYear()} Omni Card. All rights reserved.
+            {new Date().getFullYear()} Omni. All rights reserved.
           </p>
         </div>
       </div>

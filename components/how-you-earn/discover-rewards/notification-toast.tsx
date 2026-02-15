@@ -5,11 +5,11 @@ import { MapPin, LucideIcon } from 'lucide-react'
 import { ISO_COLORS } from '../shared/constants'
 
 interface NotificationToastProps {
-  /** Merchant name */
-  merchantName: string
-  /** Reward multiplier */
-  multiplier: number
-  /** Merchant icon component */
+  /** Node or status label */
+  label: string
+  /** Secondary text (e.g., step number) */
+  subtext: string
+  /** Icon component */
   Icon: LucideIcon
   /** Scroll progress */
   progress?: MotionValue<number>
@@ -19,11 +19,11 @@ interface NotificationToastProps {
 }
 
 /**
- * Animated notification toast showing nearby merchant reward
+ * Animated status toast for pipeline progress
  */
 export function NotificationToast({
-  merchantName,
-  multiplier,
+  label,
+  subtext,
   Icon,
   progress,
   appearRange = [0.75, 0.85],
@@ -59,14 +59,14 @@ export function NotificationToast({
           {/* Content */}
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium truncate">
-              You&apos;re near {merchantName}
+              {label}
             </p>
             <p className="text-xs text-muted-foreground">
-              Earn <span className="font-bold text-primary">{multiplier}x points</span> today
+              {subtext}
             </p>
           </div>
 
-          {/* Merchant icon */}
+          {/* Icon */}
           <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
             <Icon className="w-5 h-5 text-foreground" strokeWidth={2} />
           </div>

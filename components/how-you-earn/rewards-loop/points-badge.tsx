@@ -1,18 +1,16 @@
 'use client'
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
-import { PointsOdometer } from '../shared/odometer'
-import { EXAMPLE_DATA, ISO_COLORS } from '../shared/constants'
 
 interface PointsBadgeProps {
   progress?: MotionValue<number>
-  /** Progress range when badge appears and counter runs */
+  /** Progress range when badge appears */
   appearRange?: [number, number]
   className?: string
 }
 
 /**
- * Central points badge showing total accumulated points
+ * Badge showing CSR draft ready from combined outputs
  */
 export function PointsBadge({
   progress,
@@ -36,22 +34,17 @@ export function PointsBadge({
       className={`text-center ${className}`}
       style={{ opacity, scale }}
     >
-      {/* Badge container - refined professional look */}
       <div className="inline-block rounded-xl px-6 py-4 md:px-8 md:py-5 bg-muted/50 border border-border">
         <div className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">
-          Total Points
+          Combined Output
         </div>
 
         <div className="text-2xl md:text-3xl font-semibold text-foreground">
-          <PointsOdometer
-            value={EXAMPLE_DATA.totalPoints}
-            progress={progress}
-            progressRange={appearRange}
-          />
+          Report Draft Ready
         </div>
 
         <div className="text-xs text-muted-foreground mt-1">
-          from all sources
+          from upstream automation
         </div>
       </div>
     </motion.div>
