@@ -7,7 +7,7 @@ export function HeroContent() {
       {/* Badge */}
       <div className="inline-flex items-center px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-medium mb-8">
         <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse" />
-        New: FDA Compliance Module v2.0
+        New agentic platform
       </div>
 
       {/* Headline */}
