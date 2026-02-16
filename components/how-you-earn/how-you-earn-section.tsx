@@ -63,7 +63,7 @@ export function HowYouEarnSection() {
             How It Works
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            From study design to submission — automated end to end.
+            From study design to submission, automated end to end.
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">

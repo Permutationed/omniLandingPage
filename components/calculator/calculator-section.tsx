@@ -75,7 +75,7 @@ export function CalculatorSection() {
 
               <div className="mt-6 p-3 rounded-lg bg-accent/10 text-center">
                 <p className="text-sm text-muted-foreground">
-                  Automation removes operational friction — teams focus on what matters.
+                  Automation removes operational friction. Teams focus on what matters.
                 </p>
               </div>
             </div>

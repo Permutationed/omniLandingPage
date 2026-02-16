@@ -6,15 +6,15 @@
 /* Light mode only - Enterprise pharma aesthetic */
 :root {
   /* Backgrounds & Surfaces */
-  --background: oklch(0.995 0.005 270);
+  --background: #f6f7f8;
   --foreground: oklch(0.18 0.02 270);
   --card: oklch(0.995 0.005 270);
   --card-foreground: oklch(0.18 0.02 270);
   --popover: oklch(0.995 0.005 270);
   --popover-foreground: oklch(0.18 0.02 270);
 
-  /* Primary - Deep indigo with refined saturation */
-  --primary: oklch(0.45 0.16 270);
+  /* Primary - Omni Pharma blue */
+  --primary: #137fec;
   --primary-foreground: oklch(0.99 0 0);
 
   /* Secondary - Subtle warmth */
@@ -36,7 +36,7 @@
   /* Borders & Inputs */
   --border: oklch(0.90 0.01 270);
   --input: oklch(0.92 0.01 270);
-  --ring: oklch(0.45 0.16 270);
+  --ring: #137fec;
 
   /* Radii */
   --radius: 0.5rem;
@@ -101,8 +101,8 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
 
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
@@ -120,33 +120,27 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* Hero gradient mesh - subtle drift animation */
-.hero-gradient {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    135deg,
-    oklch(0.98 0.01 270),
-    oklch(0.96 0.02 265),
-    oklch(0.97 0.015 275)
-  );
-  background-size: 200% 200%;
-  animation: gradient-drift 30s ease infinite;
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+    linear-gradient(to bottom, #f0f0f0 1px, transparent 1px);
+  background-size: 6rem 4rem;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
 }
 
-@keyframes gradient-drift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 9999px;
 }
 
-/* Respect reduced motion for CSS animations */
-@media (prefers-reduced-motion: reduce) {
-  .hero-gradient {
-    animation: none;
-    background-size: 100% 100%;
-  }
-}
 
 /* Base styles */
 @layer base {

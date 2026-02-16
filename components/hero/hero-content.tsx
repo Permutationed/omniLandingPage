@@ -1,64 +1,45 @@
-'use client'
-
-import { motion } from 'motion/react'
 import Link from 'next/link'
-import { heroContainerVariants, heroItemVariants } from '@/lib/animation-variants'
 import { Button } from '@/components/ui/button'
 
 export function HeroContent() {
   return (
-    <motion.div
-      variants={heroContainerVariants}
-      initial="hidden"
-      animate="visible"
-      className="text-center max-w-4xl mx-auto"
-    >
-      <motion.h1
-        variants={heroItemVariants}
-        className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.02em] text-foreground leading-[1.1]"
-      >
-        End to end automation for{' '}
-        <span className="text-primary">clinical trials</span>
-      </motion.h1>
+    <>
+      {/* Badge */}
+      <div className="inline-flex items-center px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-medium mb-8">
+        <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse" />
+        New: FDA Compliance Module v2.0
+      </div>
 
-      <motion.p
-        variants={heroItemVariants}
-        className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium"
-      >
-        AI infrastructure that automates clinical trial operations from design through submission.
-      </motion.p>
+      {/* Headline */}
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-6">
+        Ship clinical trials faster with{' '}
+        <br className="hidden sm:block" />
+        <span className="text-primary">autonomous automation.</span>
+      </h1>
 
-      <motion.p
-        variants={heroItemVariants}
-        className="mt-4 text-base text-muted-foreground"
-      >
-        Built for regulated environments. Human oversight. Audit-ready.
-      </motion.p>
+      {/* Subtext */}
+      <p className="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+        Omni Pharma accelerates the full trial lifecycle from protocol design to FDA
+        submission using compliant, enterprise-grade AI designed for modern healthcare.
+      </p>
 
-      <motion.div
-        variants={heroItemVariants}
-        className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center"
-      >
-        <Button asChild size="lg" className="h-12 px-8 text-base">
+      {/* CTA Group */}
+      <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <Button size="lg" className="rounded-lg px-8 py-3.5 text-base font-semibold shadow-md hover:shadow-lg" asChild>
           <a href="#request-demo">Request Demo</a>
         </Button>
-        <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base">
-          <Link href="#architecture">See Architecture</Link>
+        <Button
+          variant="outline"
+          size="lg"
+          className="rounded-lg px-8 py-3.5 text-base font-medium border-slate-200 hover:bg-slate-50"
+          asChild
+        >
+          <Link href="#" className="flex items-center justify-center gap-2">
+            <span className="material-icons text-lg">description</span>
+            View Documentation
+          </Link>
         </Button>
-      </motion.div>
-
-      <motion.p
-        variants={heroItemVariants}
-        className="mt-6 text-sm text-muted-foreground"
-      >
-        <span className="inline-flex items-center gap-2 flex-wrap justify-center">
-          <span>Regulated</span>
-          <span className="text-border">|</span>
-          <span>Automated</span>
-          <span className="text-border">|</span>
-          <span>Audit-ready</span>
-        </span>
-      </motion.p>
-    </motion.div>
+      </div>
+    </>
   )
 }

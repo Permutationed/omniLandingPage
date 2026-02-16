@@ -29,7 +29,7 @@ export function ProblemSection() {
     <section className="max-w-6xl mx-auto px-4 py-20 sm:py-24">
       <ScrollReveal className="text-center mb-12">
         <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-          The Problem — Clinical Trials Are Drowning in Data
+          The Problem: Clinical Trials Are Drowning in Data
         </h2>
         <h3 className="text-2xl font-semibold text-primary mb-4">
           More Data. Same Timelines.

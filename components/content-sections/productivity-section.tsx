@@ -20,7 +20,7 @@ export function ProductivitySection() {
           Reclaim 25–40% Organizational Capacity
         </h3>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Automation removes operational friction — teams focus on what matters.
+          Automation removes operational friction. Teams focus on what matters.
         </p>
       </ScrollReveal>
 

@@ -22,7 +22,7 @@ export function FutureVisionSection() {
           Toward Fully Autonomous Clinical Trials
         </h3>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          From study design to submission — one orchestrated system.
+          From study design to submission, one orchestrated system.
         </p>
       </ScrollReveal>
 

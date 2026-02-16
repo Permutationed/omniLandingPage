@@ -7,7 +7,7 @@ export function ArchitectureSection() {
     <section id="architecture" className="max-w-6xl mx-auto px-4 py-20 sm:py-24">
       <ScrollReveal className="text-center mb-12">
         <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-          Architecture — Built for Regulated Environments
+          Architecture: Built for Regulated Environments
         </h2>
       </ScrollReveal>
 

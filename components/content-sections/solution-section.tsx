@@ -32,7 +32,7 @@ export function SolutionSection() {
           The Solution
         </h2>
         <h3 className="text-2xl font-semibold text-primary mb-4">
-          Orchestrated AI — Not a Single Model
+          Orchestrated AI: Not a Single Model
         </h3>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
           Omni automates the full clinical trial workflow with coordinated, auditable outputs.

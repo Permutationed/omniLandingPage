@@ -5,7 +5,7 @@ import { Lock, Check } from 'lucide-react'
 import { ReactNode } from 'react'
 
 interface ThresholdBadgeProps {
-  /** The rate this threshold unlocks (e.g., 0.5, 1.0) — or use display to override */
+  /** The rate this threshold unlocks (e.g., 0.5, 1.0) or use display to override */
   rate: number
   /** Optional display text to show instead of rate% */
   display?: ReactNode

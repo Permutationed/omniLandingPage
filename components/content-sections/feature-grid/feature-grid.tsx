@@ -45,7 +45,7 @@ export function FeatureGrid() {
           High-Impact Integration Points
         </h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Where Omni connects to your stack — and where it delivers the biggest gains.
+          Where Omni connects to your stack and where it delivers the biggest gains.
         </p>
       </ScrollReveal>
 
