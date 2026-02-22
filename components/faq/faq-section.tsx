@@ -9,7 +9,7 @@ export function FAQSection() {
           Frequently Asked Questions
         </h2>
         <p className="text-muted-foreground text-lg">
-          Everything you need to know about Omni
+          Everything you need to know about Astraea
         </p>
       </ScrollReveal>
 

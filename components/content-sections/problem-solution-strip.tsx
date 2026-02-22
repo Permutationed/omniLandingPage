@@ -46,7 +46,7 @@ export function ProblemSolutionStrip() {
                 </div>
                 <div className="pl-4 border-l-2 border-primary">
                   <p className="text-xs uppercase tracking-wider text-primary font-bold mb-1">
-                    Omni Solution
+                    Astraea Solution
                   </p>
                   <p className="text-sm font-medium text-slate-800 leading-relaxed">{col.solution}</p>
                 </div>

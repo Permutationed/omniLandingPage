@@ -26,7 +26,7 @@ export function AudienceTabs() {
           Who It&apos;s For
         </h2>
         <p className="text-muted-foreground text-lg text-center max-w-2xl mx-auto mb-12">
-          Omni serves clinical trial stakeholders. Explore how each audience benefits.
+          Astraea serves clinical trial stakeholders. Explore how each audience benefits.
         </p>
       </ScrollReveal>
 

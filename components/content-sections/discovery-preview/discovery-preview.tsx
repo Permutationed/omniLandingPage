@@ -39,7 +39,7 @@ export function DiscoveryPreview() {
                     <span className="text-primary text-xs font-bold">1</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Open the Omni app</h3>
+                    <h3 className="font-semibold mb-1">Open the Astraea app</h3>
                     <p className="text-muted-foreground text-sm">See partner merchants on the map with their reward multipliers.</p>
                   </div>
                 </div>
@@ -57,7 +57,7 @@ export function DiscoveryPreview() {
                     <span className="text-primary text-xs font-bold">3</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Pay with Omni</h3>
+                    <h3 className="font-semibold mb-1">Pay with Astraea</h3>
                     <p className="text-muted-foreground text-sm">Earn multiplied points automatically. No codes, no hassle.</p>
                   </div>
                 </div>

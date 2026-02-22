@@ -12,13 +12,13 @@ export function HeaderNav() {
             <div className="w-8 h-8 flex items-center justify-center">
               <img
                 src="/8.png"
-                alt="Omni logo"
+                alt="Astraea logo"
                 className="w-full h-full object-contain"
                 style={{ filter: 'brightness(0) saturate(100%) invert(40%) sepia(95%) saturate(1500%) hue-rotate(200deg)' }}
               />
             </div>
             <span className="font-semibold text-xl tracking-tight text-slate-900">
-              Omni
+              Astraea
             </span>
           </Link>
 

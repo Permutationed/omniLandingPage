@@ -19,7 +19,7 @@ export function HeroContent() {
 
       {/* Subtext */}
       <p className="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-        Omni Pharma accelerates the full trial lifecycle from protocol design to FDA
+        Astraea Pharma accelerates the full trial lifecycle from protocol design to FDA
         submission using compliant, enterprise-grade AI designed for modern healthcare.
       </p>
 

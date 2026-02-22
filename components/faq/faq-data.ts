@@ -11,9 +11,9 @@ export interface FAQItem {
 export const faqItems: FAQItem[] = [
   {
     id: 'compliance',
-    question: 'How does Omni ensure compliance?',
+    question: 'How does Astraea ensure compliance?',
     answer:
-      'Omni is built for regulated environments with audit-ready outputs and human oversight. Every deliverable can be traced back to source.',
+      'Astraea is built for regulated environments with audit-ready outputs and human oversight. Every deliverable can be traced back to source.',
   },
   {
     id: 'data-protection',
@@ -25,7 +25,7 @@ export const faqItems: FAQItem[] = [
     id: 'traceability',
     question: 'Is output traceable?',
     answer:
-      'Yes. Omni produces reproducible, auditable outputs with full lineage to source inputs.',
+      'Yes. Astraea produces reproducible, auditable outputs with full lineage to source inputs.',
   },
   {
     id: 'quality',

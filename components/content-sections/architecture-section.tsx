@@ -14,7 +14,7 @@ export function ArchitectureSection() {
       <div className="max-w-2xl mx-auto">
         <div className="rounded-xl bg-card p-8 border border-border/50">
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Omni runs as a multi-agent pipeline: specialized automation steps work together in sequence,
+            Astraea runs as a multi-agent pipeline: specialized automation steps work together in sequence,
             passing outputs from one stage to the next. A central orchestrator coordinates the workflow,
             so data flows from documents and forms through analysis and reporting without manual handoffs.
             Built for regulated environments with audit-ready outputs and human oversight at key stages.

@@ -35,7 +35,7 @@ export function SolutionSection() {
           Orchestrated AI: Not a Single Model
         </h3>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Omni automates the full clinical trial workflow with coordinated, auditable outputs.
+          Astraea automates the full clinical trial workflow with coordinated, auditable outputs.
         </p>
       </ScrollReveal>
 

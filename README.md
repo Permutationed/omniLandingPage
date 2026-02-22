@@ -1,6 +1,6 @@
-# Omni
+# Astraea
 
-Landing page for Omni, multi-agent AI infrastructure for Phase II & III clinical trials. Transform protocol design, statistical programming, monitoring, and regulatory submission into a coordinated, auditable workflow.
+Landing page for Astraea, multi-agent AI infrastructure for Phase II & III clinical trials. Transform protocol design, statistical programming, monitoring, and regulatory submission into a coordinated, auditable workflow.
 
 ## Run it
 

@@ -13,11 +13,11 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Omni Pharma - Clinical Trial Automation',
-  description: 'Omni Pharma accelerates the full trial lifecycle from protocol design to FDA submission using compliant, enterprise-grade AI designed for modern healthcare.',
+  title: 'Astraea Pharma - Clinical Trial Automation',
+  description: 'Astraea Pharma accelerates the full trial lifecycle from protocol design to FDA submission using compliant, enterprise-grade AI designed for modern healthcare.',
   keywords: ['clinical trials', 'Phase II', 'Phase III', 'AI automation', 'pharma', 'CRO', 'clinical research', 'regulatory submission'],
   openGraph: {
-    title: 'Omni - AI Automation for Phase II & III Clinical Trials',
+    title: 'Astraea - AI Automation for Phase II & III Clinical Trials',
     description: 'AI automation for clinical trials. Built for regulated environments.',
     type: 'website',
   },

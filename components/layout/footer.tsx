@@ -8,15 +8,15 @@ export function Footer() {
           <div className="w-6 h-6 flex items-center justify-center">
             <img
               src="/8.png"
-              alt="Omni logo"
+              alt="Astraea logo"
               className="w-full h-full object-contain"
               style={{ filter: 'brightness(0) saturate(100%) invert(40%) sepia(95%) saturate(1500%) hue-rotate(200deg)' }}
             />
           </div>
-          <span className="font-medium text-slate-900">Omni</span>
+          <span className="font-medium text-slate-900">Astraea</span>
         </Link>
         <div className="text-sm text-slate-500">
-          © {new Date().getFullYear()} Omni Inc. All rights reserved.
+          © {new Date().getFullYear()} Astraea Inc. All rights reserved.
         </div>
         <div className="flex gap-6">
           <a
