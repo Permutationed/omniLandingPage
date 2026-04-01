@@ -1,20 +1,17 @@
 import { HeroSection } from '@/components/hero/hero-section'
-import { HowYouEarnSection } from '@/components/how-you-earn'
-import { AudienceTabs, FAQSection, SecurityAccordion } from '@/components/content-sections'
-import { CalculatorSection } from '@/components/calculator'
+import { DashboardMockup } from '@/components/content-sections/dashboard-mockup'
+import { ProblemSolutionStrip } from '@/components/content-sections/problem-solution-strip'
+import { AstraeaSection } from '@/components/content-sections/astraea-section'
+import { CTASection } from '@/components/content-sections/cta-section'
 
 export default function Page() {
   return (
-    <>
+    <main className="relative overflow-hidden">
       <HeroSection />
-
-      <HowYouEarnSection />
-
-      <CalculatorSection />
-
-      <AudienceTabs />
-
-      <FAQSection />
-    </>
+      <DashboardMockup />
+      <ProblemSolutionStrip />
+      <AstraeaSection />
+      <CTASection />
+    </main>
   )
 }

@@ -6,10 +6,10 @@ import { ChevronDown, Shield, Lock, Server, CheckCircle } from 'lucide-react'
 import { faqItems } from './faq-data'
 
 const securityGridItems = [
-  { icon: CheckCircle, title: 'SOC 2 Type II Compliant', description: 'Independently audited security controls' },
-  { icon: Lock, title: '256-bit AES Encryption', description: 'Bank-level data protection' },
-  { icon: Server, title: 'PCI DSS Level 1', description: 'Highest payment security standard' },
-  { icon: Shield, title: 'GDPR Compliant', description: 'Full data privacy protection' },
+  { icon: CheckCircle, title: 'Privacy & Compliance', description: 'Designed for regulated data handling' },
+  { icon: Lock, title: 'Audit-Ready Outputs', description: 'Full traceability and lineage' },
+  { icon: Server, title: 'Secure Architecture', description: 'Enterprise-grade security' },
+  { icon: Shield, title: 'Human Oversight', description: 'Built-in review checkpoints' },
 ]
 
 export function FAQAccordion() {

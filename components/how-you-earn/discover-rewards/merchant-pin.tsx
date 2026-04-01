@@ -1,13 +1,13 @@
 'use client'
 
 import { motion, MotionValue, useTransform } from 'framer-motion'
-import { Coffee, BookOpen, Pizza, UtensilsCrossed, ShoppingBag, LucideIcon } from 'lucide-react'
+import { FileText, BarChart3, Database, Activity, LucideIcon } from 'lucide-react'
 import { ISO_COLORS } from '../shared/constants'
 
 interface MerchantPinProps {
-  /** Merchant name */
+  /** Pipeline node name */
   name: string
-  /** Reward multiplier (e.g., 3, 5, 10) */
+  /** Step or stage identifier (e.g., 3, 4) */
   multiplier: number
   /** Icon component for the merchant */
   Icon: LucideIcon
@@ -23,7 +23,7 @@ interface MerchantPinProps {
 }
 
 /**
- * Animated merchant pin with reward multiplier badge
+ * Animated pipeline node pin with step badge
  */
 export function MerchantPin({
   name,
@@ -72,12 +72,12 @@ export function MerchantPin({
         className="relative flex flex-col items-center"
         style={{ color }}
       >
-        {/* Multiplier badge */}
+        {/* Step badge */}
         <div
           className="px-2 py-0.5 rounded-full text-white text-xs font-bold shadow-lg mb-1"
           style={{ backgroundColor: color }}
         >
-          {multiplier}x
+          Step {multiplier}
         </div>
 
         {/* Icon circle */}
@@ -101,7 +101,7 @@ export function MerchantPin({
         />
       </div>
 
-      {/* Merchant name (shown on hover/focus in real app, always visible here for demo) */}
+      {/* Node label */}
       <motion.span
         className="text-xs font-medium mt-1 whitespace-nowrap bg-background/80 px-2 py-0.5 rounded"
         style={{
@@ -118,45 +118,45 @@ export function MerchantPin({
   )
 }
 
-// Pre-defined merchant data - spread out on wider rectangular map
+// Pipeline nodes
 export const MERCHANTS = [
   {
-    id: 'coffee',
-    name: 'Campus Coffee',
-    Icon: Coffee,
-    multiplier: 5,
-    color: ISO_COLORS.coffee,
+    id: 'doc',
+    name: 'Documents',
+    Icon: FileText,
+    multiplier: 3,
+    color: ISO_COLORS.primary,
     position: { x: 12, y: 20 },
   },
   {
-    id: 'books',
-    name: 'University Books',
-    Icon: BookOpen,
-    multiplier: 10,
-    color: ISO_COLORS.books,
+    id: 'plan',
+    name: 'Analysis Plan',
+    Icon: BarChart3,
+    multiplier: 3,
+    color: ISO_COLORS.blue,
     position: { x: 75, y: 25 },
   },
   {
-    id: 'pizza',
-    name: 'Campus Pizza',
-    Icon: Pizza,
-    multiplier: 3,
+    id: 'data',
+    name: 'Datasets',
+    Icon: Database,
+    multiplier: 4,
     color: ISO_COLORS.food,
     position: { x: 18, y: 60 },
   },
   {
-    id: 'burger',
-    name: 'Student Grill',
-    Icon: UtensilsCrossed,
-    multiplier: 5,
+    id: 'analysis',
+    name: 'Analysis',
+    Icon: BarChart3,
+    multiplier: 4,
     color: ISO_COLORS.amberDark,
     position: { x: 80, y: 65 },
   },
   {
-    id: 'store',
-    name: 'Quick Mart',
-    Icon: ShoppingBag,
-    multiplier: 7,
+    id: 'output',
+    name: 'Output',
+    Icon: Activity,
+    multiplier: 4,
     color: ISO_COLORS.retail,
     position: { x: 55, y: 5 },
   },

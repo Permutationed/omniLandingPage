@@ -9,26 +9,14 @@ interface SpendSliderProps {
   onChange: (value: number) => void
 }
 
-const MIN = 200
-const MAX = 2000
-const STEP = 50
+const MIN = 5
+const MAX = 50
+const STEP = 5
 
 /**
- * Format a number as currency with /mo suffix: $500/mo
+ * Parse numeric input
  */
-function formatCurrency(value: number): string {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(value)
-}
-
-/**
- * Parse currency input by stripping non-numeric chars
- */
-function parseCurrencyInput(input: string): number {
+function parseInput(input: string): number {
   const cleaned = input.replace(/[^0-9]/g, '')
   return parseInt(cleaned, 10) || 0
 }
@@ -39,15 +27,13 @@ export function SpendSlider({ value, onChange }: SpendSliderProps) {
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const parsed = parseCurrencyInput(e.target.value)
-    // Clamp to valid range
+    const parsed = parseInput(e.target.value)
     const clamped = Math.min(MAX, Math.max(MIN, parsed))
     onChange(clamped)
   }
 
   const handleInputBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    const parsed = parseCurrencyInput(e.target.value)
-    // Clamp on blur to ensure valid value
+    const parsed = parseInput(e.target.value)
     const clamped = Math.min(MAX, Math.max(MIN, parsed))
     onChange(clamped)
   }
@@ -55,22 +41,19 @@ export function SpendSlider({ value, onChange }: SpendSliderProps) {
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center">
-        <Label htmlFor="spend-input" className="text-sm font-medium text-foreground">
-          Monthly Everyday Spend
+        <Label htmlFor="team-input" className="text-sm font-medium text-foreground">
+          Stats / DM Team Size
         </Label>
-        <div className="flex items-center gap-1">
-          <Input
-            id="spend-input"
-            type="text"
-            inputMode="numeric"
-            value={formatCurrency(value)}
-            onChange={handleInputChange}
-            onBlur={handleInputBlur}
-            className="w-24 text-right tabular-nums font-medium"
-            aria-describedby="spend-range"
-          />
-          <span className="text-sm text-muted-foreground">/mo</span>
-        </div>
+        <Input
+          id="team-input"
+          type="text"
+          inputMode="numeric"
+          value={value}
+          onChange={handleInputChange}
+          onBlur={handleInputBlur}
+          className="w-20 text-right tabular-nums font-medium"
+          aria-describedby="team-range"
+        />
       </div>
       <Slider
         value={[value]}
@@ -78,10 +61,10 @@ export function SpendSlider({ value, onChange }: SpendSliderProps) {
         min={MIN}
         max={MAX}
         step={STEP}
-        aria-label="Monthly everyday spend amount"
+        aria-label="Statistical and data management team size"
       />
-      <p id="spend-range" className="text-xs text-muted-foreground text-right">
-        {formatCurrency(MIN)}/mo - {formatCurrency(MAX)}/mo
+      <p id="team-range" className="text-xs text-muted-foreground text-right">
+        {MIN} - {MAX} FTE
       </p>
     </div>
   )

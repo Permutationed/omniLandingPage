@@ -59,9 +59,9 @@ export function MobileNav({ items }: MobileNavProps) {
           ))}
           <Button
             className="mt-4"
-            onClick={() => handleNavClick('#waitlist')}
+            onClick={() => handleNavClick('#request-demo')}
           >
-            Join Waitlist
+            Request Demo
           </Button>
         </nav>
       </SheetContent>

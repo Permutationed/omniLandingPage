@@ -1,49 +1,45 @@
-'use client'
-
-import { motion } from 'motion/react'
-import { heroContainerVariants, heroItemVariants } from '@/lib/animation-variants'
-import { EmailCapture } from './email-capture'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 
 export function HeroContent() {
   return (
-    <motion.div
-      variants={heroContainerVariants}
-      initial="hidden"
-      animate="visible"
-      className="text-center max-w-4xl mx-auto"
-    >
-      <motion.h1
-        variants={heroItemVariants}
-        className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.02em] text-foreground leading-[1.1]"
-      >
-        Earn Rewards on Your{' '}
-        <span className="text-primary">Biggest Expense</span>
-      </motion.h1>
+    <>
+      {/* Badge */}
+      <div className="inline-flex items-center px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-medium mb-8">
+        <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse" />
+        New agentic platform
+      </div>
 
-      <motion.p
-        variants={heroItemVariants}
-        className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium"
-      >
-        Pay tuition through the Omni platform. Earn points on tuition.
-        Maximize rewards as a student.
-      </motion.p>
+      {/* Headline */}
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-6">
+        Ship clinical trials faster with{' '}
+        <br className="hidden sm:block" />
+        <span className="text-primary">autonomous automation.</span>
+      </h1>
 
-      <motion.div variants={heroItemVariants} className="mt-8">
-        <EmailCapture />
-      </motion.div>
+      {/* Subtext */}
+      <p className="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+        Astraea Pharma accelerates the full trial lifecycle from protocol design to FDA
+        submission using compliant, enterprise-grade AI designed for modern healthcare.
+      </p>
 
-      <motion.p
-        variants={heroItemVariants}
-        className="mt-6 text-sm text-muted-foreground"
-      >
-        <span className="inline-flex items-center gap-2">
-          <span>Bank-level security</span>
-          <span className="text-border">|</span>
-          <span>No fees for schools</span>
-          <span className="text-border">|</span>
-          <span>Rewards from day one</span>
-        </span>
-      </motion.p>
-    </motion.div>
+      {/* CTA Group */}
+      <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <Button size="lg" className="rounded-lg px-8 py-3.5 text-base font-semibold shadow-md hover:shadow-lg" asChild>
+          <a href="#request-demo">Request Demo</a>
+        </Button>
+        <Button
+          variant="outline"
+          size="lg"
+          className="rounded-lg px-8 py-3.5 text-base font-medium border-slate-200 hover:bg-slate-50"
+          asChild
+        >
+          <Link href="#" className="flex items-center justify-center gap-2">
+            <span className="material-icons text-lg">description</span>
+            View Documentation
+          </Link>
+        </Button>
+      </div>
+    </>
   )
 }

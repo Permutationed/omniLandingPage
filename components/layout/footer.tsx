@@ -1,52 +1,36 @@
 import Link from 'next/link'
 
-const footerLinks = {
-  nav: [
-    { href: '#how-it-works', label: 'How It Works' },
-    { href: '#calculator', label: 'Calculator' },
-    { href: '#benefits', label: 'Benefits' },
-    { href: '#faq', label: 'FAQ' },
-  ],
-}
-
 export function Footer() {
   return (
-    <footer className="border-t bg-muted/30">
-      <div className="container py-12 md:py-16">
-        <div className="grid gap-8 md:grid-cols-2">
-          {/* Logo & Tagline */}
-          <div>
-            <Link href="/" className="font-display font-bold text-xl tracking-tight">
-              Omni Card
-            </Link>
-            <p className="mt-2 text-sm text-muted-foreground max-w-xs">
-              Earn rewards on your biggest expense. Pay tuition with your credit card.
-            </p>
+    <footer className="bg-white border-t border-slate-200 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <Link href="/" className="flex items-center gap-2">
+          <div className="w-6 h-6 flex items-center justify-center">
+            <img
+              src="/8.png"
+              alt="Astraea logo"
+              className="w-full h-full object-contain"
+              style={{ filter: 'brightness(0) saturate(100%) invert(40%) sepia(95%) saturate(1500%) hue-rotate(200deg)' }}
+            />
           </div>
-
-          {/* Navigation */}
-          <div>
-            <h3 className="font-display font-semibold mb-4">Navigation</h3>
-            <ul className="space-y-2">
-              {footerLinks.nav.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <span className="font-medium text-slate-900">Astraea</span>
+        </Link>
+        <div className="text-sm text-slate-500">
+          © {new Date().getFullYear()} Astraea Inc. All rights reserved.
         </div>
-
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t">
-          <p className="text-sm text-muted-foreground">
-            {new Date().getFullYear()} Omni Card. All rights reserved.
-          </p>
+        <div className="flex gap-6">
+          <a
+            href="#"
+            className="text-slate-400 hover:text-primary transition-colors text-sm"
+          >
+            Privacy Policy
+          </a>
+          <a
+            href="#"
+            className="text-slate-400 hover:text-primary transition-colors text-sm"
+          >
+            Terms of Service
+          </a>
         </div>
       </div>
     </footer>

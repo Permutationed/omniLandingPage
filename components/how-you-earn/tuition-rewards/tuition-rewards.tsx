@@ -9,10 +9,9 @@ import { RewardCounter } from './reward-counter'
 import { EXAMPLE_DATA, ISO_COLORS } from '../shared/constants'
 
 /**
- * Section 1: Earn on Every Tuition Payment
+ * Steps 1–2: Protocol ingestion & structuring, eCRF generation
  *
- * Shows the core value prop — bank → ACH → school → rewards
- * Scroll-animated isometric illustrations
+ * Scroll-animated isometric flow from protocol to eCRF
  */
 export function TuitionRewards() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -47,12 +46,10 @@ export function TuitionRewards() {
           }}
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            Earn on Every Tuition Payment
+            Document Ingestion & Form Generation
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto">
-            Pay your (e.g.) ${EXAMPLE_DATA.tuition.toLocaleString()} tuition through Omni.
-            We handle the ACH transfer to your school — you earn up to{' '}
-            {(EXAMPLE_DATA.rewardRate * 100).toFixed(0)}% back.
+            Automated document processing and form creation for data collection.
           </p>
         </motion.div>
 
@@ -91,7 +88,7 @@ export function TuitionRewards() {
                   opacity: useTransform(animationProgress, [0.35, 0.45], [0, 1]),
                 }}
               >
-                ACH Transfer
+                Data Flow
               </motion.span>
               <motion.div
                 className="w-0.5 h-16"

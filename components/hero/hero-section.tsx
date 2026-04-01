@@ -1,26 +1,11 @@
 import { HeroContent } from './hero-content'
-import { MetricCards } from './metric-cards'
-import { HeroCard3D } from './hero-card-3d'
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center py-24 lg:py-32">
-      {/* Gradient mesh background */}
-      <div className="hero-gradient" aria-hidden="true" />
-
-      <div className="container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <HeroContent />
-
-          {/* 3D Card - positioned to right on desktop, below on mobile */}
-          <div className="order-first lg:order-last">
-            <HeroCard3D />
-          </div>
-        </div>
-
-        <div className="mt-16 sm:mt-20">
-          <MetricCards />
-        </div>
+    <section className="relative pt-20 pb-8 sm:pt-24 sm:pb-10 lg:pt-28 lg:pb-12">
+      <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-grid-pattern" />
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <HeroContent />
       </div>
     </section>
   )

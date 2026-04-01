@@ -1,6 +1,6 @@
 'use client'
 
-import { Briefcase, Layers, Activity, FileBarChart, Users } from 'lucide-react'
+import { Code2, Database, FileText, GitBranch, CheckCircle } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
 interface Benefit {
@@ -11,29 +11,29 @@ interface Benefit {
 
 const benefits: Benefit[] = [
   {
-    icon: Briefcase,
-    title: 'Scale Across Studies',
-    description: 'Run more studies with the same headcount. Automation handles documents, forms, and monitoring.',
+    icon: Code2,
+    title: 'Dataset Automation',
+    description: 'Automated dataset generation with gap detection and validation.',
   },
   {
-    icon: Layers,
-    title: 'Consistent Deliverables',
-    description: 'Standardized outputs and drafts across sponsors and therapeutic areas.',
+    icon: Database,
+    title: 'Data Lineage',
+    description: 'Full traceability from source to output. Audit-ready for every deliverable.',
   },
   {
-    icon: Activity,
-    title: 'Real-Time Monitoring',
-    description: 'Flag deviations before they become findings.',
+    icon: FileText,
+    title: 'Analysis Outputs',
+    description: 'Automated tables and figures. Weeks→hours for standard outputs.',
   },
   {
-    icon: FileBarChart,
-    title: 'Accelerated Lock',
-    description: 'Automated programming accelerates reconciliation and database lock.',
+    icon: GitBranch,
+    title: 'Automatic Propagation',
+    description: 'Change upstream and outputs update automatically.',
   },
   {
-    icon: Users,
+    icon: CheckCircle,
     title: 'Quality Assurance',
-    description: 'Automated checks for higher accuracy and auditability.',
+    description: 'Automated verification for higher accuracy.',
   },
 ]
 
@@ -50,7 +50,7 @@ function BenefitCard({ benefit }: { benefit: Benefit }) {
   )
 }
 
-export function CROsContent() {
+export function StatsDataManagementContent() {
   const topRow = benefits.slice(0, 3)
   const bottomRow = benefits.slice(3, 5)
 

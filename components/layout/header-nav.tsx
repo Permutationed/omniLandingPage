@@ -1,72 +1,32 @@
 'use client'
 
-import { motion } from 'motion/react'
 import Link from 'next/link'
-import { useScrollDirection } from '@/hooks/use-scroll-direction'
-import { MobileNav } from './mobile-nav'
-import { Magnetic } from '@/components/ui/magnetic-button'
 import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
-import { navVariants, navTransition } from '@/lib/animation-variants'
-
-const navItems = [
-  { href: '#how-it-works', label: 'How It Works' },
-  { href: '#calculator', label: 'Calculator' },
-  { href: '#benefits', label: 'Benefits' },
-  { href: '#faq', label: 'FAQ' },
-]
 
 export function HeaderNav() {
-  const { scrollDirection, isAtTop } = useScrollDirection()
-  const hidden = scrollDirection === 'down' && !isAtTop
-
-  const scrollTo = (href: string) => (e: React.MouseEvent) => {
-    e.preventDefault()
-    const id = href.replace('#', '')
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-    window.history.pushState(null, '', href)
-  }
-
   return (
-    <motion.header
-      variants={navVariants}
-      animate={hidden ? 'hidden' : 'visible'}
-      transition={navTransition}
-      className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-colors',
-        isAtTop ? 'bg-transparent' : 'bg-background/80 backdrop-blur-sm border-b'
-      )}
-    >
-      <div className="container flex h-16 items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="font-display font-bold text-xl tracking-tight">
-          Omni
-        </Link>
+    <nav className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <Link href="/" className="flex items-center gap-2">
+            <div className="w-8 h-8 flex items-center justify-center">
+              <img
+                src="/8.png"
+                alt="Astraea logo"
+                className="w-full h-full object-contain"
+                style={{ filter: 'brightness(0) saturate(100%) invert(40%) sepia(95%) saturate(1500%) hue-rotate(200deg)' }}
+              />
+            </div>
+            <span className="font-semibold text-xl tracking-tight text-slate-900">
+              Astraea
+            </span>
+          </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={scrollTo(item.href)}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
-
-        {/* CTA Button with Magnetic Effect */}
-        <div className="hidden md:block">
-          <Magnetic>
-            <Button>Join Waitlist</Button>
-          </Magnetic>
+          <Button asChild className="rounded-lg shadow-sm">
+            <a href="#request-demo">Request Demo</a>
+          </Button>
         </div>
-
-        {/* Mobile Menu */}
-        <MobileNav items={navItems} />
       </div>
-    </motion.header>
+    </nav>
   )
 }
