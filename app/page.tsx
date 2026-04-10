@@ -9,8 +9,8 @@ export default function Page() {
     <main className="relative">
       <HeroSection />
       <DashboardMockup />
-      <ProblemSolutionStrip />
       <AstraeaSection />
+      <ProblemSolutionStrip />
       <CTASection />
     </main>
   )

@@ -1,6 +1,7 @@
 'use client'
 
-import { motion } from 'motion/react'
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'motion/react'
 
 const STEPS = [
   { name: 'Protocol', done: true },
@@ -13,11 +14,22 @@ const STEPS = [
 ]
 
 export function DashboardMockup() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start end', 'end start'],
+  })
+
+  // Bar goes from 0% to 100% as section scrolls through viewport
+  const barWidth = useTransform(scrollYProgress, [0.1, 0.7], ['0%', '100%'])
+
   return (
-    <section className="py-[60px]" style={{ background: '#fafafa' }}>
+    <section ref={sectionRef} className="py-[60px]" style={{ background: '#fafafa' }}>
       <div className="max-w-[1140px] mx-auto px-5">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-start">
+          {/* Left: sticky heading */}
           <motion.div
+            className="lg:sticky lg:top-[80px] lg:self-start"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -32,6 +44,7 @@ export function DashboardMockup() {
             </p>
           </motion.div>
 
+          {/* Right: dashboard card */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -53,8 +66,12 @@ export function DashboardMockup() {
 
               {/* Dashboard body */}
               <div className="p-5">
+                {/* Scroll-driven progress bar */}
                 <div className="h-[6px] rounded-[3px] mb-5 overflow-hidden" style={{ background: '#e8e0d8' }}>
-                  <div className="h-full rounded-[3px] bg-foreground" style={{ width: '60%' }} />
+                  <motion.div
+                    className="h-full rounded-[3px] bg-foreground"
+                    style={{ width: barWidth }}
+                  />
                 </div>
                 <div className="flex gap-[6px] flex-wrap">
                   {STEPS.map((step) => (

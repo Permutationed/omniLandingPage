@@ -73,15 +73,11 @@ export function AstraeaSection() {
 
             {/* Left: Step text (crossfading) */}
             <div className="relative" style={{ minHeight: '380px' }}>
-              <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-muted-foreground mb-2">
-                Execution Pipeline v4.0
-              </p>
-
               {PIPELINE_STEPS.map((step, i) => (
                 <motion.div
                   key={step.name}
                   className="absolute left-0 right-0"
-                  style={{ top: '32px', opacity: steps[i].textOpacity }}
+                  style={{ top: '0px', opacity: steps[i].textOpacity }}
                 >
                   <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-muted-foreground mb-3">
                     Step {i + 1} of 5
@@ -117,9 +113,6 @@ export function AstraeaSection() {
 
             {/* Right: Stacking blocks */}
             <div className="flex flex-col items-center justify-center">
-              <p className="self-start text-[11px] font-bold uppercase tracking-[0.08em] text-muted-foreground mb-6">
-                Execution Pipeline v4.0
-              </p>
               <div className="flex flex-col-reverse w-[280px]">
                 {PIPELINE_STEPS.map((step, i) => (
                   <motion.div

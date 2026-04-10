@@ -9,6 +9,7 @@ export function ProblemSolutionStrip() {
       <div className="max-w-[1140px] mx-auto px-5">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-start">
           <motion.div
+            className="lg:sticky lg:top-[80px] lg:self-start"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
