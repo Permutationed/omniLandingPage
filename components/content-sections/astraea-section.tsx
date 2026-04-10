@@ -42,16 +42,22 @@ function useStepAnimations(scrollYProgress: MotionValue<number>) {
     const end = (i + 1) * 0.2
     const traceStart = start + 0.06
     return {
-      blockOpacity: useTransform(scrollYProgress, [start, start + 0.03], [0, 1]),
-      blockY: useTransform(scrollYProgress, [start, start + 0.06], [40, 0]),
+      blockOpacity: i === 0
+        ? useTransform(scrollYProgress, [0, 0], [1, 1])
+        : useTransform(scrollYProgress, [start, start + 0.03], [0, 1]),
+      blockY: i === 0
+        ? useTransform(scrollYProgress, [0, 0], [0, 0])
+        : useTransform(scrollYProgress, [start, start + 0.06], [40, 0]),
       traceProgress: useTransform(scrollYProgress, [traceStart, end - 0.02], [0, 1]),
-      textOpacity: useTransform(
-        scrollYProgress,
-        i === 4
-          ? [Math.max(0, start - 0.01), start + 0.03, 1.0, 1.0]
-          : [Math.max(0, start - 0.01), start + 0.03, end - 0.03, end],
-        [0, 1, 1, i === 4 ? 1 : 0]
-      ),
+      textOpacity: i === 0
+        ? useTransform(scrollYProgress, [0, 0.03, 0.17, 0.2], [1, 1, 1, 0])
+        : useTransform(
+            scrollYProgress,
+            i === 4
+              ? [Math.max(0, start - 0.01), start + 0.03, 1.0, 1.0]
+              : [Math.max(0, start - 0.01), start + 0.03, end - 0.03, end],
+            [0, 1, 1, i === 4 ? 1 : 0]
+          ),
     }
   })
 }
