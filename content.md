@@ -94,16 +94,14 @@ Track every phase of your trial from a single interface. Protocol, site selectio
 ## Disciplines Section
 *File: `components/content-sections/problem-solution-strip.tsx`*
 
-**Headline:**
-Built for the regulated complexity of modern clinical research.
+### Human oversight for protocol design at AI speed.
+Reduce protocol development time by up to 90% while keeping experts in control of every critical decision.
 
-**Body:**
-Our platform brings together expertise across three critical disciplines:
+### Unified visibility across the clinical data stack.
+View, organize, and manage data across multiple sources, formats, and study assets in one workspace.
 
-**Disciplines:**
-1. Protocol Design
-2. Patient Recruitment
-3. Data Automation
+### Automated SDTM and ADaM analysis with expert review built in.
+Move faster on clinical analysis and downstream outputs with automation that improves speed, consistency, and traceability.
 
 ---
 
