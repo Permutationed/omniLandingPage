@@ -1,33 +1,44 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
-import { EmailCapture } from '@/components/hero/email-capture'
+import { motion } from 'motion/react'
+import Link from 'next/link'
 
 export function CTASection() {
   return (
-    <section
-      id="request-demo"
-      className="max-w-4xl mx-auto px-4 py-12 sm:py-16"
-    >
-      <div className="text-center mb-8">
-        <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight mb-3">
-          Ready to ship faster?
-        </h2>
-        <p className="text-muted-foreground text-lg mb-6">
-          Request a technical demo.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-          <Button size="lg" className="h-12 px-8" asChild>
-            <a href="mailto:josh29@stanford.edu?subject=Technical%20Demo%20Request">
-              Book Technical Demo
-            </a>
-          </Button>
-        </div>
-        <div className="rounded-xl bg-muted/30 p-8 border border-border/50 max-w-md mx-auto">
-          <p className="text-sm font-medium mb-4 text-center">
-            Or leave your email and we&apos;ll be in touch.
-          </p>
-          <EmailCapture />
+    <section id="request-demo" className="py-20 border-t border-foreground">
+      <div className="max-w-[1140px] mx-auto px-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-end">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-muted-foreground mb-4">
+              Partner With Us
+            </p>
+            <h2 className="font-serif text-[38px] font-semibold text-foreground mb-6" style={{ lineHeight: 1.1, letterSpacing: '-0.01em' }}>
+              Ready to ship your clinical trials faster? Let&apos;s accelerate together.
+            </h2>
+            <Link
+              href="mailto:josh29@stanford.edu"
+              className="group inline-flex items-center justify-center gap-2 bg-foreground text-primary-foreground text-base font-normal h-10 px-[13px]"
+              style={{ borderRadius: '5px', border: '1px solid var(--foreground)' }}
+            >
+              Request Demo
+              <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
+            </Link>
+          </motion.div>
+
+          <motion.div
+            className="flex justify-end items-end"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+          >
+            <div className="w-[200px] h-[200px] bg-accent opacity-40" />
+          </motion.div>
         </div>
       </div>
     </section>

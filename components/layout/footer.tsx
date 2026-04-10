@@ -2,36 +2,30 @@ import Link from 'next/link'
 
 export function Footer() {
   return (
-    <footer className="bg-white border-t border-slate-200 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-6 h-6 flex items-center justify-center">
-            <img
-              src="/8.png"
-              alt="Astraea logo"
-              className="w-full h-full object-contain"
-              style={{ filter: 'brightness(0) saturate(100%) invert(40%) sepia(95%) saturate(1500%) hue-rotate(200deg)' }}
-            />
-          </div>
-          <span className="font-medium text-slate-900">Astraea</span>
-        </Link>
-        <div className="text-sm text-slate-500">
-          © {new Date().getFullYear()} Astraea Inc. All rights reserved.
+    <footer className="border-t border-foreground">
+      <div className="max-w-[1140px] mx-auto px-5 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <Link href="/" className="font-sans text-lg font-bold tracking-tight text-foreground" style={{ letterSpacing: '-0.02em' }}>
+            Astraea
+          </Link>
         </div>
-        <div className="flex gap-6">
-          <a
-            href="#"
-            className="text-slate-400 hover:text-primary transition-colors text-sm"
-          >
-            Privacy Policy
-          </a>
-          <a
-            href="#"
-            className="text-slate-400 hover:text-primary transition-colors text-sm"
-          >
-            Terms of Service
-          </a>
+        <div>
+          <h5 className="text-[11px] font-bold uppercase tracking-[0.08em] text-muted-foreground mb-3">Company</h5>
+          <Link href="#" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity">About Us</Link>
         </div>
+        <div>
+          <h5 className="text-[11px] font-bold uppercase tracking-[0.08em] text-muted-foreground mb-3">Platform</h5>
+          <Link href="#technology" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity">Technology</Link>
+          <Link href="#pipeline" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity">Pipeline</Link>
+        </div>
+        <div>
+          <h5 className="text-[11px] font-bold uppercase tracking-[0.08em] text-muted-foreground mb-3">Policies</h5>
+          <Link href="#" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity">Privacy Policy</Link>
+          <Link href="#" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity">Terms of Service</Link>
+        </div>
+      </div>
+      <div className="max-w-[1140px] mx-auto px-5 pb-10 text-xs text-muted-foreground">
+        &copy; Astraea Inc. {new Date().getFullYear()}
       </div>
     </footer>
   )

@@ -1,80 +1,49 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'motion/react'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
 
-type ValidationStatus = 'idle' | 'invalid' | 'valid'
+type ValidationState = 'idle' | 'invalid' | 'valid'
 
 export function EmailCapture() {
   const [email, setEmail] = useState('')
-  const [touched, setTouched] = useState(false)
-  const [status, setStatus] = useState<ValidationStatus>('idle')
+  const [validation, setValidation] = useState<ValidationState>('idle')
 
-  const validate = (value: string): ValidationStatus => {
-    if (!value) return 'idle'
-    const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
-    return isValid ? 'valid' : 'invalid'
-  }
-
-  const handleBlur = () => {
-    setTouched(true)
-    setStatus(validate(email))
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value
-    setEmail(value)
-    if (touched) {
-      setStatus(validate(value))
-    }
+  const validateEmail = (value: string) => {
+    if (!value) return 'idle' as const
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? 'valid' as const : 'invalid' as const
   }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const validationResult = validate(email)
-    setStatus(validationResult)
-    setTouched(true)
-
-    if (validationResult === 'valid') {
-      // TODO: Submit to waitlist API in Phase 10
-      console.log('Submitting email:', email)
+    const state = validateEmail(email)
+    setValidation(state)
+    if (state === 'valid') {
+      console.log('Email submitted:', email)
     }
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-      <div className="flex-1 relative">
-        <Input
-          type="email"
-          placeholder="Enter your email for demo"
-          value={email}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          required
-          aria-describedby={status === 'invalid' && touched ? 'email-error' : undefined}
-          className={cn(
-            'h-12',
-            status === 'invalid' && touched && 'border-destructive focus-visible:ring-destructive',
-            status === 'valid' && 'border-green-500 focus-visible:ring-green-500'
-          )}
-        />
-        {status === 'invalid' && touched && (
-          <motion.p
-            id="email-error"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-destructive text-sm mt-1 absolute"
-          >
-            Please enter a valid email
-          </motion.p>
-        )}
-      </div>
-      <Button type="submit" size="lg" className="h-12 px-8">
+    <form onSubmit={handleSubmit} className="flex gap-2">
+      <input
+        type="email"
+        value={email}
+        onChange={(e) => { setEmail(e.target.value); setValidation('idle') }}
+        onBlur={() => email && setValidation(validateEmail(email))}
+        placeholder="Enter your email"
+        className="h-10 px-[14px] bg-transparent text-foreground placeholder:text-muted-foreground text-sm font-sans w-[260px] outline-none focus:ring-1 focus:ring-foreground"
+        style={{
+          border: `1px solid ${validation === 'invalid' ? '#c44' : 'var(--foreground)'}`,
+          borderRadius: '5px',
+        }}
+      />
+      <button
+        type="submit"
+        className="group inline-flex items-center justify-center gap-2 bg-foreground text-primary-foreground text-sm font-normal h-10 px-5 whitespace-nowrap"
+        style={{ borderRadius: '5px', border: '1px solid var(--foreground)' }}
+      >
         Request Demo
-      </Button>
+        <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
+      </button>
     </form>
   )
 }

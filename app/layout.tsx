@@ -1,23 +1,30 @@
 import type { Metadata } from 'next'
-import { DM_Sans } from 'next/font/google'
+import { Source_Serif_4, Inter } from 'next/font/google'
 import { Providers } from '@/components/providers'
-import { Header } from '@/components/layout/header'
+import { HeaderNav } from '@/components/layout/header-nav'
 import { Footer } from '@/components/layout/footer'
 import './globals.css'
 
-const dmSans = DM_Sans({
+const sourceSerif4 = Source_Serif_4({
   subsets: ['latin'],
-  variable: '--font-dm-sans',
+  variable: '--font-source-serif-4',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '600'],
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+  weight: ['400', '500', '700'],
 })
 
 export const metadata: Metadata = {
-  title: 'Astraea Pharma - Clinical Trial Automation',
-  description: 'Astraea Pharma accelerates the full trial lifecycle from protocol design to FDA submission using compliant, enterprise-grade AI designed for modern healthcare.',
+  title: 'Astraea - Autonomous Clinical Trial Automation',
+  description: 'Astraea accelerates the full trial lifecycle from protocol design to FDA submission using compliant, enterprise-grade AI designed for modern healthcare.',
   keywords: ['clinical trials', 'Phase II', 'Phase III', 'AI automation', 'pharma', 'CRO', 'clinical research', 'regulatory submission'],
   openGraph: {
-    title: 'Astraea - AI Automation for Phase II & III Clinical Trials',
+    title: 'Astraea - Autonomous Clinical Trial Automation',
     description: 'AI automation for clinical trials. Built for regulated environments.',
     type: 'website',
   },
@@ -29,12 +36,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={dmSans.variable}>
-      <body className="min-h-screen bg-background font-sans antialiased text-slate-900">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <html lang="en" className={`${sourceSerif4.variable} ${inter.variable}`}>
+      <body className="min-h-screen bg-background font-sans antialiased text-foreground">
         <Providers>
           <div className="relative flex min-h-screen flex-col">
-            <Header />
+            <HeaderNav />
             <main className="flex-1">
               {children}
             </main>
