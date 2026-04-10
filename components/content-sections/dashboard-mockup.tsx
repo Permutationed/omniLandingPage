@@ -39,7 +39,7 @@ export function DashboardMockup() {
   return (
     <section ref={sectionRef} className="relative" style={{ height: '200vh', background: '#fafafa' }}>
       <div className="sticky top-[60px] flex items-center" style={{ height: 'calc(100vh - 60px)' }}>
-        <div className="max-w-[1140px] mx-auto px-5 w-full">
+        <div className="max-w-[1320px] mx-auto px-8 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-center">
             {/* Left: heading */}
             <div>

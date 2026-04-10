@@ -15,7 +15,7 @@ const PILLAR_CARDS = [
 export function HeroSection() {
   return (
     <section className="pt-10 pb-[60px]">
-      <div className="max-w-[1140px] mx-auto px-5">
+      <div className="max-w-[1320px] mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] gap-5">
 
           {/* Left: Text */}

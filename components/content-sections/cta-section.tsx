@@ -6,7 +6,7 @@ import Link from 'next/link'
 export function CTASection() {
   return (
     <section id="request-demo" className="py-20 border-t border-foreground">
-      <div className="max-w-[1140px] mx-auto px-5">
+      <div className="max-w-[1320px] mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-end">
           <motion.div
             className="lg:sticky lg:top-[80px] lg:self-start"

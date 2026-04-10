@@ -74,7 +74,7 @@ export function AstraeaSection() {
   return (
     <section id="pipeline" ref={containerRef} className="relative" style={{ height: '400vh' }}>
       <div className="sticky top-[60px]" style={{ height: 'calc(100vh - 60px)' }}>
-        <div className="max-w-[1140px] mx-auto px-5 h-full flex items-center">
+        <div className="max-w-[1320px] mx-auto px-8 h-full flex items-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[60px] w-full items-center">
 
             {/* Left: Step text (crossfading) */}

@@ -3,7 +3,7 @@ import Link from 'next/link'
 export function Footer() {
   return (
     <footer className="border-t border-foreground">
-      <div className="max-w-[1140px] mx-auto px-5 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="max-w-[1320px] mx-auto px-8 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
         <div>
           <Link href="/" className="font-sans text-lg font-bold tracking-tight text-foreground" style={{ letterSpacing: '-0.02em' }}>
             Astraea
@@ -24,7 +24,7 @@ export function Footer() {
           <Link href="#" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity">Terms of Service</Link>
         </div>
       </div>
-      <div className="max-w-[1140px] mx-auto px-5 pb-10 text-xs text-muted-foreground">
+      <div className="max-w-[1320px] mx-auto px-8 pb-10 text-xs text-muted-foreground">
         &copy; Astraea Inc. {new Date().getFullYear()}
       </div>
     </footer>
