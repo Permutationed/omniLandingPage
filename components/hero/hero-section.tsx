@@ -26,7 +26,7 @@ export function HeroSection() {
             transition={{ duration: 0.7, ease: SWOOP }}
           >
             <h1 className="font-serif text-[38px] font-semibold text-foreground mb-4" style={{ lineHeight: 1.1, letterSpacing: '-0.01em' }}>
-              Autonomous clinical trial automation.
+              Automated data analytics for clinical trials.
             </h1>
             <p className="text-base text-foreground leading-relaxed">
               Astraea accelerates the full trial lifecycle from protocol design to FDA
@@ -34,19 +34,28 @@ export function HeroSection() {
             </p>
           </motion.div>
 
-          {/* Center: Hero image */}
+          {/* Center: Hero image + YC badge */}
           <motion.div
-            className="min-h-[400px] lg:min-h-[580px] overflow-hidden"
+            className="flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: SWOOP, delay: 0.1 }}
           >
-            <img
-              src="/medicine1.avif"
-              alt="Clinical pharmaceutical research"
-              className="w-full h-full object-cover"
-              style={{ minHeight: '400px' }}
-            />
+            <div className="min-h-[400px] lg:min-h-[560px] overflow-hidden">
+              <img
+                src="/medicine1.avif"
+                alt="Clinical pharmaceutical research"
+                className="w-full h-full object-cover"
+                style={{ minHeight: '400px' }}
+              />
+            </div>
+            <div className="flex items-center justify-center gap-2 py-4">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-label="Y Combinator">
+                <rect width="24" height="24" rx="4" fill="#F26522" />
+                <text x="12" y="17" textAnchor="middle" fill="white" fontSize="16" fontWeight="700" fontFamily="sans-serif">Y</text>
+              </svg>
+              <span className="text-xs font-medium text-muted-foreground">Backed by Y Combinator</span>
+            </div>
           </motion.div>
 
           {/* Right: Pillar Cards */}

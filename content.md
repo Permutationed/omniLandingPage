@@ -15,7 +15,7 @@ Edit any text below, then update the corresponding component file.
 *File: `components/hero/hero-section.tsx`*
 
 **Headline:**
-Autonomous clinical trial automation.
+Automated data analytics for clinical trials.
 
 **Body:**
 Astraea accelerates the full trial lifecycle from protocol design to FDA submission using compliant, enterprise-grade AI designed for modern healthcare.
@@ -40,11 +40,10 @@ Astraea accelerates the full trial lifecycle from protocol design to FDA submiss
 *File: `components/content-sections/dashboard-mockup.tsx`*
 
 **Headline:**
-Real-time trial orchestration.
+Automated data orchestration.
 
 **Body:**
-Track every phase of your trial from a single interface. Protocol, site selection, recruitment, screening, treatment, data lock, and analysis -- all visible, all automated.
-
+Track every stage of clinical data analysis from a single interface. From raw and cleaned datasets to SDTM, ADaM, TFL, DSUR, IB and final outputs, everything stays visible.
 **Dashboard label:** Astraea Trial Dashboard
 
 **Trial steps (in order):**

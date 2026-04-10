@@ -107,7 +107,9 @@ export function AstraeaSection() {
                   ))}
                 </ul>
                 <Link
-                  href="#request-demo"
+                  href="https://cal.com/joshua-s-wang-z4anha/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex items-center justify-center gap-2 bg-foreground text-primary-foreground text-base font-normal h-10 px-[13px]"
                   style={{ borderRadius: '5px', border: '1px solid var(--foreground)' }}
                 >

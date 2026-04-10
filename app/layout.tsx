@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   title: 'Astraea - Autonomous Clinical Trial Automation',
   description: 'Astraea accelerates the full trial lifecycle from protocol design to FDA submission using compliant, enterprise-grade AI designed for modern healthcare.',
   keywords: ['clinical trials', 'Phase II', 'Phase III', 'AI automation', 'pharma', 'CRO', 'clinical research', 'regulatory submission'],
+  icons: {
+    icon: '/8.png',
+  },
   openGraph: {
     title: 'Astraea - Autonomous Clinical Trial Automation',
     description: 'AI automation for clinical trials. Built for regulated environments.',

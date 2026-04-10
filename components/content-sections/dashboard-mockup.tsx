@@ -44,11 +44,10 @@ export function DashboardMockup() {
             {/* Left: heading */}
             <div>
               <h2 className="font-serif text-[38px] font-semibold text-foreground mb-4" style={{ lineHeight: 1.1, letterSpacing: '-0.01em' }}>
-                Real-time trial orchestration.
+                Automated data orchestration.
               </h2>
               <p className="text-base text-foreground leading-relaxed">
-                Track every phase of your trial from a single interface. Protocol, site selection,
-                recruitment, screening, treatment, data lock, and analysis -- all visible, all automated.
+                Track every stage of clinical data analysis from a single interface. From raw and cleaned datasets to SDTM, ADaM, TFL, DSUR, IB and final outputs, everything stays visible.
               </p>
             </div>
 
