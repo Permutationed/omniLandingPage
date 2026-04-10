@@ -35,6 +35,27 @@ const PIPELINE_STEPS = [
 
 const FEATURES = ['Data refinement', 'Standards generation', 'Statistical execution', 'Cross-track validation', 'Report automation', 'Full traceability']
 
+function useStepAnimations(scrollYProgress: MotionValue<number>) {
+  // Each step: 20% of total scroll. Within each: 0-30% entrance, 30-100% trace
+  return PIPELINE_STEPS.map((_, i) => {
+    const start = i * 0.2
+    const end = (i + 1) * 0.2
+    const traceStart = start + 0.06
+    return {
+      blockOpacity: useTransform(scrollYProgress, [start, start + 0.03], [0, 1]),
+      blockY: useTransform(scrollYProgress, [start, start + 0.06], [40, 0]),
+      traceProgress: useTransform(scrollYProgress, [traceStart, end - 0.02], [0, 1]),
+      textOpacity: useTransform(
+        scrollYProgress,
+        i === 4
+          ? [Math.max(0, start - 0.01), start + 0.03, 1.0, 1.0]
+          : [Math.max(0, start - 0.01), start + 0.03, end - 0.03, end],
+        [0, 1, 1, i === 4 ? 1 : 0]
+      ),
+    }
+  })
+}
+
 export function AstraeaSection() {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
@@ -42,38 +63,17 @@ export function AstraeaSection() {
     offset: ['start start', 'end end'],
   })
 
-  // Each step occupies 1/5 of the scroll
-  // Within each step: 0-30% block entrance, 30-100% border trace
-  const stepAnimations = PIPELINE_STEPS.map((_, i) => {
-    const stepStart = i / 5
-    const stepEnd = (i + 1) / 5
-    const traceStart = stepStart + (stepEnd - stepStart) * 0.3
-
-    return {
-      blockOpacity: useTransform(scrollYProgress, [stepStart, stepStart + 0.02], [0, 1]),
-      blockY: useTransform(scrollYProgress, [stepStart, stepStart + 0.06], [60, 0]),
-      traceProgress: useTransform(scrollYProgress, [traceStart, stepEnd], [0, 1]),
-      textOpacity: useTransform(
-        scrollYProgress,
-        i === 4
-          ? [Math.max(0, stepStart - 0.02), stepStart + 0.04, 1.0, 1.0]
-          : [Math.max(0, stepStart - 0.02), stepStart + 0.04, stepEnd - 0.04, stepEnd + 0.02],
-        [0, 1, 1, i === 4 ? 1 : 0]
-      ),
-      isCompleted: useTransform(scrollYProgress, (p: number) => p > stepEnd + 0.01),
-      isActive: useTransform(scrollYProgress, (p: number) => p >= stepStart && p <= stepEnd + 0.01),
-    }
-  })
+  const steps = useStepAnimations(scrollYProgress)
 
   return (
-    <section id="pipeline" ref={containerRef} className="relative" style={{ height: '500vh' }}>
-      <div className="sticky top-[60px] overflow-hidden" style={{ height: 'calc(100vh - 60px)' }}>
+    <section id="pipeline" ref={containerRef} className="relative" style={{ height: '400vh' }}>
+      <div className="sticky top-[60px]" style={{ height: 'calc(100vh - 60px)' }}>
         <div className="max-w-[1140px] mx-auto px-5 h-full flex items-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[60px] w-full items-center">
 
             {/* Left: Step text (crossfading) */}
-            <div className="relative" style={{ minHeight: '350px' }}>
-              <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-muted-foreground mb-8">
+            <div className="relative" style={{ minHeight: '380px' }}>
+              <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-muted-foreground mb-2">
                 Execution Pipeline v4.0
               </p>
 
@@ -81,7 +81,7 @@ export function AstraeaSection() {
                 <motion.div
                   key={step.name}
                   className="absolute left-0 right-0"
-                  style={{ top: '40px', opacity: stepAnimations[i].textOpacity }}
+                  style={{ top: '32px', opacity: steps[i].textOpacity }}
                 >
                   <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-muted-foreground mb-3">
                     Step {i + 1} of 5
@@ -95,7 +95,7 @@ export function AstraeaSection() {
                 </motion.div>
               ))}
 
-              {/* Features + CTA at bottom */}
+              {/* Features list + CTA pinned at bottom */}
               <div className="absolute left-0 right-0" style={{ bottom: 0 }}>
                 <ul className="grid grid-cols-2 gap-x-6 gap-y-2 mb-6">
                   {FEATURES.map((feat) => (
@@ -116,7 +116,7 @@ export function AstraeaSection() {
             </div>
 
             {/* Right: Stacking blocks */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center justify-center">
               <p className="self-start text-[11px] font-bold uppercase tracking-[0.08em] text-muted-foreground mb-6">
                 Execution Pipeline v4.0
               </p>
@@ -125,16 +125,16 @@ export function AstraeaSection() {
                   <motion.div
                     key={step.name}
                     style={{
-                      opacity: stepAnimations[i].blockOpacity,
-                      y: stepAnimations[i].blockY,
+                      opacity: steps[i].blockOpacity,
+                      y: steps[i].blockY,
                     }}
                   >
-                    <PipelineBlockStateful
+                    <PipelineBlock
                       name={step.name}
-                      index={i}
-                      traceProgress={stepAnimations[i].traceProgress}
-                      isCompleted={stepAnimations[i].isCompleted}
-                      isActive={stepAnimations[i].isActive}
+                      isActive={true}
+                      isCompleted={false}
+                      isFirst={i === 0}
+                      progress={steps[i].traceProgress}
                     />
                   </motion.div>
                 ))}
@@ -144,27 +144,5 @@ export function AstraeaSection() {
         </div>
       </div>
     </section>
-  )
-}
-
-function PipelineBlockStateful({
-  name,
-  index,
-  traceProgress,
-}: {
-  name: string
-  index: number
-  traceProgress: MotionValue<number>
-  isCompleted: MotionValue<boolean>
-  isActive: MotionValue<boolean>
-}) {
-  return (
-    <PipelineBlock
-      name={name}
-      isActive={true}
-      isCompleted={false}
-      isFirst={index === 0}
-      progress={traceProgress}
-    />
   )
 }

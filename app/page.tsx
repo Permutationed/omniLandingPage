@@ -6,7 +6,7 @@ import { CTASection } from '@/components/content-sections/cta-section'
 
 export default function Page() {
   return (
-    <main className="relative overflow-hidden">
+    <main className="relative">
       <HeroSection />
       <DashboardMockup />
       <ProblemSolutionStrip />
