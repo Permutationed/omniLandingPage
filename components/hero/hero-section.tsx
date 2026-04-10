@@ -34,15 +34,19 @@ export function HeroSection() {
             </p>
           </motion.div>
 
-          {/* Center: Image placeholder */}
+          {/* Center: Hero image */}
           <motion.div
-            className="min-h-[400px] lg:min-h-[580px] flex items-center justify-center"
-            style={{ background: 'linear-gradient(135deg, #e8e0d8 0%, #d5cdc5 100%)' }}
+            className="min-h-[400px] lg:min-h-[580px] overflow-hidden"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: SWOOP, delay: 0.1 }}
           >
-            <span className="text-xs text-muted-foreground">[Clinical / pharma hero image]</span>
+            <img
+              src="/medicine1.avif"
+              alt="Clinical pharmaceutical research"
+              className="w-full h-full object-cover"
+              style={{ minHeight: '400px' }}
+            />
           </motion.div>
 
           {/* Right: Pillar Cards */}
