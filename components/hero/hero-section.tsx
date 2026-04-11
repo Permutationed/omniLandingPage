@@ -49,12 +49,12 @@ export function HeroSection() {
                 style={{ minHeight: '400px' }}
               />
             </div>
-            <div className="flex items-center justify-center gap-2 py-4">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-label="Y Combinator">
+            <div className="group flex items-center justify-center gap-2 py-2 px-4 mt-10 mb-4 mx-auto w-fit border border-[#d4d4d4] rounded-md cursor-pointer transition-all duration-300 ease-out hover:border-[#F26522] hover:-translate-y-[2px] hover:shadow-[0_8px_24px_-4px_rgba(242,101,34,0.45),0_0_20px_-2px_rgba(242,101,34,0.3)]">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-label="Y Combinator" className="transition-transform duration-300 group-hover:scale-110">
                 <rect width="24" height="24" rx="4" fill="#F26522" />
                 <text x="12" y="17" textAnchor="middle" fill="white" fontSize="16" fontWeight="700" fontFamily="sans-serif">Y</text>
               </svg>
-              <span className="text-xs font-medium text-muted-foreground">Backed by Y Combinator</span>
+              <span className="text-xs font-medium text-muted-foreground transition-colors duration-300 group-hover:text-foreground">Backed by Y Combinator</span>
             </div>
           </motion.div>
 

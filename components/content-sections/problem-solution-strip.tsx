@@ -10,6 +10,7 @@ const DISCIPLINES = [
     heading: 'Human oversight for data analysis at AI speed.',
     body: 'Reduce data analysis and QC time by up to 90% while keeping experts in control of every critical decision.',
     imageRight: true,
+    video: '/demo-1.mp4',
   },
   {
     number: '02',
@@ -17,6 +18,7 @@ const DISCIPLINES = [
     heading: 'Unified visibility across the clinical data stack.',
     body: 'View, organize, and manage data across multiple sources, formats, and study assets in one workspace.',
     imageRight: false,
+    video: '/demo-2.mp4',
   },
   {
     number: '03',
@@ -24,6 +26,7 @@ const DISCIPLINES = [
     heading: 'Automated SDTM and ADaM analysis with expert review built in.',
     body: 'Move faster on clinical analysis and downstream outputs with automation that improves speed, consistency, and traceability.',
     imageRight: true,
+    video: '/demo-3.mp4',
   },
 ]
 
@@ -99,14 +102,17 @@ function DisciplineRow({ item }: { item: typeof DISCIPLINES[number] }) {
               <span className="w-[10px] h-[10px] rounded-full bg-[#22c55e]" />
             </div>
           </div>
-          {/* Placeholder */}
+          {/* Demo video */}
           <div className="aspect-video relative overflow-hidden" style={{ background: '#f7f6f4' }}>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <p className="text-xs text-muted-foreground mb-1">{item.label} Demo</p>
-                <p className="text-[10px] text-muted-foreground opacity-60">Video / screenshot placeholder</p>
-              </div>
-            </div>
+            <video
+              src={item.video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
           </div>
         </div>
       </motion.div>

@@ -22,7 +22,7 @@ export function CTASection() {
               Ready to ship your clinical trials faster? Let&apos;s accelerate together.
             </h2>
             <Link
-              href="https://cal.com/joshua-s-wang-z4anha/30min"
+              href="https://cal.com/team/astraea/product-demo"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-2 bg-foreground text-primary-foreground text-base font-normal h-10 px-[13px]"
