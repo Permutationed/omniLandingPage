@@ -26,7 +26,7 @@ export function HeroSection() {
             transition={{ duration: 0.7, ease: SWOOP }}
           >
             <h1 className="font-serif text-[38px] font-semibold text-foreground mb-4" style={{ lineHeight: 1.1, letterSpacing: '-0.01em' }}>
-              Automated data analytics for clinical trials.
+              End to end automated data management for clinical trials.
             </h1>
             <p className="text-base text-foreground leading-relaxed">
               Astraea accelerates the full trial lifecycle from protocol design to FDA

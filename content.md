@@ -15,7 +15,7 @@ Edit any text below, then update the corresponding component file.
 *File: `components/hero/hero-section.tsx`*
 
 **Headline:**
-Automated data analytics for clinical trials.
+End to end automated data management for clinical trials.
 
 **Body:**
 Astraea accelerates the full trial lifecycle from protocol design to FDA submission using compliant, enterprise-grade AI designed for modern healthcare.
