@@ -7,8 +7,8 @@ const DISCIPLINES = [
   {
     number: '01',
     label: 'Protocol Design',
-    heading: 'Human oversight for protocol design at AI speed.',
-    body: 'Reduce protocol development time by up to 90% while keeping experts in control of every critical decision.',
+    heading: 'Human oversight for data analysis at AI speed.',
+    body: 'Reduce data analysis and QC time by up to 90% while keeping experts in control of every critical decision.',
     imageRight: true,
   },
   {
@@ -29,7 +29,7 @@ const DISCIPLINES = [
 
 export function ProblemSolutionStrip() {
   return (
-    <section className="py-[60px]">
+    <section id="technology" className="py-[60px]">
       <div className="max-w-[1320px] mx-auto px-8">
         <div className="space-y-20 lg:space-y-28">
           {DISCIPLINES.map((item) => (

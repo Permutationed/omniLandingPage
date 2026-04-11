@@ -93,8 +93,8 @@ Track every stage of clinical data analysis from a single interface. From raw an
 ## Disciplines Section
 *File: `components/content-sections/problem-solution-strip.tsx`*
 
-### Human oversight for protocol design at AI speed.
-Reduce protocol development time by up to 90% while keeping experts in control of every critical decision.
+### Human oversight for data analysis at AI speed.
+Reduce data analysis and QC time by up to 90% while keeping experts in control of every critical decision.
 
 ### Unified visibility across the clinical data stack.
 View, organize, and manage data across multiple sources, formats, and study assets in one workspace.

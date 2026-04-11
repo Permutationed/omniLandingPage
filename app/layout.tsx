@@ -25,6 +25,8 @@ export const metadata: Metadata = {
   keywords: ['clinical trials', 'Phase II', 'Phase III', 'AI automation', 'pharma', 'CRO', 'clinical research', 'regulatory submission'],
   icons: {
     icon: '/8.png',
+    shortcut: '/8.png',
+    apple: '/8.png',
   },
   openGraph: {
     title: 'Astraea - Autonomous Clinical Trial Automation',
