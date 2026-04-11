@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import posthog from 'posthog-js'
 
 export function Footer() {
   return (
@@ -11,17 +14,17 @@ export function Footer() {
         </div>
         <div>
           <h5 className="text-[11px] font-bold uppercase tracking-[0.08em] text-muted-foreground mb-3">Company</h5>
-          <Link href="#" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity">About Us</Link>
+          <Link href="#" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity" onClick={() => posthog.capture('footer_link_clicked', { label: 'About Us' })}>About Us</Link>
         </div>
         <div>
           <h5 className="text-[11px] font-bold uppercase tracking-[0.08em] text-muted-foreground mb-3">Platform</h5>
-          <Link href="#technology" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity">Technology</Link>
-          <Link href="#pipeline" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity">Pipeline</Link>
+          <Link href="#technology" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity" onClick={() => posthog.capture('footer_link_clicked', { label: 'Technology', href: '#technology' })}>Technology</Link>
+          <Link href="#pipeline" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity" onClick={() => posthog.capture('footer_link_clicked', { label: 'Pipeline', href: '#pipeline' })}>Pipeline</Link>
         </div>
         <div>
           <h5 className="text-[11px] font-bold uppercase tracking-[0.08em] text-muted-foreground mb-3">Policies</h5>
-          <Link href="#" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity">Privacy Policy</Link>
-          <Link href="#" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity">Terms of Service</Link>
+          <Link href="#" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity" onClick={() => posthog.capture('footer_link_clicked', { label: 'Privacy Policy' })}>Privacy Policy</Link>
+          <Link href="#" className="block text-[13px] text-foreground py-1 hover:opacity-70 transition-opacity" onClick={() => posthog.capture('footer_link_clicked', { label: 'Terms of Service' })}>Terms of Service</Link>
         </div>
       </div>
       <div className="max-w-[1320px] mx-auto px-8 pb-10 text-xs text-muted-foreground">

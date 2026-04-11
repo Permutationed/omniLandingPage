@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import posthog from 'posthog-js'
 
 export function HeaderNav() {
   return (
@@ -11,9 +12,9 @@ export function HeaderNav() {
         </Link>
         <nav>
           <ul className="flex gap-7">
-            <li><Link href="#platform" className="text-foreground text-base font-normal hover:opacity-70 transition-opacity">Platform</Link></li>
-            <li><Link href="#technology" className="text-foreground text-base font-normal hover:opacity-70 transition-opacity">Technology</Link></li>
-            <li><Link href="#pipeline" className="text-foreground text-base font-normal hover:opacity-70 transition-opacity">Pipeline</Link></li>
+            <li><Link href="#platform" className="text-foreground text-base font-normal hover:opacity-70 transition-opacity" onClick={() => posthog.capture('nav_link_clicked', { label: 'Platform', href: '#platform' })}>Platform</Link></li>
+            <li><Link href="#technology" className="text-foreground text-base font-normal hover:opacity-70 transition-opacity" onClick={() => posthog.capture('nav_link_clicked', { label: 'Technology', href: '#technology' })}>Technology</Link></li>
+            <li><Link href="#pipeline" className="text-foreground text-base font-normal hover:opacity-70 transition-opacity" onClick={() => posthog.capture('nav_link_clicked', { label: 'Pipeline', href: '#pipeline' })}>Pipeline</Link></li>
           </ul>
         </nav>
       </div>

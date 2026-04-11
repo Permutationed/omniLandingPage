@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react'
 import Link from 'next/link'
+import posthog from 'posthog-js'
 
 export function CTASection() {
   return (
@@ -27,6 +28,7 @@ export function CTASection() {
               rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-2 bg-foreground text-primary-foreground text-base font-normal h-10 px-[13px]"
               style={{ borderRadius: '5px', border: '1px solid var(--foreground)' }}
+              onClick={() => posthog.capture('request_demo_clicked', { source: 'cta_section' })}
             >
               Request Demo
               <span className="transition-transform group-hover:translate-x-1">&rarr;</span>

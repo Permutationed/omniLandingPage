@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform, MotionValue } from 'motion/react'
 import { PipelineBlock } from './pipeline-block'
 import Link from 'next/link'
+import posthog from 'posthog-js'
 
 const PIPELINE_STEPS = [
   {
@@ -112,6 +113,7 @@ export function AstraeaSection() {
                   rel="noopener noreferrer"
                   className="group inline-flex items-center justify-center gap-2 bg-foreground text-primary-foreground text-base font-normal h-10 px-[13px]"
                   style={{ borderRadius: '5px', border: '1px solid var(--foreground)' }}
+                  onClick={() => posthog.capture('request_demo_clicked', { source: 'pipeline_section' })}
                 >
                   Request Demo
                   <span className="transition-transform group-hover:translate-x-1">&rarr;</span>

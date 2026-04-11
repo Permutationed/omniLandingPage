@@ -48,3 +48,4 @@ formation-bio-fullpage.png
 
 # Source demo video (too large for git; split versions demo-1/2/3.mp4 are committed)
 public/demo.mp4
+.env.local

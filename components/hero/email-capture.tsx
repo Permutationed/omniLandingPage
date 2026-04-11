@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import posthog from 'posthog-js'
 
 type ValidationState = 'idle' | 'invalid' | 'valid'
 
@@ -19,6 +20,8 @@ export function EmailCapture() {
     setValidation(state)
     if (state === 'valid') {
       console.log('Email submitted:', email)
+      posthog.identify(email, { email })
+      posthog.capture('email_capture_submitted', { email, source: 'hero' })
     }
   }
 

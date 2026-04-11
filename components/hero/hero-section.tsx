@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react'
 import Link from 'next/link'
+import posthog from 'posthog-js'
 import { EmailCapture } from '@/components/hero/email-capture'
 
 const SWOOP = [0.16, 1, 0.3, 1] as const
@@ -78,6 +79,7 @@ export function HeroSection() {
                   href={card.href}
                   className="group inline-flex items-center justify-center gap-2 bg-foreground text-primary-foreground text-base font-normal h-[40px] px-[13px] self-start"
                   style={{ borderRadius: '5px', border: '1px solid var(--foreground)' }}
+                  onClick={() => posthog.capture('pillar_cta_clicked', { pillar: card.title, label: card.label, href: card.href })}
                 >
                   {card.label}
                   <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
