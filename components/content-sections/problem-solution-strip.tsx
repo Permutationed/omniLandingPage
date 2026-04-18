@@ -1,7 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'motion/react'
+import { motion } from 'motion/react'
 
 const DISCIPLINES = [
   {
@@ -45,45 +44,23 @@ export function ProblemSolutionStrip() {
 }
 
 function DisciplineRow({ item }: { item: typeof DISCIPLINES[number] }) {
-  const rowRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: rowRef,
-    offset: ['start 95%', 'center 40%'],
-  })
-
-  // Text slides in from its side with large offset
-  const textX = useTransform(
-    scrollYProgress,
-    [0, 0.8],
-    [item.imageRight ? -120 : 120, 0]
-  )
-  const textOpacity = useTransform(scrollYProgress, [0, 0.5], [0, 1])
-
-  // Image slides in from opposite side with large offset
-  const imageX = useTransform(
-    scrollYProgress,
-    [0, 0.8],
-    [item.imageRight ? 120 : -120, 0]
-  )
-  const imageOpacity = useTransform(scrollYProgress, [0.05, 0.55], [0, 1])
-
   return (
-    <div
-      ref={rowRef}
-      className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
-    >
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
       {/* Text side */}
       <motion.div
         className={item.imageRight ? 'lg:order-1' : 'lg:order-2'}
-        style={{ x: textX, opacity: textOpacity }}
+        initial={{ x: item.imageRight ? -80 : 80, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       >
         <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-muted-foreground mb-3">
           {item.number} -- {item.label}
         </p>
-        <h3 className="font-serif text-xl lg:text-2xl font-semibold text-foreground mb-3" style={{ lineHeight: 1.2 }}>
+        <h3 className="font-serif text-2xl font-semibold text-foreground mb-3" style={{ lineHeight: 1.2, letterSpacing: '-0.01em' }}>
           {item.heading}
         </h3>
-        <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">
+        <p className="text-base text-muted-foreground leading-relaxed">
           {item.body}
         </p>
       </motion.div>
@@ -91,7 +68,10 @@ function DisciplineRow({ item }: { item: typeof DISCIPLINES[number] }) {
       {/* Image/demo side */}
       <motion.div
         className={item.imageRight ? 'lg:order-2' : 'lg:order-1'}
-        style={{ x: imageX, opacity: imageOpacity }}
+        initial={{ x: item.imageRight ? 80 : -80, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
       >
         <div className="overflow-hidden" style={{ border: '1px solid var(--foreground)' }}>
           {/* Browser chrome */}

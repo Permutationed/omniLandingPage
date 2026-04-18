@@ -69,7 +69,7 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease: SWOOP, delay: 0.2 + i * 0.1 }}
               >
-                <h3 className="font-serif text-xl font-semibold text-foreground" style={{ lineHeight: 1.2 }}>
+                <h3 className="font-serif text-2xl font-semibold text-foreground" style={{ lineHeight: 1.2, letterSpacing: '-0.01em' }}>
                   {card.title}
                 </h3>
                 <p className="text-[13px] text-muted-foreground leading-snug">
