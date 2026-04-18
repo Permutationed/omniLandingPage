@@ -10,7 +10,7 @@ export default function HeroVideoSection({
   eyebrow = "See Astraea in motion",
   title = "Automation you can watch work.",
   subtitle = "Astraea orchestrates specialized AI agents across the biometrics workflow, with every step logged, reviewable, and aligned to CDISC standards.",
-  videoSrc = "https://www.tryastraea.com/demo-1.mp4",
+  videoSrc = "/demo-1.mp4",
   background = "primary",
 }: Props) {
   const bg = background === "secondary" ? "bg-ploy-neutral-primary-s2" : "bg-ploy-background-primary";

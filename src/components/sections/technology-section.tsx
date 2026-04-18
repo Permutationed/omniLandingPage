@@ -50,14 +50,14 @@ const features: FeatureProps[] = [
     title: "Human oversight for data analysis at AI speed.",
     description:
       "Reduce data analysis and QC time by up to 90% while keeping experts in control of every critical decision.",
-    videoSrc: "https://www.tryastraea.com/demo-1.mp4",
+    videoSrc: "/demo-1.mp4",
   },
   {
     eyebrow: "Data Management",
     title: "Unified visibility across the clinical data stack.",
     description:
       "View, organize, and manage data across multiple sources, formats, and study assets in one workspace.",
-    videoSrc: "https://www.tryastraea.com/demo-2.mp4",
+    videoSrc: "/demo-2.mp4",
     reverse: true,
   },
   {
@@ -65,7 +65,7 @@ const features: FeatureProps[] = [
     title: "Automated SDTM and ADaM analysis with expert review built in.",
     description:
       "Move faster on clinical analysis and downstream outputs with automation that improves speed, consistency, and traceability.",
-    videoSrc: "https://www.tryastraea.com/demo-3.mp4",
+    videoSrc: "/demo-3.mp4",
   },
 ];
 

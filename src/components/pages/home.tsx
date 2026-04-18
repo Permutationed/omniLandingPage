@@ -23,7 +23,7 @@ export default function Page() {
           eyebrow="See it in motion"
           title="Automation you can watch work."
           subtitle="Astraea orchestrates specialized AI agents across the biometrics workflow, every step logged, reviewable, and aligned to CDISC standards."
-          videoSrc="https://www.tryastraea.com/demo-1.mp4"
+          videoSrc="/demo-1.mp4"
           background="secondary"
         />
         <EmpowerSection

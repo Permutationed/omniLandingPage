@@ -1,7 +1,7 @@
 export default function TechnologySectionMockup3() {
   return (
     <video
-      src="https://www.tryastraea.com/demo-3.mp4"
+      src="/demo-3.mp4"
       autoPlay
       loop
       muted

@@ -15,7 +15,7 @@ export default function TechnologyFeatureSectionMockup2() {
         </div>
         <div className="bg-ploy-background-accent-tertiary aspect-video relative overflow-x-hidden overflow-y-hidden">
           <video
-            src="https://www.tryastraea.com/demo-2.mp4"
+            src="/demo-2.mp4"
             autoPlay
             loop
             muted

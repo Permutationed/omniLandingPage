@@ -23,7 +23,7 @@ const DEFAULT_DISCIPLINES: Discipline[] = [
     label: "Protocol Design",
     heading: "Human oversight for data analysis at AI speed.",
     body: "Reduce data analysis and QC time by up to 90% while keeping experts in control of every critical decision. Reviewers see what Astraea did, why, and what to approve next.",
-    videoSrc: "https://www.tryastraea.com/demo-1.mp4",
+    videoSrc: "/demo-1.mp4",
     imageRight: true,
   },
   {
@@ -31,7 +31,7 @@ const DEFAULT_DISCIPLINES: Discipline[] = [
     label: "Data Management",
     heading: "Unified visibility across the clinical data stack.",
     body: "View, organize, and manage data across multiple sources, formats, and study assets in one workspace, with full lineage from raw capture through submission-ready outputs.",
-    videoSrc: "https://www.tryastraea.com/demo-2.mp4",
+    videoSrc: "/demo-2.mp4",
     imageRight: false,
   },
   {
@@ -39,7 +39,7 @@ const DEFAULT_DISCIPLINES: Discipline[] = [
     label: "Analysis & Reporting",
     heading: "Automated SDTM and ADaM analysis with expert review built in.",
     body: "Move faster on clinical analysis and downstream outputs with automation that improves speed, consistency, and traceability, without cutting the biostatistician out of the loop.",
-    videoSrc: "https://www.tryastraea.com/demo-3.mp4",
+    videoSrc: "/demo-3.mp4",
     imageRight: true,
   },
 ];
