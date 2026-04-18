@@ -1,0 +1,14 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { EmbeddedTeamsPage } from "../../components/pages/solutions/embedded-teams-page";
+
+const description =
+  "Flexible FSP resourcing, AI-enhanced biostatisticians and programmers embedded in your SOPs, systems, and governance frameworks.";
+---
+
+<Layout
+  title="Embedded Biostatistics Teams | Astraea"
+  description={description}
+>
+  <EmbeddedTeamsPage client:load />
+</Layout>

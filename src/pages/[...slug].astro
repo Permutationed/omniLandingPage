@@ -1,0 +1,59 @@
+---
+import { getEntry, render } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import type { WithContext, Thing } from "schema-dts";
+
+const { slug } = Astro.params;
+const entry = await getEntry("pages", slug ?? "");
+const isHidden = entry?.data.draft && import.meta.env.PROD;
+
+if (!entry || isHidden) {
+  return Astro.redirect("/404");
+}
+
+const { Content } = await render(entry);
+
+const site = Astro.site;
+const canonicalUrl = site
+  ? new URL(Astro.url.pathname, site).toString()
+  : undefined;
+const siteUrl = site ? site.origin : undefined;
+const imageUrl = entry.data.image && site
+  ? new URL(entry.data.image, site).toString()
+  : entry.data.image;
+
+const jsonLd: WithContext<Thing>[] = [];
+
+if (canonicalUrl && siteUrl) {
+  jsonLd.push({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${canonicalUrl}#article`,
+    headline: entry.data.title,
+    ...(entry.data.description && { description: entry.data.description }),
+    datePublished: entry.data.pubDate.toISOString(),
+    dateModified: (entry.data.updatedDate ?? entry.data.pubDate).toISOString(),
+    url: canonicalUrl,
+    ...(imageUrl && { image: imageUrl }),
+    mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
+    isPartOf: { "@id": `${siteUrl}#website` },
+    publisher: { "@id": `${siteUrl}#organization` },
+    author: entry.data.author
+      ? { "@type": "Person", name: entry.data.author }
+      : { "@id": `${siteUrl}#organization` },
+    inLanguage: "en-US",
+  });
+}
+---
+
+<Layout
+  title={entry.data.title}
+  description={entry.data.description}
+  image={entry.data.image}
+  type="article"
+  jsonLd={jsonLd}
+>
+  <article class="prose mx-auto max-w-3xl px-4 py-12">
+    <Content />
+  </article>
+</Layout>

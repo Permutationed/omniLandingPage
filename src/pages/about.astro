@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { AboutPage } from "../components/pages/about/page";
+
+const description =
+  "Astraea is an AI-native clinical trial platform, founded by biostatisticians, programmers, AI engineers, and former sponsor-side leaders to make clinical research faster, safer, and standards-aware.";
+---
+
+<Layout
+  title="About Astraea | AI-Native Clinical Trial Platform"
+  description={description}
+>
+  <AboutPage client:load />
+</Layout>

@@ -1,0 +1,79 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource-variable/source-serif-4";
+import "../styles/globals.css";
+
+import { STARTER_VERSION } from "../starter-version";
+import { SEO } from "@/components/seo";
+import type { Thing, WithContext } from "schema-dts";
+
+
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string | URL;
+  image?: string | URL;
+  imageAlt?: string;
+  noindex?: boolean;
+  type?: "website" | "article";
+  jsonLd?: WithContext<Thing> | WithContext<Thing>[];
+}
+
+const {
+  title = "Astraea",
+  description = "Astraea accelerates the full trial lifecycle from protocol design to FDA submission using compliant, enterprise-grade AI designed for modern healthcare.",
+  canonical,
+  image,
+  imageAlt,
+  noindex = false,
+  type = "website",
+  jsonLd,
+} = Astro.props;
+
+const site = Astro.site;
+
+const resolveUrl = (value?: string | URL) => {
+  if (!value) return undefined;
+  if (value instanceof URL) return value.toString();
+  if (site) return new URL(value, site).toString();
+  return value;
+};
+
+const canonicalUrl =
+  resolveUrl(canonical) ??
+  (site ? new URL(Astro.url.pathname, site).toString() : undefined);
+const imageUrl = resolveUrl(image);
+---
+
+<!doctype html>
+<html lang="en" class="leading-normal outline-[oklab(0.239291_0.0000108778_0.00000478327_/_0.5)] light" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="ploy-astro-starter-version" content={STARTER_VERSION} />
+    <SEO
+      title={title}
+      description={description}
+      canonicalUrl={canonicalUrl}
+      imageUrl={imageUrl}
+      imageAlt={imageAlt}
+      noindex={noindex}
+      type={type}
+      jsonLd={jsonLd}
+    />
+    <slot name="head" />
+  </head>
+
+  <body class="bg-ploy-background-primary text-ploy-text-primary leading-normal min-h-screen text-base m-0">
+
+
+    <slot />
+    <script>
+      import analytics from "../lib/analytics";
+      analytics.page();
+    </script>
+  </body>
+</html>

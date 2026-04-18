@@ -1,0 +1,14 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { EndToEndBiometricsPage } from "../../components/pages/solutions/end-to-end-biometrics-page";
+
+const description =
+  "Full-service biostatistics and programming from protocol design through NDA, BLA, and IND submissions, inspection-ready deliverables, FDA and EMA aligned.";
+---
+
+<Layout
+  title="End-to-End Biometrics | Astraea"
+  description={description}
+>
+  <EndToEndBiometricsPage client:load />
+</Layout>

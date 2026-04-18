@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { ContactPage } from "../components/pages/contact/page";
+
+const description =
+  "Reach out to Astraea for demos, partnerships, or general inquiries. We usually respond within one business day.";
+---
+
+<Layout title="Contact Astraea" description={description}>
+  <ContactPage client:load />
+</Layout>

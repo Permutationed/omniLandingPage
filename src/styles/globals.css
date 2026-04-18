@@ -1,0 +1,1144 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Color bindings (auto-generated from THEME_COLOR_KEYS) */
+  --color-ploy-neutral-primary: var(--ploy-neutral-primary);
+  --color-ploy-neutral-secondary: var(--ploy-neutral-secondary);
+  --color-ploy-neutral-inverse: var(--ploy-neutral-inverse);
+  --color-ploy-neutral-light: var(--ploy-neutral-light);
+  --color-ploy-neutral-dark: var(--ploy-neutral-dark);
+  --color-ploy-neutral-primary-s0: var(--ploy-neutral-primary-s0);
+  --color-ploy-neutral-primary-s1: var(--ploy-neutral-primary-s1);
+  --color-ploy-neutral-primary-s2: var(--ploy-neutral-primary-s2);
+  --color-ploy-neutral-primary-s3: var(--ploy-neutral-primary-s3);
+  --color-ploy-neutral-primary-s4: var(--ploy-neutral-primary-s4);
+  --color-ploy-neutral-primary-s5: var(--ploy-neutral-primary-s5);
+  --color-ploy-neutral-inverse-s0: var(--ploy-neutral-inverse-s0);
+  --color-ploy-neutral-inverse-s1: var(--ploy-neutral-inverse-s1);
+  --color-ploy-neutral-inverse-s2: var(--ploy-neutral-inverse-s2);
+  --color-ploy-neutral-inverse-s3: var(--ploy-neutral-inverse-s3);
+  --color-ploy-neutral-inverse-s4: var(--ploy-neutral-inverse-s4);
+  --color-ploy-neutral-inverse-s5: var(--ploy-neutral-inverse-s5);
+  --color-ploy-accent-primary: var(--ploy-accent-primary);
+  --color-ploy-accent-secondary: var(--ploy-accent-secondary);
+  --color-ploy-accent-tertiary: var(--ploy-accent-tertiary);
+  --color-ploy-text-primary: var(--ploy-text-primary);
+  --color-ploy-text-secondary: var(--ploy-text-secondary);
+  --color-ploy-text-inverse: var(--ploy-text-inverse);
+  --color-ploy-text-inverse-secondary: var(--ploy-text-inverse-secondary);
+  --color-ploy-text-on-accent-primary: var(--ploy-text-on-accent-primary);
+  --color-ploy-text-on-accent-secondary: var(--ploy-text-on-accent-secondary);
+  --color-ploy-text-on-accent-tertiary: var(--ploy-text-on-accent-tertiary);
+  --color-ploy-button-primary-background: var(--ploy-button-primary-background);
+  --color-ploy-button-primary-text: var(--ploy-button-primary-text);
+  --color-ploy-button-primary-border: var(--ploy-button-primary-border);
+  --color-ploy-button-secondary-background: var(
+    --ploy-button-secondary-background
+  );
+  --color-ploy-button-secondary-text: var(--ploy-button-secondary-text);
+  --color-ploy-button-secondary-border: var(--ploy-button-secondary-border);
+  --color-ploy-background-primary: var(--ploy-background-primary);
+  --color-ploy-background-secondary: var(--ploy-background-secondary);
+  --color-ploy-background-accent-primary: var(--ploy-background-accent-primary);
+  --color-ploy-background-accent-secondary: var(
+    --ploy-background-accent-secondary
+  );
+  --color-ploy-background-accent-tertiary: var(
+    --ploy-background-accent-tertiary
+  );
+  --color-ploy-background-inverse: var(--ploy-background-inverse);
+  --color-ploy-border-primary: var(--ploy-border-primary);
+  --color-ploy-border-inverse: var(--ploy-border-inverse);
+  --color-ploy-input-background: var(--ploy-input-background);
+  --color-ploy-input-border: var(--ploy-input-border);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Color scale bindings (primary-50 to primary-950, etc.) */
+  --color-ploy-neutral-primary-50: var(--ploy-neutral-primary-50);
+  --color-ploy-neutral-primary-100: var(--ploy-neutral-primary-100);
+  --color-ploy-neutral-primary-200: var(--ploy-neutral-primary-200);
+  --color-ploy-neutral-primary-300: var(--ploy-neutral-primary-300);
+  --color-ploy-neutral-primary-400: var(--ploy-neutral-primary-400);
+  --color-ploy-neutral-primary-500: var(--ploy-neutral-primary-500);
+  --color-ploy-neutral-primary-600: var(--ploy-neutral-primary-600);
+  --color-ploy-neutral-primary-700: var(--ploy-neutral-primary-700);
+  --color-ploy-neutral-primary-800: var(--ploy-neutral-primary-800);
+  --color-ploy-neutral-primary-900: var(--ploy-neutral-primary-900);
+  --color-ploy-neutral-primary-950: var(--ploy-neutral-primary-950);
+  --color-ploy-neutral-inverse-50: var(--ploy-neutral-inverse-50);
+  --color-ploy-neutral-inverse-100: var(--ploy-neutral-inverse-100);
+  --color-ploy-neutral-inverse-200: var(--ploy-neutral-inverse-200);
+  --color-ploy-neutral-inverse-300: var(--ploy-neutral-inverse-300);
+  --color-ploy-neutral-inverse-400: var(--ploy-neutral-inverse-400);
+  --color-ploy-neutral-inverse-500: var(--ploy-neutral-inverse-500);
+  --color-ploy-neutral-inverse-600: var(--ploy-neutral-inverse-600);
+  --color-ploy-neutral-inverse-700: var(--ploy-neutral-inverse-700);
+  --color-ploy-neutral-inverse-800: var(--ploy-neutral-inverse-800);
+  --color-ploy-neutral-inverse-900: var(--ploy-neutral-inverse-900);
+  --color-ploy-neutral-inverse-950: var(--ploy-neutral-inverse-950);
+  --color-ploy-accent-primary-50: var(--ploy-accent-primary-50);
+  --color-ploy-accent-primary-100: var(--ploy-accent-primary-100);
+  --color-ploy-accent-primary-200: var(--ploy-accent-primary-200);
+  --color-ploy-accent-primary-300: var(--ploy-accent-primary-300);
+  --color-ploy-accent-primary-400: var(--ploy-accent-primary-400);
+  --color-ploy-accent-primary-500: var(--ploy-accent-primary-500);
+  --color-ploy-accent-primary-600: var(--ploy-accent-primary-600);
+  --color-ploy-accent-primary-700: var(--ploy-accent-primary-700);
+  --color-ploy-accent-primary-800: var(--ploy-accent-primary-800);
+  --color-ploy-accent-primary-900: var(--ploy-accent-primary-900);
+  --color-ploy-accent-primary-950: var(--ploy-accent-primary-950);
+  --color-ploy-accent-secondary-50: var(--ploy-accent-secondary-50);
+  --color-ploy-accent-secondary-100: var(--ploy-accent-secondary-100);
+  --color-ploy-accent-secondary-200: var(--ploy-accent-secondary-200);
+  --color-ploy-accent-secondary-300: var(--ploy-accent-secondary-300);
+  --color-ploy-accent-secondary-400: var(--ploy-accent-secondary-400);
+  --color-ploy-accent-secondary-500: var(--ploy-accent-secondary-500);
+  --color-ploy-accent-secondary-600: var(--ploy-accent-secondary-600);
+  --color-ploy-accent-secondary-700: var(--ploy-accent-secondary-700);
+  --color-ploy-accent-secondary-800: var(--ploy-accent-secondary-800);
+  --color-ploy-accent-secondary-900: var(--ploy-accent-secondary-900);
+  --color-ploy-accent-secondary-950: var(--ploy-accent-secondary-950);
+
+  /* Fonts */
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+  --font-mono: var(--font-mono);
+  --font-eyebrow: var(--font-eyebrow, var(--font-body));
+  --font-button: var(--font-button, var(--font-body));
+
+  /* Typography weight bindings */
+  --font-heading-weight: var(--font-heading-weight, 700);
+  --font-body-weight: var(--font-body-weight, 400);
+
+  /* Font size scale (maps --font-size-* vars to Tailwind text-* utilities) */
+  --text-xs: var(--font-size-xs, 0.75rem);
+  --text-sm: var(--font-size-sm, 0.875rem);
+  --text-base: var(--font-size-base, 1rem);
+  --text-lg: var(--font-size-lg, 1.125rem);
+  --text-xl: var(--font-size-xl, 1.25rem);
+  --text-2xl: var(--font-size-2xl, 1.5rem);
+  --text-3xl: var(--font-size-3xl, 1.875rem);
+  --text-4xl: var(--font-size-4xl, 2.25rem);
+  --text-5xl: var(--font-size-5xl, 3rem);
+  --text-6xl: var(--font-size-6xl, 3.75rem);
+  --text-7xl: var(--font-size-7xl, 4.5rem);
+  --text-8xl: var(--font-size-8xl, 6rem);
+  --text-9xl: var(--font-size-9xl, 8rem);
+
+  /* Radius tokens */
+  --radius-button: 4px;
+  --radius-card: 0px;
+  --radius-input: 4px;
+}
+
+:root {
+  --radius: 2px;
+  --ploy-shadow-color: var(--ploy-border-primary);
+  --border-width: 1px;
+  --border-style: solid;
+  --ploy-neutral-primary: oklch(0.97 0.01 67.72);
+  --ploy-neutral-secondary: oklch(0.942 0.01 72.65);
+  --ploy-neutral-inverse: oklch(0.239 0 0);
+  --ploy-neutral-light: oklch(0.97 0.01 67.72);
+  --ploy-neutral-dark: oklch(0.239 0 0);
+  --ploy-neutral-primary-s0: white;
+  --ploy-neutral-primary-s1: var(--ploy-neutral-primary);
+  --ploy-neutral-primary-s2: var(--ploy-neutral-secondary);
+  --ploy-neutral-primary-s3: color-mix(
+    in oklch,
+    var(--ploy-neutral-primary) 95%,
+    var(--ploy-neutral-inverse)
+  );
+  --ploy-neutral-primary-s4: color-mix(
+    in oklch,
+    var(--ploy-neutral-primary) 88%,
+    var(--ploy-neutral-inverse)
+  );
+  --ploy-neutral-primary-s5: color-mix(
+    in oklch,
+    var(--ploy-neutral-primary) 76%,
+    var(--ploy-neutral-inverse)
+  );
+  --ploy-neutral-inverse-s0: color-mix(
+    in oklch,
+    var(--ploy-neutral-inverse) 88%,
+    black
+  );
+  --ploy-neutral-inverse-s1: var(--ploy-neutral-inverse);
+  --ploy-neutral-inverse-s2: color-mix(
+    in oklch,
+    var(--ploy-neutral-inverse) 84%,
+    var(--ploy-neutral-primary)
+  );
+  --ploy-neutral-inverse-s3: color-mix(
+    in oklch,
+    var(--ploy-neutral-inverse) 66%,
+    var(--ploy-neutral-primary)
+  );
+  --ploy-neutral-inverse-s4: color-mix(
+    in oklch,
+    var(--ploy-neutral-inverse) 48%,
+    var(--ploy-neutral-primary)
+  );
+  --ploy-neutral-inverse-s5: color-mix(
+    in oklch,
+    var(--ploy-neutral-inverse) 30%,
+    var(--ploy-neutral-primary)
+  );
+  --ploy-accent-primary: oklch(0.676 0.189 42.04);
+  --ploy-accent-secondary: oklch(0.563 0.241 260.82);
+  --ploy-accent-tertiary: oklch(0.735 0.146 84.26);
+  --ploy-text-primary: var(--ploy-neutral-inverse);
+  --ploy-text-secondary: var(--ploy-neutral-inverse-600);
+  --ploy-text-inverse: var(--ploy-neutral-primary);
+  --ploy-text-inverse-secondary: color-mix(
+    in srgb,
+    var(--ploy-neutral-primary) 60%,
+    transparent
+  );
+  --ploy-text-on-accent-primary: oklch(0.973 0.003 84.4);
+  --ploy-text-on-accent-secondary: oklch(0.973 0.003 84.4);
+  --ploy-text-on-accent-tertiary: oklch(0.239 0 0);
+  --ploy-button-primary-background: var(--ploy-background-inverse);
+  --ploy-button-primary-text: oklch(0.973 0.003 84.4);
+  --ploy-button-primary-border: var(--ploy-text-primary);
+  --ploy-button-secondary-background: var(--ploy-background-primary);
+  --ploy-button-secondary-text: var(--ploy-background-inverse);
+  --ploy-button-secondary-border: var(--ploy-text-primary);
+  --ploy-background-primary: var(--ploy-neutral-primary-s1);
+  --ploy-background-secondary: var(--ploy-neutral-secondary);
+  --ploy-background-accent-primary: var(--ploy-accent-primary);
+  --ploy-background-accent-secondary: var(--ploy-accent-secondary);
+  --ploy-background-accent-tertiary: var(--ploy-accent-tertiary);
+  --ploy-background-inverse: var(--ploy-neutral-inverse-s1);
+  --ploy-border-primary: var(--ploy-neutral-primary-s5);
+  --ploy-border-inverse: color-mix(
+    in srgb,
+    var(--ploy-neutral-inverse-s0) 20%,
+    transparent
+  );
+  --ploy-input-background: var(--ploy-neutral-primary);
+  --ploy-input-border: var(--ploy-neutral-primary-s5);
+  --destructive: oklch(0.676 0.189 42.04);
+  --border: var(--ploy-border-primary);
+  --background: var(--ploy-background-primary);
+  --foreground: var(--ploy-text-primary);
+  --card: var(--ploy-background-secondary);
+  --card-foreground: var(--ploy-text-primary);
+  --popover: var(--ploy-background-secondary);
+  --popover-foreground: var(--ploy-text-primary);
+  --primary: oklch(0.676 0.189 42.04);
+  --primary-foreground: var(--ploy-text-inverse);
+  --secondary: var(--ploy-background-secondary);
+  --secondary-foreground: var(--ploy-text-primary);
+  --muted: var(--ploy-background-secondary);
+  --muted-foreground: var(--ploy-text-secondary);
+  --accent: oklch(0.563 0.241 260.82);
+  --accent-foreground: var(--ploy-text-inverse);
+  --input: var(--ploy-input-border);
+  --ring: oklch(0.676 0.189 42.04);
+
+  /* Color scales */
+  --ploy-neutral-primary-50: oklch(0.97 0.01 67.72);
+  --ploy-neutral-primary-100: oklch(0.936 0.005 66.22);
+  --ploy-neutral-primary-200: oklch(0.885 0.009 64.72);
+  --ploy-neutral-primary-300: oklch(0.826 0.01 63.22);
+  --ploy-neutral-primary-400: oklch(0.76 0.012 61.72);
+  --ploy-neutral-primary-500: oklch(0.69 0.011 60.22);
+  --ploy-neutral-primary-600: oklch(0.615 0.012 58.72);
+  --ploy-neutral-primary-700: oklch(0.536 0.011 57.22);
+  --ploy-neutral-primary-800: oklch(0.454 0.01 55.72);
+  --ploy-neutral-primary-900: oklch(0.368 0.008 54.22);
+  --ploy-neutral-primary-950: oklch(0.28 0.006 52.72);
+  --ploy-neutral-inverse-50: oklch(0.98 0 352);
+  --ploy-neutral-inverse-100: oklch(0.951 0 352.8);
+  --ploy-neutral-inverse-200: oklch(0.902 0 353.6);
+  --ploy-neutral-inverse-300: oklch(0.843 0 354.4);
+  --ploy-neutral-inverse-400: oklch(0.775 0 355.2);
+  --ploy-neutral-inverse-500: oklch(0.699 0 356);
+  --ploy-neutral-inverse-600: oklch(0.618 0 356.8);
+  --ploy-neutral-inverse-700: oklch(0.53 0 357.6);
+  --ploy-neutral-inverse-800: oklch(0.438 0 358.4);
+  --ploy-neutral-inverse-900: oklch(0.341 0 359.2);
+  --ploy-neutral-inverse-950: oklch(0.239 0 0);
+  --ploy-accent-primary-50: oklch(0.98 0.009 34.04);
+  --ploy-accent-primary-100: oklch(0.948 0.025 35.64);
+  --ploy-accent-primary-200: oklch(0.896 0.054 37.24);
+  --ploy-accent-primary-300: oklch(0.831 0.092 38.84);
+  --ploy-accent-primary-400: oklch(0.757 0.14 40.44);
+  --ploy-accent-primary-500: oklch(0.676 0.189 42.04);
+  --ploy-accent-primary-600: oklch(0.627 0.182 42.44);
+  --ploy-accent-primary-700: oklch(0.556 0.16 42.84);
+  --ploy-accent-primary-800: oklch(0.472 0.131 43.24);
+  --ploy-accent-primary-900: oklch(0.38 0.1 43.64);
+  --ploy-accent-primary-950: oklch(0.28 0.074 44.04);
+  --ploy-accent-secondary-50: oklch(0.98 0.01 269.82);
+  --ploy-accent-secondary-100: oklch(0.936 0.031 268.02);
+  --ploy-accent-secondary-200: oklch(0.865 0.068 266.22);
+  --ploy-accent-secondary-300: oklch(0.776 0.118 264.42);
+  --ploy-accent-secondary-400: oklch(0.675 0.175 262.62);
+  --ploy-accent-secondary-500: oklch(0.563 0.241 260.82);
+  --ploy-accent-secondary-600: oklch(0.528 0.202 259.82);
+  --ploy-accent-secondary-700: oklch(0.477 0.176 258.82);
+  --ploy-accent-secondary-800: oklch(0.418 0.14 257.82);
+  --ploy-accent-secondary-900: oklch(0.351 0.106 256.82);
+  --ploy-accent-secondary-950: oklch(0.28 0.077 255.82);
+
+  --font-heading: "Source Serif 4 Variable", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter Variable", system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, monospace;
+  --font-eyebrow: "Inter Variable", system-ui, -apple-system, sans-serif;
+  --font-button: "Inter Variable", system-ui, -apple-system, sans-serif;
+
+  /* Typography role weights, letter-spacing, line-height */
+  --font-heading-weight: 600;
+  --font-heading-bold-weight: 600;
+  --font-heading-letter-spacing: -0.01em;
+  --font-heading-line-height: 1.12;
+  --font-body-weight: 400;
+  --font-body-bold-weight: 700;
+  --font-body-letter-spacing: normal;
+  --font-body-line-height: 1.5;
+  --font-button-weight: 400;
+  --font-button-bold-weight: 500;
+  --font-button-letter-spacing: normal;
+  --font-button-line-height: 1.5;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --ploy-neutral-primary: oklch(0.03 0.01 67.72);
+  --ploy-neutral-secondary: oklch(0.058 0.01 72.65);
+  --ploy-neutral-inverse: oklch(0.761 0 0);
+  --ploy-neutral-light: oklch(0.951 0 352.8);
+  --ploy-neutral-dark: oklch(0.03 0.01 67.72);
+  --ploy-neutral-primary-s0: color-mix(
+    in oklch,
+    var(--ploy-neutral-primary) 88%,
+    black
+  );
+  --ploy-neutral-primary-s1: var(--ploy-neutral-primary);
+  --ploy-neutral-primary-s2: var(--ploy-neutral-secondary);
+  --ploy-neutral-primary-s3: color-mix(
+    in oklch,
+    var(--ploy-neutral-primary) 95%,
+    var(--ploy-neutral-inverse)
+  );
+  --ploy-neutral-primary-s4: color-mix(
+    in oklch,
+    var(--ploy-neutral-primary) 88%,
+    var(--ploy-neutral-inverse)
+  );
+  --ploy-neutral-primary-s5: color-mix(
+    in oklch,
+    var(--ploy-neutral-primary) 76%,
+    var(--ploy-neutral-inverse)
+  );
+  --ploy-neutral-inverse-s0: color-mix(
+    in oklch,
+    var(--ploy-neutral-inverse) 88%,
+    white
+  );
+  --ploy-neutral-inverse-s1: var(--ploy-neutral-inverse);
+  --ploy-neutral-inverse-s2: color-mix(
+    in oklch,
+    var(--ploy-neutral-inverse) 84%,
+    var(--ploy-neutral-primary)
+  );
+  --ploy-neutral-inverse-s3: color-mix(
+    in oklch,
+    var(--ploy-neutral-inverse) 66%,
+    var(--ploy-neutral-primary)
+  );
+  --ploy-neutral-inverse-s4: color-mix(
+    in oklch,
+    var(--ploy-neutral-inverse) 48%,
+    var(--ploy-neutral-primary)
+  );
+  --ploy-neutral-inverse-s5: color-mix(
+    in oklch,
+    var(--ploy-neutral-inverse) 30%,
+    var(--ploy-neutral-primary)
+  );
+  --ploy-accent-primary: oklch(0.324 0.189 42.04);
+  --ploy-accent-secondary: oklch(0.437 0.241 260.82);
+  --ploy-accent-tertiary: oklch(0.265 0.146 84.26);
+  --ploy-text-primary: var(--ploy-neutral-inverse-100);
+  --ploy-text-secondary: oklch(0.373 0 0);
+  --ploy-text-inverse: var(--ploy-neutral-primary);
+  --ploy-text-inverse-secondary: color-mix(
+    in srgb,
+    var(--ploy-neutral-primary) 60%,
+    transparent
+  );
+  --ploy-text-on-accent-primary: oklch(0.027 0.003 84.4);
+  --ploy-text-on-accent-secondary: oklch(0.027 0.003 84.4);
+  --ploy-text-on-accent-tertiary: oklch(0.951 0 352.8);
+  --ploy-button-primary-background: var(--ploy-background-inverse);
+  --ploy-button-primary-text: oklch(0.027 0.003 84.4);
+  --ploy-button-primary-border: var(--ploy-background-inverse);
+  --ploy-button-secondary-background: var(--ploy-background-primary);
+  --ploy-button-secondary-text: var(--ploy-background-inverse);
+  --ploy-button-secondary-border: var(--ploy-background-inverse);
+  --ploy-background-primary: var(--ploy-neutral-primary-s1);
+  --ploy-background-secondary: var(--ploy-neutral-secondary);
+  --ploy-background-accent-primary: var(--ploy-accent-primary);
+  --ploy-background-accent-secondary: var(--ploy-accent-secondary);
+  --ploy-background-accent-tertiary: var(--ploy-accent-tertiary);
+  --ploy-background-inverse: var(--ploy-neutral-inverse-s1);
+  --ploy-border-primary: var(--ploy-neutral-primary-s5);
+  --ploy-border-inverse: color-mix(
+    in srgb,
+    var(--ploy-neutral-inverse-s0) 20%,
+    transparent
+  );
+  --ploy-input-background: var(--ploy-neutral-primary);
+  --ploy-input-border: var(--ploy-neutral-primary-s5);
+  --destructive: oklch(0.324 0.189 42.04);
+  --border: var(--ploy-border-primary);
+  --background: var(--ploy-background-primary);
+  --foreground: var(--ploy-text-primary);
+  --card: var(--ploy-background-secondary);
+  --card-foreground: var(--ploy-text-primary);
+  --popover: var(--ploy-background-secondary);
+  --popover-foreground: var(--ploy-text-primary);
+  --primary: oklch(0.324 0.189 42.04);
+  --primary-foreground: var(--ploy-text-inverse);
+  --secondary: var(--ploy-background-secondary);
+  --secondary-foreground: var(--ploy-text-primary);
+  --muted: var(--ploy-background-secondary);
+  --muted-foreground: var(--ploy-text-secondary);
+  --accent: oklch(0.437 0.241 260.82);
+  --accent-foreground: var(--ploy-text-inverse);
+  --input: var(--ploy-input-border);
+  --ring: oklch(0.324 0.189 42.04);
+
+  /* Color scales */
+  --ploy-neutral-primary-50: oklch(0.98 0 352);
+  --ploy-neutral-primary-100: oklch(0.941 0 352.8);
+  --ploy-neutral-primary-200: oklch(0.877 0 353.6);
+  --ploy-neutral-primary-300: oklch(0.798 0 354.4);
+  --ploy-neutral-primary-400: oklch(0.708 0 355.2);
+  --ploy-neutral-primary-500: oklch(0.609 0 356);
+  --ploy-neutral-primary-600: oklch(0.501 0 356.8);
+  --ploy-neutral-primary-700: oklch(0.385 0 357.6);
+  --ploy-neutral-primary-800: oklch(0.263 0 358.4);
+  --ploy-neutral-primary-900: oklch(0.134 0 359.2);
+  --ploy-neutral-primary-950: oklch(0 0 0);
+  --ploy-neutral-inverse-50: oklch(0.98 0 352);
+  --ploy-neutral-inverse-100: oklch(0.957 0 353.6);
+  --ploy-neutral-inverse-200: oklch(0.919 0 355.2);
+  --ploy-neutral-inverse-300: oklch(0.873 0 356.8);
+  --ploy-neutral-inverse-400: oklch(0.819 0 358.4);
+  --ploy-neutral-inverse-500: oklch(0.76 0 0);
+  --ploy-neutral-inverse-600: oklch(0.701 0 0.4);
+  --ploy-neutral-inverse-700: oklch(0.614 0 0.8);
+  --ploy-neutral-inverse-800: oklch(0.513 0 1.2);
+  --ploy-neutral-inverse-900: oklch(0.401 0 1.6);
+  --ploy-neutral-inverse-950: oklch(0.28 0 2);
+  --ploy-accent-primary-50: oklch(0.98 0.01 21.23);
+  --ploy-accent-primary-100: oklch(0.951 0.025 22.12);
+  --ploy-accent-primary-200: oklch(0.904 0.054 23.01);
+  --ploy-accent-primary-300: oklch(0.846 0.091 23.9);
+  --ploy-accent-primary-400: oklch(0.78 0.133 24.79);
+  --ploy-accent-primary-500: oklch(0.707 0.155 25.68);
+  --ploy-accent-primary-600: oklch(0.627 0.166 26.57);
+  --ploy-accent-primary-700: oklch(0.542 0.161 27.46);
+  --ploy-accent-primary-800: oklch(0.452 0.141 28.34);
+  --ploy-accent-primary-900: oklch(0.357 0.147 29.23);
+  --ploy-accent-primary-950: oklch(0.28 0.091 31.23);
+  --ploy-accent-secondary-50: oklch(0.98 0.01 272.52);
+  --ploy-accent-secondary-100: oklch(0.923 0.037 270.72);
+  --ploy-accent-secondary-200: oklch(0.831 0.086 268.92);
+  --ploy-accent-secondary-300: oklch(0.717 0.153 267.12);
+  --ploy-accent-secondary-400: oklch(0.586 0.23 265.32);
+  --ploy-accent-secondary-500: oklch(0.442 0.236 263.52);
+  --ploy-accent-secondary-600: oklch(0.422 0.192 262.52);
+  --ploy-accent-secondary-700: oklch(0.393 0.168 261.52);
+  --ploy-accent-secondary-800: oklch(0.358 0.138 260.52);
+  --ploy-accent-secondary-900: oklch(0.321 0.11 259.52);
+  --ploy-accent-secondary-950: oklch(0.28 0.086 258.52);
+}
+
+.light {
+  color-scheme: light;
+
+  --ploy-neutral-primary: oklch(0.97 0.01 67.72);
+  --ploy-neutral-secondary: oklch(0.942 0.01 72.65);
+  --ploy-neutral-inverse: oklch(0.239 0 0);
+  --ploy-neutral-light: oklch(0.97 0.01 67.72);
+  --ploy-neutral-dark: oklch(0.239 0 0);
+  --ploy-neutral-primary-s0: white;
+  --ploy-neutral-primary-s1: var(--ploy-neutral-primary);
+  --ploy-neutral-primary-s2: var(--ploy-neutral-secondary);
+  --ploy-neutral-primary-s3: color-mix(
+    in oklch,
+    var(--ploy-neutral-primary) 95%,
+    var(--ploy-neutral-inverse)
+  );
+  --ploy-neutral-primary-s4: color-mix(
+    in oklch,
+    var(--ploy-neutral-primary) 88%,
+    var(--ploy-neutral-inverse)
+  );
+  --ploy-neutral-primary-s5: color-mix(
+    in oklch,
+    var(--ploy-neutral-primary) 76%,
+    var(--ploy-neutral-inverse)
+  );
+  --ploy-neutral-inverse-s0: color-mix(
+    in oklch,
+    var(--ploy-neutral-inverse) 88%,
+    black
+  );
+  --ploy-neutral-inverse-s1: var(--ploy-neutral-inverse);
+  --ploy-neutral-inverse-s2: color-mix(
+    in oklch,
+    var(--ploy-neutral-inverse) 84%,
+    var(--ploy-neutral-primary)
+  );
+  --ploy-neutral-inverse-s3: color-mix(
+    in oklch,
+    var(--ploy-neutral-inverse) 66%,
+    var(--ploy-neutral-primary)
+  );
+  --ploy-neutral-inverse-s4: color-mix(
+    in oklch,
+    var(--ploy-neutral-inverse) 48%,
+    var(--ploy-neutral-primary)
+  );
+  --ploy-neutral-inverse-s5: color-mix(
+    in oklch,
+    var(--ploy-neutral-inverse) 30%,
+    var(--ploy-neutral-primary)
+  );
+  --ploy-accent-primary: oklch(0.676 0.189 42.04);
+  --ploy-accent-secondary: oklch(0.563 0.241 260.82);
+  --ploy-accent-tertiary: oklch(0.735 0.146 84.26);
+  --ploy-text-primary: var(--ploy-neutral-inverse);
+  --ploy-text-secondary: var(--ploy-neutral-inverse-600);
+  --ploy-text-inverse: var(--ploy-neutral-primary);
+  --ploy-text-inverse-secondary: color-mix(
+    in srgb,
+    var(--ploy-neutral-primary) 60%,
+    transparent
+  );
+  --ploy-text-on-accent-primary: oklch(0.973 0.003 84.4);
+  --ploy-text-on-accent-secondary: oklch(0.973 0.003 84.4);
+  --ploy-text-on-accent-tertiary: oklch(0.239 0 0);
+  --ploy-button-primary-background: var(--ploy-background-inverse);
+  --ploy-button-primary-text: oklch(0.973 0.003 84.4);
+  --ploy-button-primary-border: var(--ploy-text-primary);
+  --ploy-button-secondary-background: var(--ploy-background-primary);
+  --ploy-button-secondary-text: var(--ploy-background-inverse);
+  --ploy-button-secondary-border: var(--ploy-text-primary);
+  --ploy-background-primary: var(--ploy-neutral-primary-s1);
+  --ploy-background-secondary: var(--ploy-neutral-secondary);
+  --ploy-background-accent-primary: var(--ploy-accent-primary);
+  --ploy-background-accent-secondary: var(--ploy-accent-secondary);
+  --ploy-background-accent-tertiary: var(--ploy-accent-tertiary);
+  --ploy-background-inverse: var(--ploy-neutral-inverse-s1);
+  --ploy-border-primary: var(--ploy-neutral-primary-s5);
+  --ploy-border-inverse: color-mix(
+    in srgb,
+    var(--ploy-neutral-inverse-s0) 20%,
+    transparent
+  );
+  --ploy-input-background: var(--ploy-neutral-primary);
+  --ploy-input-border: var(--ploy-neutral-primary-s5);
+  --destructive: oklch(0.676 0.189 42.04);
+  --border: var(--ploy-border-primary);
+  --background: var(--ploy-background-primary);
+  --foreground: var(--ploy-text-primary);
+  --card: var(--ploy-background-secondary);
+  --card-foreground: var(--ploy-text-primary);
+  --popover: var(--ploy-background-secondary);
+  --popover-foreground: var(--ploy-text-primary);
+  --primary: oklch(0.676 0.189 42.04);
+  --primary-foreground: var(--ploy-text-inverse);
+  --secondary: var(--ploy-background-secondary);
+  --secondary-foreground: var(--ploy-text-primary);
+  --muted: var(--ploy-background-secondary);
+  --muted-foreground: var(--ploy-text-secondary);
+  --accent: oklch(0.563 0.241 260.82);
+  --accent-foreground: var(--ploy-text-inverse);
+  --input: var(--ploy-input-border);
+  --ring: oklch(0.676 0.189 42.04);
+
+  /* Color scales */
+  --ploy-neutral-primary-50: oklch(0.97 0.01 67.72);
+  --ploy-neutral-primary-100: oklch(0.936 0.005 66.22);
+  --ploy-neutral-primary-200: oklch(0.885 0.009 64.72);
+  --ploy-neutral-primary-300: oklch(0.826 0.01 63.22);
+  --ploy-neutral-primary-400: oklch(0.76 0.012 61.72);
+  --ploy-neutral-primary-500: oklch(0.69 0.011 60.22);
+  --ploy-neutral-primary-600: oklch(0.615 0.012 58.72);
+  --ploy-neutral-primary-700: oklch(0.536 0.011 57.22);
+  --ploy-neutral-primary-800: oklch(0.454 0.01 55.72);
+  --ploy-neutral-primary-900: oklch(0.368 0.008 54.22);
+  --ploy-neutral-primary-950: oklch(0.28 0.006 52.72);
+  --ploy-neutral-inverse-50: oklch(0.98 0 352);
+  --ploy-neutral-inverse-100: oklch(0.951 0 352.8);
+  --ploy-neutral-inverse-200: oklch(0.902 0 353.6);
+  --ploy-neutral-inverse-300: oklch(0.843 0 354.4);
+  --ploy-neutral-inverse-400: oklch(0.775 0 355.2);
+  --ploy-neutral-inverse-500: oklch(0.699 0 356);
+  --ploy-neutral-inverse-600: oklch(0.618 0 356.8);
+  --ploy-neutral-inverse-700: oklch(0.53 0 357.6);
+  --ploy-neutral-inverse-800: oklch(0.438 0 358.4);
+  --ploy-neutral-inverse-900: oklch(0.341 0 359.2);
+  --ploy-neutral-inverse-950: oklch(0.239 0 0);
+  --ploy-accent-primary-50: oklch(0.98 0.009 34.04);
+  --ploy-accent-primary-100: oklch(0.948 0.025 35.64);
+  --ploy-accent-primary-200: oklch(0.896 0.054 37.24);
+  --ploy-accent-primary-300: oklch(0.831 0.092 38.84);
+  --ploy-accent-primary-400: oklch(0.757 0.14 40.44);
+  --ploy-accent-primary-500: oklch(0.676 0.189 42.04);
+  --ploy-accent-primary-600: oklch(0.627 0.182 42.44);
+  --ploy-accent-primary-700: oklch(0.556 0.16 42.84);
+  --ploy-accent-primary-800: oklch(0.472 0.131 43.24);
+  --ploy-accent-primary-900: oklch(0.38 0.1 43.64);
+  --ploy-accent-primary-950: oklch(0.28 0.074 44.04);
+  --ploy-accent-secondary-50: oklch(0.98 0.01 269.82);
+  --ploy-accent-secondary-100: oklch(0.936 0.031 268.02);
+  --ploy-accent-secondary-200: oklch(0.865 0.068 266.22);
+  --ploy-accent-secondary-300: oklch(0.776 0.118 264.42);
+  --ploy-accent-secondary-400: oklch(0.675 0.175 262.62);
+  --ploy-accent-secondary-500: oklch(0.563 0.241 260.82);
+  --ploy-accent-secondary-600: oklch(0.528 0.202 259.82);
+  --ploy-accent-secondary-700: oklch(0.477 0.176 258.82);
+  --ploy-accent-secondary-800: oklch(0.418 0.14 257.82);
+  --ploy-accent-secondary-900: oklch(0.351 0.106 256.82);
+  --ploy-accent-secondary-950: oklch(0.28 0.077 255.82);
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/20aee433927f7d4b-s.a2c089c6.woff2")
+    format("woff2");
+  unicode-range:
+    U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/256e1f7f180674ba-s.afa27594.woff2")
+    format("woff2");
+  unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/be3bf58b83159894-s.7b13a9eb.woff2")
+    format("woff2");
+  unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/753b6407f468151f-s.504826d2.woff2")
+    format("woff2");
+  unicode-range:
+    U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301,
+    U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/292081311a6a8abc-s.2a17492d.woff2")
+    format("woff2");
+  unicode-range:
+    U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/68d403cf9f2c68c5-s.p.f9f15f61.woff2")
+    format("woff2");
+  unicode-range:
+    U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308,
+    U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/20aee433927f7d4b-s.a2c089c6.woff2")
+    format("woff2");
+  unicode-range:
+    U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/256e1f7f180674ba-s.afa27594.woff2")
+    format("woff2");
+  unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/be3bf58b83159894-s.7b13a9eb.woff2")
+    format("woff2");
+  unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/753b6407f468151f-s.504826d2.woff2")
+    format("woff2");
+  unicode-range:
+    U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301,
+    U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/292081311a6a8abc-s.2a17492d.woff2")
+    format("woff2");
+  unicode-range:
+    U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/68d403cf9f2c68c5-s.p.f9f15f61.woff2")
+    format("woff2");
+  unicode-range:
+    U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308,
+    U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/2c55a0e60120577a-s.2a48534a.woff2")
+    format("woff2");
+  unicode-range:
+    U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/9c72aa0f40e4eef8-s.18a48cbc.woff2")
+    format("woff2");
+  unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/ad66f9afd8947f86-s.7a40eb73.woff2")
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/5476f68d60460930-s.c995e352.woff2")
+    format("woff2");
+  unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/2bbe8d2671613f1f-s.76dcb0b2.woff2")
+    format("woff2");
+  unicode-range:
+    U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301,
+    U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/1bffadaabf893a1e-s.7cd81963.woff2")
+    format("woff2");
+  unicode-range:
+    U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2")
+    format("woff2");
+  unicode-range:
+    U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308,
+    U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/2c55a0e60120577a-s.2a48534a.woff2")
+    format("woff2");
+  unicode-range:
+    U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/9c72aa0f40e4eef8-s.18a48cbc.woff2")
+    format("woff2");
+  unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/ad66f9afd8947f86-s.7a40eb73.woff2")
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/5476f68d60460930-s.c995e352.woff2")
+    format("woff2");
+  unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/2bbe8d2671613f1f-s.76dcb0b2.woff2")
+    format("woff2");
+  unicode-range:
+    U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301,
+    U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/1bffadaabf893a1e-s.7cd81963.woff2")
+    format("woff2");
+  unicode-range:
+    U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2")
+    format("woff2");
+  unicode-range:
+    U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308,
+    U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/2c55a0e60120577a-s.2a48534a.woff2")
+    format("woff2");
+  unicode-range:
+    U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/9c72aa0f40e4eef8-s.18a48cbc.woff2")
+    format("woff2");
+  unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/ad66f9afd8947f86-s.7a40eb73.woff2")
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/5476f68d60460930-s.c995e352.woff2")
+    format("woff2");
+  unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/2bbe8d2671613f1f-s.76dcb0b2.woff2")
+    format("woff2");
+  unicode-range:
+    U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301,
+    U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/1bffadaabf893a1e-s.7cd81963.woff2")
+    format("woff2");
+  unicode-range:
+    U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://www.tryastraea.com/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2")
+    format("woff2");
+  unicode-range:
+    U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308,
+    U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD;
+}
+
+html {
+  font-family: var(--font-body);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-ploy-background-primary text-ploy-text-primary;
+  }
+
+  /* Scrollbar styles */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: 0px 0px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgb(196, 189, 182);
+    border-radius: 9999px;
+  }
+  /* Descendant selectors */
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+  /* Keyframe animations */
+  @keyframes enter {
+    0% {
+      opacity: var(--tw-enter-opacity, 1);
+      transform: translate3d(
+          var(--tw-enter-translate-x, 0),
+          var(--tw-enter-translate-y, 0),
+          0
+        )
+        scale3d(
+          var(--tw-enter-scale, 1),
+          var(--tw-enter-scale, 1),
+          var(--tw-enter-scale, 1)
+        )
+        rotate(var(--tw-enter-rotate, 0));
+      filter: blur(var(--tw-enter-blur, 0));
+    }
+  }
+  @keyframes exit {
+    100% {
+      opacity: var(--tw-exit-opacity, 1);
+      transform: translate3d(
+          var(--tw-exit-translate-x, 0),
+          var(--tw-exit-translate-y, 0),
+          0
+        )
+        scale3d(
+          var(--tw-exit-scale, 1),
+          var(--tw-exit-scale, 1),
+          var(--tw-exit-scale, 1)
+        )
+        rotate(var(--tw-exit-rotate, 0));
+      filter: blur(var(--tw-exit-blur, 0));
+    }
+  }
+  @keyframes accordion-down {
+    0% {
+      height: 0px;
+    }
+    100% {
+      height: var(
+        --radix-accordion-content-height,
+        var(
+          --bits-accordion-content-height,
+          var(
+            --reka-accordion-content-height,
+            var(
+              --kb-accordion-content-height,
+              var(--ngp-accordion-content-height, auto)
+            )
+          )
+        )
+      );
+    }
+  }
+  @keyframes accordion-up {
+    0% {
+      height: var(
+        --radix-accordion-content-height,
+        var(
+          --bits-accordion-content-height,
+          var(
+            --reka-accordion-content-height,
+            var(
+              --kb-accordion-content-height,
+              var(--ngp-accordion-content-height, auto)
+            )
+          )
+        )
+      );
+    }
+    100% {
+      height: 0px;
+    }
+  }
+}
+
+/* Pin carousel tracks to first slide (Rosetta can't capture interactive state) */
+
+.swiper-wrapper,
+.embla__container,
+.glide__slides,
+.glide__track,
+.splide__list,
+.flickity-slider,
+.keen-slider,
+.slick-track,
+[class*="carousel"] [class*="track"],
+[class*="slider"] [class*="track"] {
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+.embla__slide,
+.embla__container > * {
+  opacity: 0 !important;
+}
+.embla__slide:first-child,
+.embla__container > :first-child {
+  opacity: 1 !important;
+  transform: none !important;
+  translate: none !important;
+  pointer-events: auto !important;
+}

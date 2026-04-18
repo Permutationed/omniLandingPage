@@ -1,0 +1,14 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { StandardsAutomationPage } from "../../components/pages/solutions/standards-automation-page";
+
+const description =
+  "Automate CRF annotation, SDTM and ADaM mapping, Define-XML, and TLF generation, three clicks from raw study data to submission-ready package.";
+---
+
+<Layout
+  title="Standards & Submission Automation | Astraea"
+  description={description}
+>
+  <StandardsAutomationPage client:load />
+</Layout>

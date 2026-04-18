@@ -1,0 +1,6 @@
+# Copy this file to .dev.vars and fill in your secrets
+# These values are used for local development with wrangler dev
+
+# Example secrets:
+# API_KEY=your_api_key_here
+# DATABASE_URL=your_database_url_here

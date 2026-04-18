@@ -1,0 +1,117 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Page from "../components/pages/home";
+import type { WithContext, Thing } from "schema-dts";
+
+const description =
+  "Astraea accelerates the full trial lifecycle from protocol design to FDA submission using compliant, enterprise-grade AI designed for modern healthcare.";
+
+const siteUrl = "https://tryastraea.com";
+const logoUrl = `${siteUrl}/logo.png`;
+
+const jsonLd: WithContext<Thing>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    additionalType: "https://schema.org/MedicalOrganization",
+    "@id": `${siteUrl}#organization`,
+    name: "Astraea",
+    legalName: "Astraea Inc.",
+    url: siteUrl,
+    logo: {
+      "@type": "ImageObject",
+      url: logoUrl,
+    },
+    description,
+    foundingDate: "2024",
+    slogan: "Autonomous Clinical Trial Automation",
+    knowsAbout: [
+      "Clinical Trials",
+      "Protocol Design",
+      "Clinical Data Management",
+      "FDA Submission",
+      "Phase II Clinical Trials",
+      "Phase III Clinical Trials",
+      "Regulatory Compliance",
+      "Pharmaceutical Research",
+    ],
+    sameAs: [
+      "https://www.ycombinator.com/companies/astraea",
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "Sales",
+      url: "https://cal.com/team/astraea/product-demo",
+      availableLanguage: "English",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteUrl}#website`,
+    name: "Astraea",
+    url: siteUrl,
+    description,
+    publisher: { "@id": `${siteUrl}#organization` },
+    inLanguage: "en-US",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${siteUrl}#webpage`,
+    url: siteUrl,
+    name: "Astraea - Autonomous Clinical Trial Automation",
+    description,
+    isPartOf: { "@id": `${siteUrl}#website` },
+    about: { "@id": `${siteUrl}#organization` },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: `${siteUrl}/medicine1.avif`,
+    },
+    inLanguage: "en-US",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": `${siteUrl}#software`,
+    name: "Astraea Platform",
+    applicationCategory: "BusinessApplication",
+    applicationSubCategory: "Clinical Trial Automation",
+    operatingSystem: "Web",
+    description,
+    url: siteUrl,
+    publisher: { "@id": `${siteUrl}#organization` },
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      url: "https://cal.com/team/astraea/product-demo",
+    },
+    audience: {
+      "@type": "Audience",
+      audienceType:
+        "Pharmaceutical companies, CROs, and clinical research teams",
+    },
+    featureList: [
+      "Automated protocol design",
+      "End-to-end clinical data management",
+      "Regulatory-compliant AI workflows",
+      "FDA submission automation",
+      "Phase II and Phase III trial execution",
+    ],
+  },
+];
+---
+
+<Layout
+  title="Astraea - Autonomous Clinical Trial Automation"
+  description={description}
+  jsonLd={jsonLd}
+>
+  <Fragment slot="head">
+    <meta
+      name="keywords"
+      content="clinical trials, Phase II, Phase III, AI automation, pharma, CRO, clinical research, regulatory submission"
+    />
+  </Fragment>
+  <Page client:load />
+</Layout>

@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { PlatformPage } from "../components/pages/platform/page";
+
+const description =
+  "The Astraea platform, a standards-native execution layer for modern clinical development. SDTM, ADaM, Define-XML, compliance, evidence, and statistical automation in one controlled, audit-ready system.";
+---
+
+<Layout
+  title="The Astraea Platform | Standards-Native AI for Clinical Trials"
+  description={description}
+>
+  <PlatformPage client:load />
+</Layout>
