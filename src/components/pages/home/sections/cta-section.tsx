@@ -14,7 +14,7 @@ export default function CtaSection() {
             </a>
           </div>
           <div className="cta__image-wrapper flex justify-end">
-            <img src="https://www.tryastraea.com/pharmaimage2.webp" alt="Pharmaceutical research" className="cta__image w-full max-w-md object-cover" />
+            <img src="/pharmaimage2.webp" alt="Pharmaceutical research" className="cta__image w-full max-w-md object-cover" />
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ export default function Page() {
           background="secondary"
         />
         <EmpowerSection
-          imageSrc="https://www.tryastraea.com/pharmaimage2.webp"
+          imageSrc="/pharmaimage2.webp"
           imageAlt="Pharmaceutical lab work, clinical trial data preparation and analysis"
           imageSide="left"
         />

@@ -30,7 +30,7 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="hero__image-wrapper overflow-hidden rounded-sm">
-            <img src="https://www.tryastraea.com/medicine1.avif" alt="Clinical pharmaceutical research"
+            <img src="/medicine1.avif" alt="Clinical pharmaceutical research"
               className="hero__image w-full h-auto min-h-[20rem] lg:min-h-[28rem] object-cover" />
           </div>
         </div>

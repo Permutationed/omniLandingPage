@@ -30,7 +30,7 @@ export default function CtaSection() {
           </div>
           <div className="flex justify-end items-end">
             <img
-              src="https://www.tryastraea.com/pharmaimage2.webp"
+              src="/pharmaimage2.webp"
               alt="Pharmaceutical research"
               className="w-full max-w-[30rem] block object-cover"
             />

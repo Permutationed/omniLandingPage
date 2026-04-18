@@ -26,7 +26,7 @@ export default function DemoRequestSection() {
           </div>
           <div className="cta__image-wrapper flex justify-end">
             <img
-              src="https://www.tryastraea.com/pharmaimage2.webp"
+              src="/pharmaimage2.webp"
               alt="Pharmaceutical research"
               className="cta__image w-full max-w-md rounded-sm object-cover"
             />

@@ -21,7 +21,7 @@ export default function HomeHeroSection({
   subtitle = "From protocol design to FDA submission, Astraea transforms clinical data workflows with multi-agent AI and automation, cutting cycle times, reducing costs, and ensuring compliance at every step.",
   primaryCta = { label: "Request a Demo", href: "https://cal.com/team/astraea/product-demo" },
   secondaryCta = { label: "Explore the Platform", href: "/platform" },
-  imageSrc = "https://www.tryastraea.com/medicine1.avif",
+  imageSrc = "/medicine1.avif",
   imageAlt = "Colorful pharmaceutical capsules arranged on a peach background, Astraea clinical trial automation",
 }: Props) {
   return (
