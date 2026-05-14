@@ -15,18 +15,14 @@ export function CalculatorSection() {
     const weeksSavedPerStudy = 15
     const totalWeeksSaved = studiesPerYear * weeksSavedPerStudy
 
-    // Capacity reclaimed: 25% base + scales with studies/team (capped 25-40%)
-    const baseCapacity = 25
-    const studyFactor = Math.min(studiesPerYear * 1.5, 10)
-    const teamFactor = Math.min(teamSize * 0.2, 5)
-    const capacityReclaimed = Math.min(40, Math.round(baseCapacity + studyFactor + teamFactor))
+    const capacityReclaimed = 95
 
     return {
       weeksSaved: totalWeeksSaved,
       capacityReclaimed,
       csrReduction: 90,
     }
-  }, [studiesPerYear, teamSize])
+  }, [studiesPerYear])
 
   return (
     <section id="calculator" className="py-16 sm:py-20">
@@ -58,7 +54,7 @@ export function CalculatorSection() {
                   {results.weeksSaved} weeks
                 </div>
                 <p className="text-muted-foreground mt-1">
-                  <span className="text-foreground font-medium">{results.capacityReclaimed}%</span> capacity reclaimed
+                  <span className="text-foreground font-medium">{results.capacityReclaimed}%</span> less work
                 </p>
               </div>
 

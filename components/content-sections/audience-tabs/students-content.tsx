@@ -28,7 +28,7 @@ const benefits: Benefit[] = [
   {
     icon: Clock,
     title: 'Capacity Reclamation',
-    description: 'Reclaim 25–40% of capacity from manual tasks.',
+    description: '95% less work on manual tasks.',
   },
   {
     icon: Shield,

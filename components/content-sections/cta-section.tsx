@@ -18,7 +18,7 @@ export function CTASection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
           <Button size="lg" className="h-12 px-8" asChild>
-            <a href="mailto:josh29@stanford.edu?subject=Technical%20Demo%20Request">
+            <a href="mailto:founders@tryastraea.com?subject=Technical%20Demo%20Request">
               Book Technical Demo
             </a>
           </Button>

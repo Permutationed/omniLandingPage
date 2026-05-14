@@ -17,7 +17,7 @@ export function ProductivitySection() {
           Productivity Impact
         </h2>
         <h3 className="text-2xl font-semibold text-primary mb-4">
-          Reclaim 25–40% Organizational Capacity
+          95% Less Work
         </h3>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
           Automation removes operational friction. Teams focus on what matters.

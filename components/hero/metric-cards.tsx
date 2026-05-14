@@ -15,7 +15,7 @@ function MetricCard({ value, label }: MetricCardProps) {
 }
 
 const metrics = [
-  { value: '25–40%', label: 'Capacity reclaimed' },
+  { value: '95%', label: 'Less work' },
   { value: '90%', label: 'Report draft-time reduction' },
   { value: 'Phase II/III', label: 'Clinical trial focus' },
 ]
